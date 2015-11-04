@@ -9,7 +9,7 @@ block content
         .row
           .col-sm-6
             button.btn.btn-secondary-outline.btn-lg.btn-block Become a Trainer
-            p.hidden-sm-down.text-center.p-t Questions? (800) 555-5555
+            p.hidden-xs-down.text-center.p-t Questions? (800) 555-5555
             .row
               .col-xs-8.col-xs-push-2
                 button.hidden-sm-up.btn.btn-secondary-outline.btn-block.m-t 
@@ -23,21 +23,11 @@ block content
         h5.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
       .col-sm-12.col-md-6
         ul.no-bull.p-l-0
-          li.text-center
-            img.hidden-sm-down.m-r(src='http://placehold.it/60x60')
-            img.hidden-md-up.center-block(src='http://placehold.it/60x60')
+          li
+            img.m-r(src='http://placehold.it/60x60') 
             | Lorem ipsum dolor sit amet
-          li.text-center
-            img.hidden-sm-down.m-r(src='http://placehold.it/60x60')
-            img.hidden-md-up.center-block(src='http://placehold.it/60x60')
-            | Lorem ipsum dolor sit amet
-          li.text-center
-            img.hidden-sm-down.m-r(src='http://placehold.it/60x60')
-            img.hidden-md-up.center-block(src='http://placehold.it/60x60')
-            | Lorem ipsum dolor sit amet
-          li.text-center
-            img.hidden-sm-down.m-r(src='http://placehold.it/60x60')
-            img.hidden-md-up.center-block(src='http://placehold.it/60x60')
+          li
+            img.m-r(src='http://placehold.it/60x60') 
             | Lorem ipsum dolor sit amet
       .col-md-6.hidden-sm-down
         ul.no-bull
@@ -47,30 +37,9 @@ block content
           li
             img.m-r(src='http://placehold.it/60x60') 
             | Lorem ipsum dolor sit amet
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-      .col-sm-12
+      //- .col-sm-12
         p.text-center Lorem ipsum dolor sit amet 
           button.btn.btn-secondary-outline.btn-lg.m-l Become A Trainer
-  hr.m-b-lg.m-t-lg
-  .container
-    .col-md-12.m-b-lg
-      h2.text-center What Our Trainers Say
-      h5.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-    .col-sm-6.trainer-testimonial
-      img.circle(src='http://placehold.it/120x120')
-      .clearfix.hidden-lg-up
-      h5 Matty Muscles
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    .col-sm-6.trainer-testimonial
-      img.circle(src='http://placehold.it/120x120')
-      .clearfix.hidden-lg-up
-      h5 Matty Muscles
-      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   hr.m-b-lg.m-t-lg
   .container
     .col-md-12.m-b
@@ -91,9 +60,50 @@ block content
   hr.m-b-lg.m-t-lg
   .container
     .col-md-12.m-b-lg
-      h2.text-center Lorem ipsum dolor
+      h2.text-center What Our Group Instructors Say
       h5.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-    .col-lg-6
+    .col-sm-6.trainer-testimonial
+      img.circle(src='http://placehold.it/120x120')
+      .clearfix.hidden-lg-up
+      h5 Matty Muscles
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .col-sm-6.trainer-testimonial
+      img.circle(src='http://placehold.it/120x120')
+      .clearfix.hidden-lg-up
+      h5 Matty Muscles
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  hr.m-b-lg.m-t-lg
+  .container
+    .col-md-12
+      h2.text-center American Fitness Magazine
+      h5.text-center.m-b-lg Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
+    .col-md-6
+      img(src='http://placehold.it/540x240')
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    .col-md-push-1.col-md-5
+      h4.m-b
+        i.fa.fa-newspaper-o
+        |  Fresh Stories
+      h5 Lorem ipsum dolor
+      p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+      hr
+      h5 Lorem ipsum dolor
+      p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+      hr
+      h5 Lorem ipsum dolor
+      p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+      hr
+      h5 Lorem ipsum dolor
+      p Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod
+  //- .container
+    .col-md-12
+      h3.pull-left Lorem Ipsum Dolor Sit Amet
+      button.btn.btn-lg.btn-secondary-outline.pull-right Click Me!
+  hr.m-b-lg.m-t-lg
+  .container
+    .col-md-12.m-b-lg
+      h2.text-center Lorem ipsum dolor
+      h5.text-center.m-b-lg Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
       .form-group.row
         .col-sm-6
           input.form-control(placeholder='First Name')
@@ -101,20 +111,12 @@ block content
           input.form-control(placeholder='Last Name')
       .form-group.row
         .col-sm-6
-          input.form-control(placeholder='Email')
+          input.form-control(placeholder='Email Address')
         .col-sm-6
-          input.form-control(placeholder='Phone')
+          input.form-control(placeholder='Phone Number')
       .row
-        .col-sm-10.col-sm-push-1
-          button.btn.btn-secondary-outline.btn-block Subscribe
-    .col-lg-6.hidden-md-down
-      //- textarea.form-control(rows=6, placeholder='Comments')
-      img(src='http://placehold.it/540x180').m-t-0
-  hr.m-b-lg.m-t-lg
-  .container
-    .col-md-12
-      h3.pull-left Lorem Ipsum Dolor Sit Amet
-      button.btn.btn-lg.btn-secondary-outline.pull-right Click Me!
+        .col-sm-10.col-sm-push-1.col-md-4.col-md-push-4
+          button.btn.btn-secondary-outline.btn-block.btn-lg Subscribe
   hr.m-b-lg.m-t-lg
   .container
     .col-md-12.m-b
@@ -184,8 +186,16 @@ block content
           a(href='#') Lorem Ipsum Dolor
         li 
           a(href='#') Lorem Ipsum Dolor
-    .col-md-12.col-lg-3
+    .col-md-12.col-lg-3.m-b-lg
       img(src='http://placehold.it/300x200')
+    .col-md-12
+      p.text-center 
+        a.p-r-md(href='#') 
+          i.fa.fa-envelope 
+          |  support@afaa.com
+        a(href='tel:#')
+          i.fa.fa-phone 
+          |  1-800-555-5555
     .col-md-12
       p.text-center.colophon &copy; 2014 Aerobics and Fitness Association of America | 12345 E. Novelty Lane, Somewhere, CA 92886 | 
         a(href='#') Privacy&nbsp;Policy

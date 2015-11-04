@@ -13,36 +13,34 @@ module.exports =
   navbarBrand:
     title: 'AFAA'
     link: '/'
+  topNavigation: [
+    title: 'Sign In'
+    link: '#'
+    icon: 'fa-user'
+  ,
+    title: 'Cart'
+    link: '#'
+    icon: 'fa-shopping-cart'
+  ,
+    title: '1‑800‑555‑5555'
+    link: '#'
+    icon: 'fa-phone'
+  ]
   navigation: [
-    title: 'Readme'
-    link: '/readme'
-  ,
-    title: 'Become A Trainer'
+    title: 'Group Fitness'
     link: '#'
   ,
-    title: 'Courses'
+    title: 'Personal Trainer'
     link: '#'
   ,
-    title: 'Resources'
+    title: 'Continuing Education'
     link: '#'
   ,
-    title: 'Events'
+    title: 'Workshops'
     link: '#'
   ,
-    title: 'Contact'
+    title: 'Recertification'
     link: '#'
-  ,
-    title: 'Blog'
-    link: '#'
-  ,
-    title: 'Login'
-    link: '#'
-    liclass: 'pull-right'
-  ,
-    title: ''
-    link: '#'
-    liclass: 'pull-right'
-    class: [ 'fa', 'fa-search' ]
   ]
   timestamp: new Date()
   env: process.env.NODE_ENV
