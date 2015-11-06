@@ -63,6 +63,7 @@ gulp.task 'watch', [ 'copystatic', 'copyfont', 'copycss', 'sass', 'copyjs', 'cof
   gulp.watch './views/**/*.jade', ['jade']
   gulp.watch './view-data/**/*.coffee', ['jade']
   gulp.watch './readme.md', ['jade']
+  gulp.watch './views/**/*.md', ['jade']
   return livereload.listen
     basePath: './src'
     start: true
