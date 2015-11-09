@@ -57,13 +57,13 @@ gulp.task 'reload', ->
   return livereload.reload()
 
 gulp.task 'watch', [ 'copystatic', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ], ->
-  gulp.watch './static/**/*.*', ['reload']
-  gulp.watch './src/sass/**/*.sass', ['sass']
-  gulp.watch './src/coffee/**/*.coffee', ['coffee']
-  gulp.watch './views/**/*.jade', ['jade']
-  gulp.watch './view-data/**/*.coffee', ['jade']
-  gulp.watch './readme.md', ['jade']
-  gulp.watch './views/**/*.md', ['jade']
+  gulp.watch 'static/**/*.*', ['reload']
+  gulp.watch 'src/sass/**/*.sass', ['sass']
+  gulp.watch 'src/coffee/**/*.coffee', ['coffee']
+  gulp.watch 'views/**/*.jade', ['jade']
+  gulp.watch 'view-data/**/*.coffee', ['jade']
+  gulp.watch 'readme.md', ['jade']
+  gulp.watch 'views/**/*.md', ['jade']
   return livereload.listen
     basePath: './src'
     start: true
