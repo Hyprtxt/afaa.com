@@ -23,7 +23,7 @@ module.exports =
     link: '#'
     icon: 'fa-shopping-cart'
   ,
-    title: module.exports.phone
+    title: '1 (800) 555-5555'
     link: '#'
     icon: 'fa-phone'
   ]
