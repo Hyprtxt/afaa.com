@@ -10,6 +10,7 @@ module.exports =
     '/css/font-awesome/font-awesome.min.css'
     '/css/style.css'
   ]
+  phone: '1 (800) 555-5555'
   navbarBrand:
     title: 'AFAA'
     link: '/'
@@ -22,7 +23,7 @@ module.exports =
     link: '#'
     icon: 'fa-shopping-cart'
   ,
-    title: '1‑800‑555‑5555'
+    title: module.exports.phone
     link: '#'
     icon: 'fa-phone'
   ]
