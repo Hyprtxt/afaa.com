@@ -1,9 +1,9 @@
 build:
   image: node:5-slim
   commands:
-    - npm i
-    - npm -g i gulp bower
-    - bower install
+    - npm -q i
+    - npm -q -g i gulp bower
+    - bower install --allow-root
     - gulp build
 
 notify:
