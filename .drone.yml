@@ -6,6 +6,11 @@ build:
     - bower install --allow-root
     - gulp build
 
+deploy:
+  bash:
+    script:
+      - ./drone/deploy.sh
+
 notify:
   slack:
     webhook_url: https://hooks.slack.com/services/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
