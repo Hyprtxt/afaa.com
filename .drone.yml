@@ -1,6 +1,7 @@
 build:
   image: node:5-slim
   commands:
+    - apt-get install git
     - npm -q i
     - npm -q -g i gulp bower
     - bower install --allow-root
