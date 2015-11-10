@@ -1,8 +1,9 @@
-image: dockerfile/nodejs
-script:
-  - npm -q install
-  - npm -q -g install gulp
-  - gulp build
+build:
+  image: node:5-slim
+  commands:
+    - npm -q i
+    - npm -q -g i gulp
+    - gulp build
 
 notify:
   email:
