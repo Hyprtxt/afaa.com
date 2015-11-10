@@ -7,7 +7,7 @@ build:
     - gulp build
 
 notify:
-  slack:
+  hipchat:
     room: Sitefinity
     token: vE1iFkfmQUL9FtiqWBFoOtLnOkVO3dfvgKS3D2r4
     on_started: true
