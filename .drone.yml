@@ -1,14 +1,15 @@
 build:
   image: node:5
   commands:
-    - which git
-    - which node
     - npm -q -g i gulp bower
     - npm -q i
     - bower install --allow-root
     - gulp build
 
 notify:
-  email:
-    recipients:
-      - taylor@hyprtxt.com
+  slack:
+    room: Sitefinity
+    token: vE1iFkfmQUL9FtiqWBFoOtLnOkVO3dfvgKS3D2r4
+    on_started: true
+    on_success: true
+    on_failure: true
