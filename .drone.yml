@@ -1,0 +1,10 @@
+image: dockerfile/nodejs
+script:
+  - npm -q install
+  - npm -q -g install gulp
+  - gulp build
+
+notify:
+  email:
+    recipients:
+      - taylor@hyprtxt.com
