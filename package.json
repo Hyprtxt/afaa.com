@@ -20,6 +20,7 @@
     "gulp-sourcemaps": "^1.5.2",
     "gulp-task-listing": "^1.0.1",
     "gulp-util": "^3.0.6",
+    "gulp-wait": "0.0.2",
     "jade": "^1.11.0",
     "jstransformer-markdown-it": "^0.1.0",
     "mkdirp": "^0.5.1",

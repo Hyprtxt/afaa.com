@@ -6,10 +6,10 @@ build:
     - bower install --allow-root
     - gulp build
 
-deploy:
-  bash:
-    script:
-      - ./drone/deploy.sh
+# deploy:
+#   bash:
+#     script:
+#       - ./drone/deploy.sh
 
 notify:
   slack:

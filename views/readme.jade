@@ -3,5 +3,10 @@ extends ./layout/layout.jade
 block content
   .container
     .row
+      .col-md-12.m-b
+        h1.text-center Lorem Ipsum Dolor
+        h4.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
       .col-md-12
         include:markdown-it ../readme.md
+  hr.m-b-lg.m-t-lg
+  include ./block/form

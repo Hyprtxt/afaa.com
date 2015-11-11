@@ -1,0 +1,7 @@
+{
+  "restartable": "rs",
+  "watch": [
+    "gulpfile.coffee"
+  ],
+  "exec": "gulp watch"
+}
