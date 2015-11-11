@@ -1,6 +1,7 @@
 build:
   image: node:5
   commands:
+    - pwd
     - npm -q -g i gulp bower node-gyp
     - npm -q i
     - bower install --allow-root
@@ -11,26 +12,25 @@ build:
 #     script:
 #       - ./drone/deploy.sh
 
+# deploy:
+#   rsync:
+#     host: 45.55.237.204
+#     user: root
+#     port: 22
+#     source: static_generated
+#     target: /var/www/afaa.hyprtxt.com/static_generated
+#     recursive: true
+#     delete: true
+
 deploy:
-  rsync:
+  ssh:
     host: 45.55.237.204
     user: root
     port: 22
-    source: static_generated
-    target: /var/www/afaa.hyprtxt.com/static_generated
-    recursive: true
-    delete: true
-
-# deploy:
-  # ssh:
-  #   host: 45.55.237.204
-  #   user: root
-  #   port: 22
-  #     artifacts:
-  #       - ./static_generated
-  #   commands:
-  #     - cd /var/www/afaa.hyprtxt.com
-  #     -
+      artifacts:
+        - ./static_generated
+    commands:
+      - cd /var/www/afaa.hyprtxt.com
 
 notify:
   slack:
