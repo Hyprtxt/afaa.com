@@ -27,8 +27,8 @@ deploy:
     host: 45.55.237.204
     user: root
     port: 22
-      artifacts:
-        - ./static_generated
+    artifacts:
+      - ./static_generated
     commands:
       - cd /var/www/afaa.hyprtxt.com
 
