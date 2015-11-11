@@ -1,7 +1,7 @@
 build:
   image: node:5
   commands:
-    - npm -q -g i gulp bower
+    - npm -q -g i gulp bower node-gyp
     - npm -q i
     - bower install --allow-root
     - gulp build
