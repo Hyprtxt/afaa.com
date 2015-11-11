@@ -28,9 +28,10 @@ deploy:
     user: root
     port: 22
     commands:
-      - source ~/.bashrc
+      - source /root/.bashrc
       - cd /var/www/afaa.hyprtxt.com
       - pwd
+      - whoami
       - git pull
       - npm -q i
       - bower install --allow-root
