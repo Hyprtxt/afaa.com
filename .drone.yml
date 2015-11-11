@@ -11,6 +11,27 @@ build:
 #     script:
 #       - ./drone/deploy.sh
 
+deploy:
+  rsync:
+    host: 45.55.237.204
+    user: root
+    port: 22
+    source: static_generated
+    target: /var/www/afaa.hyprtxt.com/static_generated
+    recursive: true
+    delete: true
+
+# deploy:
+  # ssh:
+  #   host: 45.55.237.204
+  #   user: root
+  #   port: 22
+  #     artifacts:
+  #       - ./static_generated
+  #   commands:
+  #     - cd /var/www/afaa.hyprtxt.com
+  #     -
+
 notify:
   slack:
     webhook_url: https://hooks.slack.com/services/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
