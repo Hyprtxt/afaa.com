@@ -28,6 +28,7 @@ deploy:
     user: root
     port: 22
     commands:
+      - source ~/.bashrc
       - cd /var/www/afaa.hyprtxt.com
       - pwd
       - git pull
