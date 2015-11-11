@@ -203,8 +203,8 @@ $btn-border-radius-sm:           1rem
 
 // Components
 @import "bootstrap/scss/animation"
-// @import "bootstrap/scss/dropdown"
-// @import "bootstrap/scss/button-group"
+@import "bootstrap/scss/dropdown"
+@import "bootstrap/scss/button-group"
 @import "bootstrap/scss/input-group"
 @import "bootstrap/scss/custom-forms"
 @import "bootstrap/scss/nav"
@@ -307,14 +307,25 @@ body > nav.navbar-message
 
 img
   max-width: 100%
+
+img.rounded
   border-radius: 0.5rem
-  margin: 0 0 1rem 0
 
 .colophon
   font-size: 0.75rem
 
 img.circle
   border-radius: 50%
+
+.text-small
+  font-size: smaller
+
+.course
+  border: 1px solid $gray-light
+  .content
+    padding: 1rem
+  img
+    margin: 0
 
 // Media Queries
 

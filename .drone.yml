@@ -29,6 +29,7 @@ deploy:
     port: 22
     commands:
       - source /root/.bashrc
+      - echo 'source done'
       - cd /var/www/afaa.hyprtxt.com
       - pwd
       - whoami

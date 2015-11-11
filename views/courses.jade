@@ -3,28 +3,41 @@ extends ./layout/layout.jade
 block content
   .container
     .row
-      .col-md-12.m-bb
+      .col-md-12.m-b
         h2.text-center Why Choose AFAA
         h5.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-      .col-sm-12.col-md-6
-        ul.no-bull.p-l-0
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-      .col-md-6.hidden-sm-down
-        ul.no-bull
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-          li
-            img.m-r(src='http://placehold.it/60x60') 
-            | Lorem ipsum dolor sit amet
-      //- .col-sm-12
-        p.text-center Lorem ipsum dolor sit amet 
-          button.btn.btn-secondary-outline.btn-lg.m-l Become A Trainer
+      .col-md-push-1.col-md-10.m-b
+        form
+          .form-group
+            .input-group
+              .input-group-btn
+                button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown") Filter
+                .dropdown-menu
+                  a.dropdown-item(href='#') Filter
+                  a.dropdown-item(href='#') Sort
+              input.form-control(placeholder='Search courses...')
+      .col-md-12.m-b-lg
+        ul.nav.nav-tabs
+          li.nav-item
+            a.nav-link.active Certification
+          li.nav-item
+            a.nav-link Recertification
+          li.nav-item
+            a.nav-link Specializations
+          li.nav-item
+            a.nav-link Sports Performance
+          li.nav-item
+            a.nav-link Continuing Education
+      .col-md-12.m-b
+        h3 Personal Training Certification
+        include ./block/course
+        include ./block/course
+        h3 Recertification
+        include ./block/course
+        include ./block/course
+        h3 Specializations
+        include ./block/course
+        include ./block/course
   hr.m-b-lg.m-t-lg
   .container
     .col-md-12
@@ -53,23 +66,4 @@ block content
       h3.pull-left Lorem Ipsum Dolor Sit Amet
       button.btn.btn-lg.btn-secondary-outline.pull-right Click Me!
   hr.m-b-lg.m-t-lg
-  .container
-    .col-md-12.m-b-lg
-      h2.text-center Lorem ipsum dolor sit
-      h5.text-center.m-b-lg Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-      form(action='http://certify.nasm.org/acton/eform/14843/0039/d-ext-0001', method='POST')
-        input(type='hidden', name='Topic', value='AFAA')
-        .form-group.row
-          .col-sm-6
-            input.form-control(placeholder='First Name', name='First Name')
-          .col-sm-6
-            input.form-control(placeholder='Last Name', name='Last Name')
-        .form-group.row
-          .col-sm-6
-            input.form-control(placeholder='Email Address', name='Email Address')
-          .col-sm-6
-            input.form-control(placeholder='Phone Number', name='Phone')
-        .row
-          .col-sm-10.col-sm-push-1.col-md-4.col-md-push-4
-            button.btn.btn-secondary-outline.btn-block.btn-lg Subscribe
-  hr.m-b-lg.m-t-lg
+  include ./block/form

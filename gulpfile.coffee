@@ -92,7 +92,7 @@ gulp.task 'jade', [ 'setupJadeData' ], ( next ) ->
       locals: _jadeData
       pretty: true
     .pipe gulp.dest dest
-    .pipe wait 500
+    .pipe wait 1000
     .pipe livereload()
 
 gulp.task 'copystatic', ->

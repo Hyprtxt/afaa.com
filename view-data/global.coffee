@@ -4,6 +4,7 @@ module.exports =
     '/js/jquery/jquery.min.js'
     '/js/bootstrap/util.js'
     '/js/bootstrap/collapse.js'
+    '/js/bootstrap/dropdown.js'
     '/js/script.js'
   ]
   stylesheets: [
