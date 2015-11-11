@@ -1,5 +1,7 @@
 # AFAA Sitefinity Notes
 
+[![Build Status](http://drone.hyprtxt.com/api/badges/sportsmedicine/afaa.hyprtxt.com/status.svg)](http://drone.hyprtxt.com/sportsmedicine/afaa.hyprtxt.com)
+
 * SVN Checkout: [https://ati-svn.ascendlearning.com:8443/svn/NASM/trunk/SITEFINITY](https://ati-svn.ascendlearning.com:8443/svn/NASM/trunk/SITEFINITY)
 * Local Dev + Dev Site SQL DB: `NASM-DEV-SQL30`
 * Dev Server: [http://dev-www.afaa.com](http://dev-www.afaa.com)
