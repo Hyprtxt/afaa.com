@@ -12,25 +12,28 @@ build:
 #     script:
 #       - ./drone/deploy.sh
 
-deploy:
-  rsync:
-    host: 45.55.237.204
-    user: root
-    port: 22
-    source: static_generated
-    target: /var/www/afaa.hyprtxt.com/static_generated
-    recursive: true
-    delete: true
-
 # deploy:
-#   ssh:
+#   rsync:
 #     host: 45.55.237.204
 #     user: root
 #     port: 22
-#     commands:
-#       - cd /var/www/afaa.hyprtxt.com
-#       - pwd
-#       - echo 'things'
+#     source: static_generated
+#     target: /var/www/afaa.hyprtxt.com/static_generated
+#     recursive: true
+#     delete: true
+
+deploy:
+  ssh:
+    host: 45.55.237.204
+    user: root
+    port: 22
+    commands:
+      - cd /var/www/afaa.hyprtxt.com
+      - pwd
+      - git pull
+      - npm -q i
+      - bower install --allow-root
+      - gulp build
 
 notify:
   slack:
