@@ -22,21 +22,21 @@ build:
 #     recursive: true
 #     delete: true
 
-deploy:
-  ssh:
-    host: 45.55.237.204
-    user: root
-    port: 22
-    commands:
-      - source /root/.bashrc
-      - echo 'source done'
-      - cd /var/www/afaa.hyprtxt.com
-      - pwd
-      - whoami
-      - git pull
-      - npm -q i
-      - bower install --allow-root
-      - gulp build
+# deploy:
+#   ssh:
+#     host: 45.55.237.204
+#     user: root
+#     port: 22
+#     commands:
+#       - source /root/.bashrc
+#       - echo 'source done'
+#       - cd /var/www/afaa.hyprtxt.com
+#       - pwd
+#       - whoami
+#       - git pull
+#       - npm -q i
+#       - bower install --allow-root
+#       - gulp build
 
 notify:
   slack:
