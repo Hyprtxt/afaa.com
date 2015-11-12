@@ -2,12 +2,9 @@ build:
   image: node:5
   commands:
     - pwd
-    - npm i -g -q node-gyp
-    - npm i -g -q coffee-script
-    - npm i -g -q gulp
-    - npm i -g -q bower
+    - npm -q -g i gulp bower node-gyp
+    - npm -q i
     - bower install --allow-root
-    - which gulp
     - gulp build
 
 notify:
@@ -18,6 +15,18 @@ notify:
     on_started: true
     on_success: true
     on_failure: true
+
+# build:
+#   image: node:5
+#   commands:
+#     - pwd
+#     - npm i -g -q node-gyp
+#     - npm i -g -q coffee-script
+#     - npm i -g -q gulp
+#     - npm i -g -q bower
+#     - bower install --allow-root
+#     - which gulp
+#     - gulp build
 
 # deploy:
 #   bash:
