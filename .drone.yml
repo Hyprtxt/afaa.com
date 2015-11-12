@@ -2,10 +2,20 @@ build:
   image: node:5
   commands:
     - pwd
-    - npm -q -g i gulp bower node-gyp
-    - npm -q i
+    - npm node-gyp
+    - npm i -g -q gulp bower
+    - npm i -q
     - bower install --allow-root
     - gulp build
+
+notify:
+  slack:
+    webhook_url: https://hooks.slack.com/services/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
+    username: 'drone'
+    channel: '#code'
+    on_started: true
+    on_success: true
+    on_failure: true
 
 # deploy:
 #   bash:
@@ -37,12 +47,3 @@ build:
 #       - npm -q i
 #       - bower install --allow-root
 #       - gulp build
-
-notify:
-  slack:
-    webhook_url: https://hooks.slack.com/services/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
-    username: 'drone'
-    channel: '#code'
-    on_started: true
-    on_success: true
-    on_failure: true
