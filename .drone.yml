@@ -3,6 +3,7 @@ build:
   commands:
     - pwd
     - npm i -g -q node-gyp
+    - npm i -g -q coffee-script
     - npm i -g -q gulp
     - npm i -g -q bower
     - bower install --allow-root
