@@ -7,6 +7,7 @@ build:
     - npm i -g -q gulp
     - npm i -g -q bower
     - bower install --allow-root
+    - which gulp
     - gulp build
 
 notify:
