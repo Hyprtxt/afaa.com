@@ -2,9 +2,9 @@ build:
   image: node:5
   commands:
     - pwd
-    - npm node-gyp
-    - npm i -g -q gulp bower
-    - npm i -q
+    - npm i -g -q node-gyp
+    - npm i -g -q gulp
+    - npm i -g -q bower
     - bower install --allow-root
     - gulp build
 
