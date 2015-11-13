@@ -1,6 +1,7 @@
 build:
   image: hyprtxt/nvm
   commands:
+    - /bin/bash
     - npm i
 
 notify:
