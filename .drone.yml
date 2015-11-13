@@ -2,9 +2,6 @@ build:
   image: node:5
   commands:
     - npm i
-    - pwd
-    - ./node_modules/bower/bin/bower install --allow-root
-    - ./node_modules/gulp/bin/gulp.js build
 
 notify:
   slack:
