@@ -2,7 +2,8 @@ build:
   image: node:4
   commands:
     - /bin/bash
-    - npm i
+    - npm -q i
+    - ./node_modules/gulp/bin/gulp.js build
 
 notify:
   slack:
