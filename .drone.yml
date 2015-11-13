@@ -1,5 +1,5 @@
 build:
-  image: node:5
+  image: hyprtxt/nvm
   commands:
     - npm i
 
