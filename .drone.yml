@@ -1,5 +1,5 @@
 build:
-  image: node:5
+  image: node:5-wheezy
   commands:
     - npm -q i
     - ./node_modules/bower/bin/bower install --allow-root
