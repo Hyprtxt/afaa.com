@@ -1,4 +1,5 @@
 gulp = require 'gulp'
+changed = require 'gulp-changed'
 wait = require 'gulp-wait'
 gutil = require 'gulp-util'
 sass = require 'gulp-sass'
@@ -61,12 +62,12 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'static/**/*.*', ['reload']
   gulp.watch 'src/sass/**/*.sass', ['sass']
   gulp.watch 'src/coffee/**/*.coffee', ['coffee']
-  gulp.watch 'views/**/*.jade', ['jade']
+  gulp.watch 'views/**/*.jade', ['jadeSingle']
   gulp.watch 'view-data/**/*.coffee', ['jade']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
   return livereload.listen
-    basePath: './src'
+    basePath: 'static_generated/'
     start: true
 
 # static site stuff
@@ -86,14 +87,25 @@ gulp.task 'setupJadeData', ( next ) ->
       _jadeData = eval coffeeScript.compile _data, coffeeopts
     return next()
 
+_jadeSrc = [ './views/**/*.jade', '!./views/layout/**', '!./views/block/**' ]
+
+doJade = ( stream ) ->
+  return stream.pipe jade
+    locals: _jadeData
+    pretty: true
+  .pipe gulp.dest dest
+  .pipe wait 1000
+  .pipe livereload()
+
 gulp.task 'jade', [ 'setupJadeData' ], ( next ) ->
-  jadePipe = gulp.src [ './views/**/*.jade', '!./views/layout/**', '!./views/block/**' ]
-    .pipe jade
-      locals: _jadeData
-      pretty: true
-    .pipe gulp.dest dest
-    .pipe wait 1000
-    .pipe livereload()
+  stream = gulp.src _jadeSrc
+  return doJade stream
+
+gulp.task 'jadeSingle', [ 'setupJadeData' ], ( next ) ->
+  stream = gulp.src _jadeSrc
+    .pipe changed dest,
+      extension: '.html'
+  return doJade stream
 
 gulp.task 'copystatic', ->
   gulp.src [ './static/**', dest + '/**' ]
