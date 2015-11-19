@@ -1,7 +1,7 @@
 .container
-  .col-md-8.m-b-lg.col-md-push-2
-    h2.text-center.text-bold.text-uppercase You Belong at AFAA
-    h5.text-center.m-b-lg Discover how to take the first step now.
+  .row
+    +title( 'You Belong at AFAA', 'Discover how to take the first step now.' )
+  .col-lg-8.m-b-lg.col-lg-push-2
     form(action='http://certify.nasm.org/acton/eform/14843/0039/d-ext-0001', method='POST')
       input(type='hidden', name='Topic', value='AFAA')
       .form-group.row

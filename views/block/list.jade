@@ -1,24 +1,32 @@
 .container
   .row
     +title( 'Giving You the Edge', "Browse AFAA's many discipines to find exactly what you are looking for" )
-    .col-sm-12.col-md-4.col-md-push-2
-      ul.no-bull.p-l-0
-        li.m-b
-          img.m-r(src='http://placehold.it/120x120') 
-          | Personal Trainer Certification
-        li.m-b
-          img.m-r(src='http://placehold.it/120x120') 
-          | Kick Boxing Certification
-    .col-sm-12.col-md-4.col-md-push-2
-      ul.no-bull.p-l-0
-        li.m-b
-          img.m-r(src='http://placehold.it/120x120') 
-          | Military Fitness Specialist Certification
-        li.m-b
-          img.m-r(src='http://placehold.it/120x120') 
-          | Pilates
+  .row
+    .col-lg-8.col-lg-push-2.m-b-lg
+      .row
+        .col-md-6.edge-block
+          .border.top
+            img(src='/images/list1.jpg').pull-left.m-r
+            p.m-t-lg Personal Trainer Certification
+            .clearfix
+        .col-md-6.edge-block
+          .border.top
+            img(src='/images/list2.jpg').pull-left.m-r
+            p.m-t-lg Kick Boxing Certification
+            .clearfix
+        .col-md-6.edge-block
+          .border
+            img(src='/images/list3.jpg').pull-left.m-r
+            p.m-t-lg Military Fitness Specialist Certification
+            .clearfix
+        .col-md-6.edge-block
+          .border
+            img(src='/images/list4.jpg').pull-left.m-r
+            p.m-t-lg Pilates
+            .clearfix
     .col-md-12.m-b-lg
-      p.text-center And Many More 
+      p.text-center
+        span.p-r-lg And Many More 
         button.btn-primary.btn-lg.text-uppercase See All Certifications
     include ../block/quote
   .clearfix

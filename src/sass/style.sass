@@ -274,13 +274,22 @@ $btn-border-radius-sm:           $btn-border-radius
 .float-right
   float: right
 
-.quote
-  footer::before
-    content: "\2014 \00A0"
+.b-r
+  border-right: 1px solid $gray-lighter
+
+.b-l
+  border-left: 1px solid $gray-lighter
+
+.flex
+  display: flex
 
 @include media-breakpoint-down(xs)
   .text-center-xs-down
     text-align: center
+
+@include media-breakpoint-up(md)
+  .flex-md-up
+    display: flex
 
 // Bootstrap Overrides
 // Should edit variables instead
@@ -323,8 +332,9 @@ img.circle
 .text-small
   font-size: smaller
 
-// body
-  // background: blue
+::selection
+  background: rgba( $brand-primary, 0.8 )
+  color: white
 
 .course
   border: 1px solid $gray-light
@@ -358,8 +368,20 @@ img.circle
   text-align: center
   padding: 0
   li
-    padding: 1rem
+    padding: 1rem 3rem
     border-bottom: 1px solid $gray-lighter
+
+.edge-block
+  padding: 0 2rem 0 1rem
+  .border
+    padding: 1rem 0
+    border-bottom: 1px solid $gray-lighter
+  .border.top
+    border-top: 1px solid $gray-lighter
+
+.quote
+  footer::before
+    content: "\2014 \00A0"
 
 // Media Queries
 @include media-breakpoint-down(md)
