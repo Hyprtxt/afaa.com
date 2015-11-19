@@ -1,24 +1,30 @@
 .container
-  .col-md-12.m-b
-    h2.text-center Get Certifited in What You Love
-    h5.text-center AFAA has just what you need to become the best in the fitness world.
+  +title( 'Get Certifited in What You Love', 'AFAA has just what you need to become the best in the fitness world.' )
   .col-lg-4.col-sm-6
-    img(src='http://placehold.it/350x200')
-    h4.text-center.text-uppercase Become a Group Instructor
-    ul
+    .triple-card
+      img(src='/images/triple1.jpg')
+      .text
+        h4.text-center.text-uppercase Become a Group Instructor
+    ul.triple-list
       li Simple Online training
       li Instant Registration
   .col-lg-4.col-sm-6
-    img(src='http://placehold.it/350x200')
-    h4.text-center.text-uppercase Become a Personal Fitness Trainer
-    ul
+    .triple-card
+      img(src='/images/triple2.jpg')
+      .text
+        h4.text-center.text-uppercase Become a Personal Fitness Trainer
+    ul.triple-list
       li Continue your education
+      li Acquire a new expertise
       li Shows a commitment to excellence
   .col-lg-4.hidden-md-down
-    img(src='http://placehold.it/350x200')
-    h4.text-center.text-uppercase Get Continuing Education
-    ul
+    .triple-card
+      img(src='/images/triple3.jpg')
+      .text
+        h4.text-center.text-uppercase Get Continuing Education
+    ul.triple-list
       li Read the latest fitness knowledge online
       li Connect with American Fitness Magazine
       li Share with your network
-hr.m-b-lg.m-t-lg
+  .clearfix
+  hr.m-b-lg.m-t-lg

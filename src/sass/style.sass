@@ -242,7 +242,7 @@ $btn-border-radius-sm:           $btn-border-radius
 @import "font-awesome/scss/mixins"
 @import "font-awesome/scss/path"
 @import "font-awesome/scss/core"
-// @import "font-awesome/scss/larger"
+@import "font-awesome/scss/larger"
 // @import "font-awesome/scss/fixed-width"
 // @import "font-awesome/scss/list"
 // @import "font-awesome/scss/bordered-pulled"
@@ -266,13 +266,17 @@ $btn-border-radius-sm:           $btn-border-radius
   font-weight: bold
 
 .text-italic
-  font-weight: italic
+  font-style: italic
 
 .float-left
   float: left
 
 .float-right
   float: right
+
+.quote
+  footer::before
+    content: "\2014 \00A0"
 
 @include media-breakpoint-down(xs)
   .text-center-xs-down
@@ -331,6 +335,31 @@ img.circle
 
 .hero, .foot
   background: #f3f3f3
+
+.hero .container
+  background: url(/images/hero.jpg)
+  min-height: 434px
+
+.triple-card
+  position: relative
+  width: 262px
+  margin: 0 auto
+  .text
+    position: absolute
+    bottom: 0
+    height: 5rem
+    background: rgba( $brand-primary, 0.9 )
+    color: white
+    padding: 1rem
+.triple-list
+  width: 262px
+  margin: 0 auto
+  list-style: none
+  text-align: center
+  padding: 0
+  li
+    padding: 1rem
+    border-bottom: 1px solid $gray-lighter
 
 // Media Queries
 @include media-breakpoint-down(md)
