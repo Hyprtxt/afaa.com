@@ -8,6 +8,7 @@ module.exports =
     '/js/script.js'
   ]
   stylesheets: [
+    '//fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
     '/css/font-awesome/font-awesome.min.css'
     '/css/style.css'
   ]
@@ -29,7 +30,7 @@ module.exports =
     icon: 'fa-phone'
   ]
   navigation: [
-    title: 'Group Fitness'
+    title: 'Group X Instructor'
     link: '#'
   ,
     title: 'Personal Trainer'

@@ -1,34 +1,3 @@
-nav.navbar.navbar-top.hidden-sm-down
-  .container
-    a.navbar-brand.text-bold.hidden-lg-up(href=navbarBrand.link) #{navbarBrand.title}
-    ul.nav.navbar-nav.hidden-sm-down.pull-right
-      each nav in topNavigation
-        li.nav-item.m-l-lg(class=nav.liclass)
-          a.nav-link(href=nav.link, class=nav.class, id=nav.id) 
-            if nav.icon
-              i.fa(class=nav.icon)
-            |  &nbsp;#{nav.title}
-nav.navbar.navbar-main
-  .container
-    a.navbar-brand.text-bold.hidden-md-only(href=navbarBrand.link) #{navbarBrand.title}
-    button.navbar-toggler.pull-right.hidden-md-up(data-toggle='collapse', data-target='#mobileNav') &#9776;
-    ul.nav.navbar-nav.hidden-sm-down.pull-right
-      each nav in navigation
-        li.nav-item.m-l-md(class=nav.liclass)
-          a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
-    .clearfix
-    ul#mobileNav.nav.nav-pills.nav-stacked.collapse
-      each nav in navigation
-        li.nav-item
-          a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
-nav.navbar.navbar-message.bg-faded
-  .container
-    p.text-center.m-b-0
-      strong 10% Off All Orders
-      | , Ends Thursday!
-      span.p-l-lg.hidden-sm-down Use Code: 
-        strong GOAFAA 
-        | or Call&nbsp;#{phone}
-    p.text-center.hidden-md-up.m-b-0 Use Code: 
-      strong GOAFAA 
-      | or Call&nbsp;1&#8209;800&#8209;555&#8209;5555
+include ../block/message
+include ../block/navtop
+include ../block/nav
