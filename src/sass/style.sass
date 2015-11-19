@@ -305,12 +305,31 @@ body > nav.navbar-message
   background: $brand-primary
   color: white
 
+.navbar-main .navbar-nav
+  width: 100%
+  .nav-item
+    margin: 0
+    width: 20%
+    text-align: center
+
+.logo
+  width: 7rem
+  padding: 0.5rem
+
 .navbar-top
   padding: 0
+  font-size: 0.75rem
+  .container
+    border-bottom: 1px solid $gray-lighter
+  .phone
+    clear: right
+    font-size: 1.5rem
+
 
 .navbar-top,
 .navbar-main
-  border-bottom: 1px solid $gray-dark
+  text-transform: uppercase
+  // border-bottom: 1px solid $gray-dark
   border-radius: 0
   a
     color: $gray-dark

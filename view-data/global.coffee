@@ -17,17 +17,13 @@ module.exports =
     title: 'AFAA'
     link: '/'
   topNavigation: [
-    title: 'Sign In'
-    link: '#'
-    icon: 'fa-user'
-  ,
     title: 'Cart'
     link: '#'
-    icon: 'fa-shopping-cart'
+    # icon: 'fa-shopping-cart'
   ,
-    title: '1 (800) 555-5555'
+    title: 'My Account'
     link: '#'
-    icon: 'fa-phone'
+    # icon: 'fa-user'
   ]
   navigation: [
     title: 'Group X Instructor'

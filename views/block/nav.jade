@@ -1,9 +1,9 @@
 nav.navbar.navbar-main
   .container
-    button.navbar-toggler.pull-right.hidden-md-up(data-toggle='collapse', data-target='#mobileNav') &#9776;
+    button.navbar-toggler.hidden-md-up(data-toggle='collapse', data-target='#mobileNav') &#9776;
     ul.nav.navbar-nav.hidden-sm-down.pull-right
       each nav in navigation
-        li.nav-item.m-l-md(class=nav.liclass)
+        li.nav-item(class=nav.liclass)
           a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
     .clearfix
     ul#mobileNav.nav.nav-pills.nav-stacked.collapse

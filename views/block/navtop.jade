@@ -1,6 +1,8 @@
 nav.navbar.navbar-top.hidden-sm-down
   .container
-    a.navbar-brand.text-bold(href=navbarBrand.link) #{navbarBrand.title}
+    
+    a.pull-left.navbar-brand.text-bold(href=navbarBrand.link) 
+      img.logo(src='/afaa.svg')
     ul.nav.navbar-nav.hidden-sm-down.pull-right
       each nav in topNavigation
         li.nav-item.m-l-lg(class=nav.liclass)
@@ -8,3 +10,4 @@ nav.navbar.navbar-top.hidden-sm-down
             if nav.icon
               i.fa(class=nav.icon)
             |  &nbsp;#{nav.title}
+    a(href='tel:555-5555').phone.pull-right 1-800-555-5555
