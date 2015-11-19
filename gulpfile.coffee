@@ -111,8 +111,9 @@ gulp.task 'copystatic', ->
   gulp.src [ './static/**', dest + '/**' ]
     .pipe gulp.dest dest
 
-gulp.task 'render', [ 'copystatic', 'jade', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ], ( cb ) ->
-  rimraf dest + '/map', cb
+gulp.task 'render', [ 'copystatic', 'jade', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ]
+# , ( cb ) ->
+  # rimraf dest + '/map', cb
 
 gulp.task 'build', [ 'clean' ], ->
   gulp.start 'render'

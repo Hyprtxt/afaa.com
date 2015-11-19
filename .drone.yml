@@ -5,6 +5,11 @@ build:
     - npm -q i
     - ./node_modules/gulp/bin/gulp.js build
 
+deploy:
+  commands:
+    - pwd
+    - ls
+
 notify:
   slack:
     webhook_url: https://hooks.slack.com/services/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
