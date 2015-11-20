@@ -1,4 +1,5 @@
 module.exports =
+  assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets',
   title: 'AFAA'
   javascripts: [
     '/js/jquery/jquery.min.js'
@@ -9,7 +10,6 @@ module.exports =
   ]
   stylesheets: [
     '//fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
-    '/css/font-awesome/font-awesome.min.css'
     '/css/style.css'
   ]
   phone: '1 (800) 555-5555'
