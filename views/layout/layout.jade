@@ -11,3 +11,7 @@ html
 
     block foot
       include ./includes/foot
+
+    block scripts
+      each script in javascripts
+        script(src=script)

@@ -360,10 +360,14 @@ h1, h2, h3, h4, h5, h6
   padding: 1.25rem 2.5rem
 
 // AFAA Styles
-body > nav.navbar-message
+nav.navbar-message
   background: $brand-primary
   color: white
   border-radius: 0
+  font-family: $font-family-condensed
+
+.mobile-nav-spacer
+  margin-top: 4rem
 
 .navbar-main .navbar-nav
   width: 100%
@@ -434,13 +438,18 @@ img.circle
 .fixed-scroll
   border-top: 1px solid $gray-lighter
   margin-top: 38.9rem
-  padding-top: 2rem
+  padding-top: 4rem
   background-color: white
   position: relative
   z-index: 2
 
 .hero, .foot
   background: #f3f3f3
+
+.foot
+  z-index: 2
+  position: relative
+  padding-bottom: 3rem
 
 .hero .container
   background: url(#{$assets}/images/hero.jpg)

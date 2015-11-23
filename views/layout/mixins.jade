@@ -1,4 +1,11 @@
-mixin title( title, tagline )
-  .col-md-12.m-b-lg
-    h2.text-center.text-bold.text-uppercase=title
-    p.text-center.text-muted=tagline
+mixin title( title, tagline, colClass )
+  if colClass
+    .col-md-12(class=colClass)
+      +titleHeadings( title, tagline )
+  else
+    .col-md-12.m-b-lg
+      +titleHeadings( title, tagline )
+
+mixin titleHeadings( title, tagline )
+  h2.text-center.text-bold.text-uppercase=title
+  p.text-center.text-muted=tagline
