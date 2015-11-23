@@ -22,9 +22,9 @@ $assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets'
 
 // $gray-dark:                 #373a3c
 // $gray:                      #55595c
-// $gray-light:                #818a91
-// $gray-lighter:              #eceeef
-// $gray-lightest:             #f7f7f9
+$gray-light:                #818a91
+$gray-lighter:              #f3f3f3
+$gray-lightest:             #f7f7f9
 $brand-primary:                #2c4ba3
 // $brand-success:             #5cb85c
 // $brand-info:                #5bc0de
@@ -210,7 +210,7 @@ $input-border-radius:            0
 $input-border-radius-lg:         $border-radius-lg
 $input-border-radius-sm:         $border-radius-sm
 
-$input-border-focus:             #66afe9
+$input-border-focus:             $brand-primary // #66afe9
 $input-box-shadow-focus:         rgba(102,175,233,.6)
 
 $input-color-placeholder:        #999
@@ -366,7 +366,7 @@ img.circle
   border-radius: 50%
 
 // Bootstrap Overrides
-// Should edit variables instead if possible
+// Should instead edit variables where possible
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal
@@ -398,8 +398,11 @@ nav.navbar-message
   border-radius: 0
   font-family: $font-family-condensed
 
+.navbar-mobile
+  background: white
+
 .mobile-nav-spacer
-  margin-top: 4rem
+  margin-top: 3.45rem
 
 .navbar-main .navbar-nav
   width: 100%
@@ -439,6 +442,17 @@ nav.navbar-message
   a:hover
     color: $gray-light
 
+// Footer
+
+.foot
+  background: $gray-lightest
+  z-index: 2
+  position: relative
+  padding-bottom: 3rem
+
+.colophon
+  font-size: 0.75rem
+
 // Fancy Fixed Scrolling for the Homepage
 
 .fixed-wrap
@@ -461,13 +475,28 @@ nav.navbar-message
 
 @include media-breakpoint-down(sm)
   .fixed-scroll
-    margin-top: 34.5rem
+    margin-top: 30.5rem
+
+// Homepage Hero
+
+@include media-breakpoint-up(xl)
+  .hero
+    background: $gray-lightest
+    .container
+      background: url(#{$assets}/images/hero.jpg)
+      min-height: 434px
+
+@include media-breakpoint-down(lg)
+  .hero
+    background-color: $gray-lightest
+    background: url(#{$assets}/images/hero.jpg) center center no-repeat
+    min-height: 434px
+
+@include media-breakpoint-down(md)
+  .hero
+    background-position: left center
 
 // Disorganized Stuff
-
-.hero .container
-  background: url(#{$assets}/images/hero.jpg)
-  min-height: 434px
 
 .course
   border: 1px solid $gray-light
@@ -475,17 +504,6 @@ nav.navbar-message
     padding: 1rem
   img
     margin: 0
-
-.hero, .foot
-  background: #f3f3f3
-
-.foot
-  z-index: 2
-  position: relative
-  padding-bottom: 3rem
-
-.colophon
-  font-size: 0.75rem
 
 .triple-card
   position: relative
@@ -529,7 +547,6 @@ nav.navbar-message
 .afm img
   width: 100%
 
-// Media Queries
 @include media-breakpoint-down(md)
   .trainer-testimonial
     text-align: center
