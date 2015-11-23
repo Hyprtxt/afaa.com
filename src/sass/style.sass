@@ -6,6 +6,9 @@ $assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets'
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+// Custom AFAA variables
+// @import "afaa_variables"
+
 // Core variables and mixins
 @import "bootstrap/scss/variables"
 @import "bootstrap/scss/mixins"
@@ -41,7 +44,8 @@ $link-hover-decoration:      underline
 //
 // Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:     'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif
+$font-family-condensed:        'Roboto Condensed', sans-serif
+$font-family-sans-serif:    'Open Sans', sans-serif
 // $font-family-serif:          Georgia, "Times New Roman", Times, serif
 // $font-family-monospace:      Menlo, Monaco, Consolas, "Courier New", monospace
 $font-family-base:           $font-family-sans-serif
@@ -74,7 +78,7 @@ $font-family-base:           $font-family-sans-serif
 // $line-height:                1.5
 //
 // $headings-margin-bottom:     ($spacer / 2)
-// $headings-font-family:       inherit
+$headings-font-family:       $font-family-condensed
 $headings-font-weight:       bold
 // $headings-line-height:       1.1
 // $headings-color:             inherit
@@ -97,10 +101,10 @@ $headings-font-weight:       bold
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-// $btn-padding-x:                  1rem
-// $btn-padding-y:                  .375rem
-// $btn-font-weight:                normal
-//
+$btn-padding-x:                  1rem
+$btn-padding-y:                  .5rem
+$btn-font-weight:                normal
+
 $btn-primary-color:              #fff
 $btn-primary-bg:                 $brand-primary
 $btn-primary-border:             $btn-primary-bg
@@ -189,6 +193,46 @@ $btn-border-radius-sm:           $btn-border-radius
 // $breadcrumb-active-color:       $gray-light
 // $breadcrumb-divider:            "/"
 
+
+// Forms
+
+$input-padding-x:                0.85rem
+$input-padding-y:                0.5rem
+
+$input-bg:                       $gray-lighter
+$input-bg-disabled:              $gray-light
+
+$input-color:                    $gray
+$input-border:                   darken( $gray-lighter, 5 )
+$input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075)
+
+$input-border-radius:            0
+$input-border-radius-lg:         $border-radius-lg
+$input-border-radius-sm:         $border-radius-sm
+
+$input-border-focus:             #66afe9
+$input-box-shadow-focus:         rgba(102,175,233,.6)
+
+$input-color-placeholder:        #999
+
+// $input-padding-x-sm:             .75rem
+// $input-padding-y-sm:             .275rem
+//
+// $input-padding-x-lg:             1.25rem
+// $input-padding-y-lg:             .75rem
+//
+// $input-height:                   (($font-size-base * $line-height) + ($input-padding-y * 2))
+// $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2))
+// $input-height-sm:                (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2))
+//
+// $form-group-margin-bottom:       $spacer-y
+//
+// $input-group-addon-bg:           $gray-lighter
+// $input-group-addon-border-color: $input-border
+//
+// $cursor-disabled:                not-allowed
+
+
 // Reset and dependencies
 @import "bootstrap/scss/normalize"
 @import "bootstrap/scss/print"
@@ -247,7 +291,7 @@ $btn-border-radius-sm:           $btn-border-radius
 @import "font-awesome/scss/larger"
 // @import "font-awesome/scss/fixed-width"
 // @import "font-awesome/scss/list"
-// @import "font-awesome/scss/bordered-pulled"
+@import "font-awesome/scss/bordered-pulled"
 // @import "font-awesome/scss/animated"
 // @import "font-awesome/scss/rotated-flipped"
 // @import "font-awesome/scss/stacked"
@@ -299,8 +343,21 @@ $btn-border-radius-sm:           $btn-border-radius
 h1, h2, h3, h4, h5, h6
   font-weight: normal
 
-.btn
+
+.form-control
+  font-size: $font-size-sm
+  &::placeholder
+    font-style: italic
+
+.btn,
+.btn-lg
+  font-weight: 400
   text-transform: uppercase
+  font-family: $font-family-condensed
+
+.btn-lg
+  font-size: 1.1rem
+  padding: 1.25rem 2.5rem
 
 // AFAA Styles
 body > nav.navbar-message
@@ -316,10 +373,16 @@ body > nav.navbar-message
     text-align: center
 
 .logo
-  width: 7rem
+  width: 7.5rem
   padding: 0.5rem
 
+.navbar-top,
+.navbar-main
+  font-family: $font-family-condensed
+  text-transform: uppercase
+
 .navbar-top
+  border-radius: 0
   padding: 0
   font-size: 0.75rem
   .container
@@ -327,13 +390,10 @@ body > nav.navbar-message
   .phone
     clear: right
     font-size: 1.5rem
+    color: $gray-light
 
-
-.navbar-top,
 .navbar-main
-  text-transform: uppercase
   // border-bottom: 1px solid $gray-dark
-  border-radius: 0
   a
     color: $gray-dark
   a:hover
@@ -364,6 +424,20 @@ img.circle
     padding: 1rem
   img
     margin: 0
+
+.fixed-wrap
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+
+.fixed-scroll
+  border-top: 1px solid $gray-lighter
+  margin-top: 38.9rem
+  padding-top: 2rem
+  background-color: white
+  position: relative
+  z-index: 2
 
 .hero, .foot
   background: #f3f3f3
@@ -404,6 +478,9 @@ img.circle
 .quote
   footer::before
     content: "\2014 \00A0"
+
+.afm img
+  width: 100%
 
 // Media Queries
 @include media-breakpoint-down(md)

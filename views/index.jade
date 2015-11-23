@@ -1,10 +1,17 @@
 extends ./layout/layout.jade
 
+block navigation
+
 block content
-  include ./block/hero
-  include ./block/triple
-  include ./block/list
-  //- include ./block/instructors
-  include ./block/magazine
-  //- //- include ./block/cta
-  include ./block/form
+  include ./block/message
+  .fixed-wrap
+    include ./block/navtop
+    include ./block/nav
+    include ./block/hero
+  .fixed-scroll
+    include ./block/triple
+    include ./block/list
+    //- include ./block/instructors
+    include ./block/magazine
+    //- //- include ./block/cta
+    include ./block/form

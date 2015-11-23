@@ -1,11 +1,10 @@
-nav.navbar.navbar-top.hidden-sm-down
+nav.navbar.navbar-top.hidden-sm-down.m-t-lg
   .container
-    
     a.pull-left.navbar-brand.text-bold(href=navbarBrand.link) 
       img.logo(src=assets+'/images/afaa.png')
-    ul.nav.navbar-nav.hidden-sm-down.pull-right
+    ul.nav.navbar-nav.hidden-sm-down.pull-right.m-t
       each nav in topNavigation
-        li.nav-item.m-l-lg(class=nav.liclass)
+        li.nav-item(class=nav.liclass)
           a.nav-link(href=nav.link, class=nav.class, id=nav.id) 
             if nav.icon
               i.fa(class=nav.icon)

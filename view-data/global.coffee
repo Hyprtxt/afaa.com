@@ -9,7 +9,7 @@ module.exports =
     '/js/script.js'
   ]
   stylesheets: [
-    '//fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
+    '//fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Roboto+Condensed:400,700'
     '/css/style.css'
   ]
   phone: '1 (800) 555-5555'
@@ -19,6 +19,7 @@ module.exports =
   topNavigation: [
     title: 'Cart'
     link: '#'
+    class: [ 'b-r', 'p-r' ]
     # icon: 'fa-shopping-cart'
   ,
     title: 'My Account'
