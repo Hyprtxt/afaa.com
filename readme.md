@@ -3,12 +3,7 @@
 
 A very dynamic program that dynamically creates a static website, ready for Sitefinity copy pasta action.
 
-## Style Guide
-
-Brand Primary:
-
-
-<div style="width: 100px;height: 100px" class="bg-primary">
+[W3 Validator](https://validator.w3.org/nu/?showoutline=yes&doc=http%3A%2F%2Fafaa.nasm.pw%2F)
 
 
 ## Sitefinity Notes

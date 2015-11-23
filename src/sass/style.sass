@@ -199,11 +199,11 @@ $btn-border-radius-sm:           $btn-border-radius
 $input-padding-x:                0.85rem
 $input-padding-y:                0.5rem
 
-$input-bg:                       $gray-lighter
+$input-bg:                       $gray-lightest
 $input-bg-disabled:              $gray-light
 
 $input-color:                    $gray
-$input-border:                   darken( $gray-lighter, 5 )
+$input-border:                   $gray-lighter
 $input-box-shadow:               inset 0 1px 1px rgba(0,0,0,.075)
 
 $input-border-radius:            0
@@ -278,6 +278,7 @@ $input-color-placeholder:        #999
 @import "bootstrap/scss/utilities"
 @import "bootstrap/scss/utilities-spacing"
 @import "bootstrap/scss/utilities-responsive"
+@import "bootstrap/scss/utilities-background"
 
 /*!
  *  Font Awesome 4.4.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -297,7 +298,9 @@ $input-color-placeholder:        #999
 // @import "font-awesome/scss/stacked"
 @import "font-awesome/scss/icons"
 
-// Custom Utility Classes
+/* * * * * * * * * * * * * *
+ *  Custom Utility Classes
+ * * * * * * * * * * * * * */
 
 .no-bull
   list-style-type: none
@@ -314,11 +317,27 @@ $input-color-placeholder:        #999
 .text-italic
   font-style: italic
 
+.text-condensed
+  font-family: $font-family-condensed
+
+.text-gray-lighter
+  color: $gray-lighter
+
+.text-small
+  font-size: smaller
+
+::selection
+  background: rgba( $brand-primary, 0.8 )
+  color: white
+
 .float-left
   float: left
 
 .float-right
   float: right
+
+.b-a
+  border: 1px solid $gray-lighter
 
 .b-r
   border-right: 1px solid $gray-lighter
@@ -329,9 +348,6 @@ $input-color-placeholder:        #999
 .flex
   display: flex
 
-.text-gray-lighter
-  color: $gray-lighter
-
 @include media-breakpoint-down(xs)
   .text-center-xs-down
     text-align: center
@@ -340,12 +356,20 @@ $input-color-placeholder:        #999
   .flex-md-up
     display: flex
 
+img
+  max-width: 100%
+
+img.rounded
+  border-radius: 0.5rem
+
+img.circle
+  border-radius: 50%
+
 // Bootstrap Overrides
-// Should edit variables instead
+// Should edit variables instead if possible
 
 h1, h2, h3, h4, h5, h6
   font-weight: normal
-
 
 .form-control
   font-size: $font-size-sm
@@ -362,7 +386,12 @@ h1, h2, h3, h4, h5, h6
   font-size: 1.1rem
   padding: 1.25rem 2.5rem
 
-// AFAA Styles
+/* * * * * * * * * * * * * *
+ *  AFAA Styles
+ * * * * * * * * * * * * * */
+
+// Navigation Styles
+
 nav.navbar-message
   background: $brand-primary
   color: white
@@ -406,31 +435,7 @@ nav.navbar-message
   a:hover
     color: $gray-light
 
-img
-  max-width: 100%
-
-img.rounded
-  border-radius: 0.5rem
-
-.colophon
-  font-size: 0.75rem
-
-img.circle
-  border-radius: 50%
-
-.text-small
-  font-size: smaller
-
-::selection
-  background: rgba( $brand-primary, 0.8 )
-  color: white
-
-.course
-  border: 1px solid $gray-light
-  .content
-    padding: 1rem
-  img
-    margin: 0
+// Fancy Fixed Scrolling for the Homepage
 
 .fixed-wrap
   position: fixed
@@ -446,6 +451,27 @@ img.circle
   position: relative
   z-index: 2
 
+@include media-breakpoint-down(md)
+  .fixed-scroll
+    margin-top: 40.4rem
+
+@include media-breakpoint-down(sm)
+  .fixed-scroll
+    margin-top: 34.5rem
+
+// Disorganized Stuff
+
+.hero .container
+  background: url(#{$assets}/images/hero.jpg)
+  min-height: 434px
+
+.course
+  border: 1px solid $gray-light
+  .content
+    padding: 1rem
+  img
+    margin: 0
+
 .hero, .foot
   background: #f3f3f3
 
@@ -454,21 +480,26 @@ img.circle
   position: relative
   padding-bottom: 3rem
 
-.hero .container
-  background: url(#{$assets}/images/hero.jpg)
-  min-height: 434px
+.colophon
+  font-size: 0.75rem
 
 .triple-card
   position: relative
   width: 262px
   margin: 0 auto
+  padding-top: 1.5rem
   .text
     position: absolute
     bottom: 0
     height: 5rem
     background: rgba( $brand-primary, 0.9 )
     color: white
-    padding: 1rem
+    padding: 1rem 3.5rem
+    font-family: $font-family-condensed
+    text-transform: uppercase
+    text-align: center
+    min-width: 100%
+
 .triple-list
   width: 262px
   margin: 0 auto
@@ -476,7 +507,7 @@ img.circle
   text-align: center
   padding: 0
   li
-    padding: 1rem 3rem
+    padding: 1rem 2rem
     border-bottom: 1px solid $gray-lighter
 
 .edge-block

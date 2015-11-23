@@ -1,0 +1,102 @@
+extends ./layout/layout.jade
+
+block content
+  .container
+    .row
+      .m-b-lg
+      .col-md-12
+        +title( 'Style Guide' )
+    .row.m-b
+      .col-md-4.m-b
+        h3 Fonts
+        p.text-condensed Roboto Condensed Regular
+        p.text-condensed.text-bold Roboto Condensed Bold
+        p Open Sans Regular
+        p.text-italic Open Sans Regular Italic
+        p.text-bold Open Sans Bold
+      .col-md-8.m-b
+        h3 Buttons
+        .btn.btn-primary.btn-sm Small Primary Button
+        .btn.btn-primary Primary Button
+        .btn.btn-primary.btn-lg Large Primary Button
+      .col-md-8.m-b-lg
+        .btn.btn-secondary.btn-sm Small Secondary Button
+        .btn.btn-secondary Secondary Button
+        .btn.btn-secondary.btn-lg Large Secondary Button
+    .row.m-b
+      .col-md-6
+        h3 Form Controls
+        form
+          .form-group.row
+            .col-sm-6
+              input.form-control(placeholder='With Placeholders')
+            .col-sm-6
+              input.form-control(placeholder='With Placeholders')
+          .form-group.row
+            .col-sm-12
+              input.form-control(placeholder='With Placeholders')
+          .form-group.row
+            .col-sm-12
+              select.form-control
+                option Select
+                option Option 1
+                option Option 2
+                option Option 3
+                option Option 4
+          .form-group.row
+            .col-sm-4
+              .checkbox
+                label
+                  input(type='checkbox')
+                  |  Check me out now
+            .col-sm-4
+              .checkbox
+                label
+                  input(type='checkbox')
+                  |  The Fung Sho
+            .col-sm-4
+              .checkbox
+                label
+                  input(type='checkbox')
+                  |  Brotha
+          .form-group.row
+            .col-sm-4
+              .radio
+                label
+                  input(type='radio', name='radiogroup')
+                  |  Pick me out now
+            .col-sm-4
+              .radio
+                label
+                  input(type='radio', name='radiogroup')
+                  |  The Fung Sho
+            .col-sm-4
+              .radio
+                label
+                  input(type='radio', name='radiogroup')
+                  |  Brotha
+          .form-group.row
+            .col-sm-12
+              label With Labels
+              input.form-control(placeholder='And Placeholders')
+          .form-group.row
+            .col-sm-12
+              label With Labels Only
+              input.form-control
+          .form-group.row
+            .col-sm-12
+              .btn.btn-primary Submit
+      .col-md-6
+        h3 Colors
+        .bg-primary.p-a.m-b
+          p.m-b-0 Brand Primary
+        .bg-success.p-a.m-b
+          p.m-b-0 Brand Success
+        .bg-info.p-a.m-b
+          p.m-b-0 Brand Info
+        .bg-warning.p-a.m-b
+          p.m-b-0 Brand Warning
+        .bg-danger.p-a.m-b
+          p.m-b-0 Brand Danger
+  hr.m-b-lg.m-t-lg
+  include ./block/form
