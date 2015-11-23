@@ -5,6 +5,7 @@ A very dynamic program that dynamically creates a static website, ready for Site
 
 [W3 Validator](https://validator.w3.org/nu/?showoutline=yes&doc=http%3A%2F%2Fafaa.nasm.pw%2F)
 
+[Google Fonts Collection](https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans:400,400italic,700|Roboto+Condensed:400,700)
 
 ## Sitefinity Notes
 
