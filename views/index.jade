@@ -1,10 +1,12 @@
 extends ./layout/layout.jade
 
 block navigation
+  include ./block/message
 
 block content
-  include ./block/message
   .fixed-wrap
+    .m-t-lg.hidden-sm-down
+    .mobile-nav-spacer.hidden-md-up
     include ./block/navtop
     include ./block/nav
     include ./block/hero

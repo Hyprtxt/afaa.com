@@ -1,6 +1,7 @@
 module.exports =
   assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets',
   title: 'AFAA'
+  description: 'AFAA Static'
   javascripts: [
     '/js/jquery/jquery.min.js'
     '/js/bootstrap/util.js'
