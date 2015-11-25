@@ -28,7 +28,7 @@ module.exports =
   ]
   navigation: [
     title: 'Group X Instructor'
-    link: '#'
+    link: '/group-x'
   ,
     title: 'Personal Trainer'
     link: '#'

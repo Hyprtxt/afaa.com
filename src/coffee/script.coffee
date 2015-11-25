@@ -3,6 +3,8 @@ console.log 'script loaded'
 # $unbreaker = $ '.unbreaker'
 # $unbreaker.remove()
 
-jQuery ( $ ) ->
-  $activeNavLinks = 'nav a[href^="/' + location.pathname.split("/")[1] + '"]'
-  $activeNavLinks.addClass 'active'
+# jQuery ( $ ) ->
+# $activeNavLinks = $ 'a[href^="/' + location.pathname.split("/")[1] + '"].nav-link'
+$activeNavLinks = $ 'a[href="/' + location.pathname.split("/")[1] + '"].nav-link'
+console.log $activeNavLinks
+$activeNavLinks.parent().addClass 'active'
