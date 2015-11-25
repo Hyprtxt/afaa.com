@@ -31,10 +31,10 @@ module.exports =
     link: '/group-x'
   ,
     title: 'Personal Trainer'
-    link: '#'
+    link: '/personal-trainer'
   ,
     title: 'Continuing Education'
-    link: '#'
+    link: '/education'
   ,
     title: 'Workshops'
     link: '#'

@@ -1,16 +1,16 @@
 .container
   .row
     .col-md-6
-      img.pull-right.m-b(src='http://placehold.it/600x600')
+      img.pull-right.m-b(src=assets+'/images/pdp1.jpg')
       a(href='#')
-        img.pull-right.m-l(src='http://placehold.it/80x80')
+        img.pull-right.m-l.product-thumb.desaturate.active(src=assets+'/images/related1.jpg')
       a(href='#')
-        img.pull-right.m-l(src='http://placehold.it/80x80')
+        img.pull-right.m-l.product-thumb.desaturate(src=assets+'/images/related2.jpg')
       a(href='#')
-        img.pull-right.m-l(src='http://placehold.it/80x80')
+        img.pull-right.m-l.product-thumb.desaturate(src=assets+'/images/related3.jpg')
       .clearfix
     .col-md-6
-      h3.text-bold.text-condensed Group X Instructor Certification
+      h3.text-bold.text-condensed=productTitle
       p Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.
       p Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise  certification,  you must pass the written examination and show proof of your current hands-on CPR/AED certification.
       p Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.
@@ -34,4 +34,5 @@
           a(href='#') 
             span.fa.fa-chevron-down
             |  Technical Requirements
-hr.m-b-lg.m-t-lgrs
+    .clearfix
+    hr.m-b-lg.m-t-lgrs
