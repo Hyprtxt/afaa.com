@@ -22,11 +22,9 @@ module.exports =
     title: 'Cart'
     link: '#'
     class: [ 'b-r', 'p-r' ]
-    # icon: 'fa-shopping-cart'
   ,
     title: 'My Account'
     link: '#'
-    # icon: 'fa-user'
   ]
   navigation: [
     title: 'Group X Instructor'

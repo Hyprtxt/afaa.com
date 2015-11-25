@@ -1,15 +1,16 @@
 nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
   .container
     // Mobile Navigation
-    button.navbar-toggler(data-toggle='collapse', data-target='#mobileNav') &#9776;
-    a.pull-right.mobile-logo(href=navbarBrand.link) 
+    button.navbar-toggler.pull-right(data-toggle='collapse', data-target='#mobileNav') &#9776;
+    a.pull-left.mobile-logo(href=navbarBrand.link) 
       img(src=assets+'/images/afaa.png', alt='Aerobics and Fitness Association of America')
-    a(href='', title='Your Shopping Cart').m-l
-      i.fa.fa-shopping-cart
-    a(href='', title='Your Account').m-l-md
-      i.fa.fa-user
+    //- a(href='', title='Your Shopping Cart').m-l
+    //-   i.fa.fa-shopping-cart
+    //- a(href='', title='Your Account').m-l-md
+    //-   i.fa.fa-user
     a(href='tel:214 799-3897').m-l-md
       i.fa.fa-phone
+      |  214-799-3897
     // Mobile Dropdown
     ul#mobileNav.nav.nav-pills.nav-stacked.collapse
       each nav in navigation
@@ -27,5 +28,4 @@ nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
         a.nav-link(href='tel:214 799-3897')
           i.fa.fa-phone
           |  1 (800) 555-5555
-.mobile-nav-spacer.hidden-md-up
-  .unbreaker SFS
+.mobile-nav-spacer.hidden-md-up &#8291;
