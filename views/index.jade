@@ -3,30 +3,30 @@ extends ./layout/layout.jade
 block navigation
   include ./block/message
 
-//- block content
-//-   include ./block/mobilenav
-//-   .m-t-lg.hidden-sm-down
-//-   .mobile-nav-spacer.hidden-md-up
-//-   include ./block/navtop
-//-   include ./block/nav
-//-   include ./block/hero
-//-   include ./block/triple
-//-   include ./block/list
-//-   include ./block/magazine
-//-   include ./block/form
-
 block content
   include ./block/mobilenav
-  .fixed-wrap
-    .m-t-lg.hidden-sm-down
-    .mobile-nav-spacer.hidden-md-up
-    include ./block/navtop
-    include ./block/nav
-    include ./block/hero
-  .fixed-scroll
-    include ./block/triple
-    include ./block/list
-    //- include ./block/instructors
-    include ./block/magazine
-    //- //- include ./block/cta
-    include ./block/form
+  //- Spacer for fixed top message bar
+  //- .m-t-lg.hidden-sm-down
+  include ./block/navtop
+  include ./block/nav
+  include ./block/hero
+  include ./block/triple
+  include ./block/list
+  include ./block/magazine
+  include ./block/form
+
+//- block content
+//-   include ./block/mobilenav
+//-   .fixed-wrap
+//-     .m-t-lg.hidden-sm-down
+//-     .mobile-nav-spacer.hidden-md-up
+//-     include ./block/navtop
+//-     include ./block/nav
+//-     include ./block/hero
+//-   .fixed-scroll
+//-     include ./block/triple
+//-     include ./block/list
+//-     //- include ./block/instructors
+//-     include ./block/magazine
+//-     //- //- include ./block/cta
+//-     include ./block/form
