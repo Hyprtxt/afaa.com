@@ -37,7 +37,7 @@ module.exports =
     link: '/education'
   ,
     title: 'Workshops'
-    link: '#'
+    link: '/courses'
   ,
     title: 'Recertification'
     link: '#'

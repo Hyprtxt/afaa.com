@@ -3,19 +3,7 @@ extends ./layout/layout.jade
 block content
   .container
     .row
-      .col-md-12.m-b
-        h2.text-center Why Choose AFAA
-        h5.text-center Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do
-      //- .col-md-push-1.col-md-10.m-b
-      //-   form
-      //-     .form-group
-      //-       .input-group
-      //-         .input-group-btn
-      //-           button.btn.btn-secondary.dropdown-toggle(data-toggle="dropdown") Filter
-      //-           .dropdown-menu
-      //-             a.dropdown-item(href='#') Filter
-      //-             a.dropdown-item(href='#') Sort
-      //-         input.form-control(placeholder='Search courses...')
+      .m-b-lg
       .col-md-12.m-b-lg
         ul.nav.nav-tabs
           li.nav-item
@@ -28,15 +16,20 @@ block content
             a.nav-link Sports Performance
           li.nav-item
             a.nav-link Continuing Education
-      .col-md-12.m-b
-        h3 Personal Training Certification
-        include ./block/course
-        include ./block/course
-        h3 Recertification
-        include ./block/course
-        include ./block/course
-        h3 Specializations
-        include ./block/course
-        include ./block/course
-  hr.m-b-lg.m-t-lg
-  include ./block/form
+      .col-md-12.m-b-lg
+        h3.m-b.text-center.text-bold.text-condensed.text-uppercase Personal Training Certification
+        .b-b
+          include ./block/course
+          include ./block/course
+      .col-md-12.m-b-lg
+        h3.m-b.text-center.text-bold.text-condensed.text-uppercase Recertification
+        .b-b
+          include ./block/course
+          include ./block/course
+      .col-md-12.m-b-lg
+        h3.m-b.text-center.text-bold.text-condensed.text-uppercase Specializations
+        .b-b
+          include ./block/course
+          include ./block/course
+  //- hr.m-b-lg.m-t-lg
+  //- include ./block/form
