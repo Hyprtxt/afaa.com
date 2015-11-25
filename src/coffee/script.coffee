@@ -11,3 +11,11 @@ $activeNavLinks.parent().addClass 'active'
 
 $('div').each ->
   $(this).html( $(this).html().replace(/&nbsp;/gi,'') )
+
+$('.product-thumb').on 'click', ( e ) ->
+  $this = $ this
+  $ 'img.active'
+    .removeClass 'active'
+  $ '.product-image'
+    .attr 'src', $this.attr('src')
+  $this.addClass 'active'
