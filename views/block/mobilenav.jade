@@ -12,7 +12,8 @@ nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
       i.fa.fa-phone
       |  214-799-3897
     // Mobile Dropdown
-    ul#mobileNav.nav.nav-pills.nav-stacked.collapse
+    .clearfix
+    ul#mobileNav.nav.nav-pills.nav-stacked.collapse.p-t
       each nav in navigation
         li.nav-item
           a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}

@@ -407,8 +407,10 @@ nav.navbar-message
 .mobile-nav-spacer
   margin-top: 3.45rem
 
-.navbar-main
+.navbar-main.hidden-sm-down
   padding: 0
+
+.navbar-main
   .navbar-nav
     width: 100%
     .nav-item
@@ -510,14 +512,21 @@ nav.navbar-message
 
 // PDP Styles
 
+.desaturate
+  opacity: 0.7
+  filter: grayscale( 100% )
+.desaturate.active
+  filter: none
+  opacity: 1
 .product-thumb
+  transition: 0.3s
   max-width: 120px
   max-height: 108px
-
-.desaturate
-  filter: grayscale( 100% )
-
-.desaturate.active
+  cursor: pointer
+.product-thumb:hover
+  opacity: 1
+  filter: grayscale( 80% )
+.product-thumb.active:hover
   filter: none
 
 // Disorganized Stuff

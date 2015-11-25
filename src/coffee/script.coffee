@@ -8,3 +8,6 @@ console.log 'script loaded'
 $activeNavLinks = $ 'a[href="/' + location.pathname.split("/")[1] + '"].nav-link'
 console.log $activeNavLinks
 $activeNavLinks.parent().addClass 'active'
+
+$('div').each ->
+  $(this).html( $(this).html().replace(/&nbsp;/gi,'') )
