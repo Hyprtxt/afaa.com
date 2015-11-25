@@ -9,7 +9,7 @@
     "install": "./node_modules/bower/bin/bower install --allow-root",
     "postinstall": "./node_modules/gulp/bin/gulp.js build",
     "start": "./node_modules/gulp/bin/gulp.js",
-    "deploy": "rsync -r --del ./static_generated nasm:/var/www/afaa.nasm.pw"
+    "deploy": "./scripts/deploy.sh"
   },
   "author": "Taylor Young (taylor@hyprtxt.com)",
   "license": "MIT",
