@@ -1,31 +1,32 @@
 nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
   .container
-    // Mobile Navigation
-    button.navbar-toggler.pull-right(data-toggle='collapse', data-target='#mobileNav') &#9776;
-    a.pull-left.mobile-logo(href=navbarBrand.link) 
-      img(src=assets+'/images/afaa.png', alt='Aerobics and Fitness Association of America')
-    //- a(href='', title='Your Shopping Cart').m-l
-    //-   i.fa.fa-shopping-cart
-    //- a(href='', title='Your Account').m-l-md
-    //-   i.fa.fa-user
-    a(href='tel:214 799-3897').m-l-md
-      i.fa.fa-phone
-      |  214-799-3897
-    // Mobile Dropdown
-    .clearfix
-    ul#mobileNav.nav.nav-pills.nav-stacked.collapse.p-t
-      each nav in navigation
+    .row
+      // Mobile Navigation
+      button.navbar-toggler.pull-right(data-toggle='collapse', data-target='#mobileNav') &#9776;
+      a.pull-left.mobile-logo(href=navbarBrand.link) 
+        img(src=assets+'/images/afaa.png', alt='Aerobics and Fitness Association of America')
+      //- a(href='', title='Your Shopping Cart').m-l
+      //-   i.fa.fa-shopping-cart
+      //- a(href='', title='Your Account').m-l-md
+      //-   i.fa.fa-user
+      a(href='tel:214 799-3897').m-l-md.mobile-phone
+        i.fa.fa-phone
+        |  214-799-3897
+      // Mobile Dropdown
+      .clearfix
+      ul#mobileNav.nav.nav-pills.nav-stacked.collapse.p-t
+        each nav in navigation
+          li.nav-item
+            a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
         li.nav-item
-          a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
-      li.nav-item
-        a.nav-link(href='', title='Your Shopping Cart')
-          i.fa.fa-shopping-cart
-          |  Shopping Cart
-      li.nav-item
-        a.nav-link(href='', title='Your Account')
-          i.fa.fa-user
-          |  Your Account
-      li.nav-item
-        a.nav-link(href='tel:214 799-3897')
-          i.fa.fa-phone
-          |  1 (800) 555-5555
+          a.nav-link(href='', title='Your Shopping Cart')
+            i.fa.fa-shopping-cart
+            |  Shopping Cart
+        li.nav-item
+          a.nav-link(href='', title='Your Account')
+            i.fa.fa-user
+            |  Your Account
+        li.nav-item
+          a.nav-link(href='tel:214 799-3897')
+            i.fa.fa-phone
+            |  1 (800) 555-5555
