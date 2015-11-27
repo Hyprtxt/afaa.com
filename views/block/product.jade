@@ -14,7 +14,7 @@
       each description in product.description
         p=description
       p.h3.m-b-md $#{product.price}
-      .btn.btn-primary.btn-lg.m-b-lg 
+      a(href=product.link).btn.btn-primary.btn-lg.m-b-lg 
         p.p-x-lg.m-b-0 Enroll Now
       p=product.featureDescription
       ul.p-l-md
@@ -29,4 +29,3 @@
             span.fa.fa-chevron-down
             |  Technical Requirements
     .clearfix
-    hr.m-b-lg.m-t-lgrs

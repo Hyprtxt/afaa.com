@@ -5,4 +5,5 @@ block content
     +title( 'Education Products', 'For a better life', 'm-b-md p-t-lg' )
     .clearfix
   include ../block/product
-  include ../block/related
+  if product.relatedProducts
+    include ../block/related

@@ -20,18 +20,18 @@ module.exports =
     link: '/'
   topNavigation: [
     title: 'Cart'
-    link: '#'
+    link: 'https://shop.nasm.org/ShoppingCart.aspx'
     class: [ 'b-r', 'p-r' ]
   ,
     title: 'My Account'
-    link: '#'
+    link: 'https://shop.nasm.org/account.aspx'
   ]
   navigation: [
     title: 'Group X Instructor'
-    link: '/group-x'
+    link: '/products/group-x'
   ,
     title: 'Personal Trainer'
-    link: '/personal-trainer'
+    link: '/products/certified-personal-trainer-certification'
   ,
     title: 'Continuing Education'
     link: '/education'
