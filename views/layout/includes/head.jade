@@ -7,5 +7,7 @@ head
   meta(charset='utf-8')
   meta(name='robots', content='noindex,nofollow')
   link(rel='icon', type='image/x-icon', href='/favicon.ico')
+  if canonical
+    link(rel='canonical', href=canonical)
   each style in stylesheets
     link(rel='stylesheet', href=style)

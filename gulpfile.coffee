@@ -137,6 +137,7 @@ modelsToJade = ( model ) ->
       .pipe data ( file, next ) ->
         requireCoffee path, ( data ) ->
           jadeData.product = data
+          jadeData.canonical = '/' + filename.replace '.html', ''
           next undefined, jadeData
       .pipe jade
         pretty: true
