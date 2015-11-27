@@ -9,6 +9,14 @@ coffee = require 'gulp-coffee'
 livereload = require 'gulp-livereload'
 rimraf = require 'rimraf'
 list = require 'gulp-task-listing'
+glob = require 'glob'
+q = require 'q'
+rename = require 'gulp-rename'
+jade = require 'gulp-jade'
+fs = require 'fs'
+coffeeScript = require 'coffee-script'
+merge = require 'merge-stream'
+data = require 'gulp-data'
 
 dest = './static_generated'
 
@@ -74,23 +82,29 @@ gulp.task 'watch', [ 'render' ], ->
     start: true
 
 # static site stuff
-jade = require 'gulp-jade'
-fs = require 'fs'
-coffeeScript = require 'coffee-script'
-
-_jadeData = {}
-gulp.task 'setupJadeData', ( next ) ->
-  fs.readFile './view-data/global.coffee', 'utf8', ( err, _data ) ->
+getObject = ( path, next ) ->
+  fs.readFile path, 'utf8', ( err, _data ) ->
     if err
       throw err
     else
       coffeeopts =
         bare: true
         header: false
-      _jadeData = eval coffeeScript.compile _data, coffeeopts
+      next( eval coffeeScript.compile _data, coffeeopts )
+    # return next()
+
+_jadeData = {}
+gulp.task 'setupJadeData', ( next ) ->
+  getObject './view-data/global.coffee', ( obj ) ->
+    _jadeData = obj
     return next()
 
-_jadeSrc = [ './views/**/*.jade', '!./views/layout/**', '!./views/block/**' ]
+_jadeSrc = [
+  './views/**/*.jade'
+  '!./views/layout/**'
+  '!./views/block/**'
+  '!./views/template/**'
+]
 
 doJade = ( stream ) ->
   return stream.pipe jade
@@ -110,11 +124,29 @@ gulp.task 'jadeSingle', [ 'setupJadeData' ], ( next ) ->
       extension: '.html'
   return doJade stream
 
+gulp.task 'products', [ 'setupJadeData' ], ->
+  products = glob.sync './view-data/products/**.coffee'
+  jadeData = _jadeData
+  jadeData.javascripts.push '/js/imageSwapper.js'
+  tasks = products.map ( path, idx ) ->
+    name = path.replace( './view-data/', '' ).replace( '.coffee', '.html' )
+    # console.log name
+    return gulp.src './views/template/products.jade'
+      .pipe data ( file, next ) ->
+        getObject path, ( data ) ->
+          jadeData.product = data
+          next undefined, jadeData
+      .pipe jade
+        pretty: true
+      .pipe rename name
+      .pipe gulp.dest dest
+  return merge tasks
+
 gulp.task 'copystatic', ->
   gulp.src [ './static/**', dest + '/**' ]
     .pipe gulp.dest dest
 
-gulp.task 'render', [ 'copystatic', 'jade', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ]
+gulp.task 'render', [ 'products', 'copystatic', 'jade', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ]
 # , ( cb ) ->
   # rimraf dest + '/map', cb
 

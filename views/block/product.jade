@@ -1,29 +1,25 @@
 .container
   .row
     .col-md-6.m-b-lg
-      img.pull-right.m-b.product-image(src=assets+'/images/pdp1.jpg')
+      img.pull-right.m-b.product-image(src=assets+product.images[0])
       .clearfix
-      img.pull-right.m-l.product-thumb.desaturate.active(src=assets+'/images/related1.jpg')
-      img.pull-right.m-l.product-thumb.desaturate(src=assets+'/images/related2.jpg')
-      img.pull-right.m-l.product-thumb.desaturate(src=assets+'/images/related3.jpg')
+      each image, idx in product.images
+        if idx == 0
+          img.pull-right.m-l.product-thumb.desaturate.active(src=assets+image)
+        else
+          img.pull-right.m-l.product-thumb.desaturate(src=assets+image)
       .clearfix
     .col-md-6
-      h3.text-bold.text-condensed=productTitle
-      p Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.
-      p Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise  certification,  you must pass the written examination and show proof of your current hands-on CPR/AED certification.
-      p Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.
-      p.h3.m-b-md $699
+      h3.text-bold.text-condensed=product.title
+      each description in product.description
+        p=description
+      p.h3.m-b-md $#{product.price}
       .btn.btn-primary.btn-lg.m-b-lg 
         p.p-x-lg.m-b-0 Enroll Now
-      p The Personal Fitness Trainer program includes:
+      p=product.featureDescription
       ul.p-l-md
-        li 14 on-line video lectures 
-        li Primary Group Exercise downloadable study guide
-        li Sample multiple-choice questions
-        li Video lecture review clips
-        li An independently monitored and authenticated written exam
-        li One-year AFAA membership and a digital subscription to American Fitness® magazine 
-        li AFAA Certified Personal Trainer certification and I.D. card (upon passing the written examination and providing proof of current hands-on CPR/AED certification).
+        each feature in product.features
+          li=feature
       hr
       p The program includes video lectures. In order to play them, you will need Adobe Flash installed on your computer. 
         a(href='#get-flash') Download the free program.
