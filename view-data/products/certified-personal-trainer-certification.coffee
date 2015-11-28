@@ -8,7 +8,7 @@ module.exports =
   ]
   featureDescription: 'The Personal Fitness Trainer program includes:'
   features: [
-    '14 on-line video lectures '
+    '14 on-line video lectures'
     'Primary Group Exercise downloadable study guide'
     'Sample multiple-choice questions'
     'Video lecture review clips'
