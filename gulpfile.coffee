@@ -1,3 +1,5 @@
+#!/usr/bin/env coffee
+
 gulp = require 'gulp'
 changed = require 'gulp-changed'
 wait = require 'gulp-wait'
