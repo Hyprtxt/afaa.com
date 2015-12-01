@@ -14,14 +14,14 @@ module.exports =
     'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
     '/css/style.css'
   ]
-  phone: '1 (800) 555-5555'
+  phone: '800-555-5555'
   navbarBrand:
     title: 'AFAA'
     link: '/'
   topNavigation: [
     title: 'Cart'
     link: 'https://shop.nasm.org/ShoppingCart.aspx'
-    class: [ 'b-r', 'p-r' ]
+    class: [ 'p-r' ]
   ,
     title: 'My Account'
     link: 'https://shop.nasm.org/account.aspx'

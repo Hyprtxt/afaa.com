@@ -16,6 +16,7 @@ $assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets'
 //
 // Grayscale and brand colors for use across Bootstrap.
 
+$gray-darkest:              #121214
 $gray-dark:                 #373a3c
 $gray:                      #55595c
 $gray-light:                #818a91
@@ -420,6 +421,10 @@ nav.navbar-message
       text-align: center
       padding-top: 0.4rem
       padding-bottom: 0.4rem
+      a
+        color: $gray-darkest
+        color: black
+        // color: red
     .nav-item.active
       background: $brand-primary
       a
@@ -436,8 +441,8 @@ nav.navbar-message
 
 .navbar-top,
 .navbar-main
-  font-family: $font-family-condensed
-  text-transform: uppercase
+  // font-family: $font-family-condensed
+  text-transform: capitalize
 
 .navbar-top
   border-radius: 0
@@ -447,7 +452,7 @@ nav.navbar-message
     border-bottom: 1px solid $gray-lighter
   .phone
     clear: right
-    font-size: 1.5rem
+    font-size: 1.2rem
     color: $gray-light
 
 .mobile-phone
@@ -461,6 +466,10 @@ nav.navbar-message
     color: $gray-dark
   a:hover
     color: $gray-light
+
+@include media-breakpoint-down(md)
+  .navbar-main
+    font-size: 0.85rem;
 
 // Footer
 
