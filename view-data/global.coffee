@@ -34,13 +34,13 @@ module.exports =
     link: '/products/certified-personal-trainer-certification'
   ,
     title: 'Continuing Education'
-    link: '/education'
+    link: '/continuing-education'
   ,
     title: 'Workshops'
-    link: '/courses'
+    link: '/workshops'
   ,
     title: 'Recertification'
-    link: '#'
+    link: '/recertification'
   ]
   timestamp: new Date()
   env: process.env.NODE_ENV

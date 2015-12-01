@@ -1,5 +1,4 @@
 module.exports =
-  filename: 'group-x-instructor'
   title: 'Group X Instructor'
   description: [
     'Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.'

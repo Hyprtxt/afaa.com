@@ -13,19 +13,22 @@
       h3.text-bold.text-condensed=product.title
       each description in product.description
         p=description
-      p.h3.m-b-md $#{product.price}
+      p.h3.m-b-md.pull-left $#{product.price}
+      p.m-l.pull-left #{product.ceus} CEU's
+      .clearfix
       a(href=product.link).btn.btn-primary.btn-lg.m-b-lg 
         span.p-x-lg.m-b-0 Enroll Now
-      p=product.featureDescription
-      ul.p-l-md
-        each feature in product.features
-          li=feature
-      hr
-      p The program includes video lectures. In order to play them, you will need Adobe Flash installed on your computer. 
-        a(href='#get-flash') Download the free program.
-      .bg-grey
-        p.p-x-md.p-y 
-          a(href='#') 
-            span.fa.fa-chevron-down
-            |  Technical Requirements
+      if product.featureDescription 
+        p=product.featureDescription
+        ul.p-l-md
+          each feature in product.features
+            li=feature
+        hr
+        p The program includes video lectures. In order to play them, you will need Adobe Flash installed on your computer. 
+          a(href='#get-flash') Download the free program.
+        .bg-grey
+          p.p-x-md.p-y 
+            a(href='#') 
+              span.fa.fa-chevron-down
+              |  Technical Requirements
     .clearfix
