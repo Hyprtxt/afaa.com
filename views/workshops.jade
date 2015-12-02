@@ -4,28 +4,47 @@ block content
   .bg-grey.m-b-lg
     +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
     .clearfix
-  .container
+  .container.b-b
     .row.m-t-lg
       .col-md-8
         include:markdown-it ../markdown/workshops/group-fitness.md
       .col-md-4
-        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#group') Find a workshop near you
-        ul.bg-primary.collapse.p-y#group
-          li What
-          li Things
-          li Things
-          li Things
-          li Things
-      hr
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#group') Find a workshop near you 
+          span.fa.fa-chevron-down
+        ul.bg-primary.collapse.p-y.no-bull#group
+          li.b-b(data-toggle='collapse', data-target='#subgroup') What 
+            span.fa.fa-chevron-down
+            .collapse#subgroup
+              p This is a bit more info
+          li.b-b(data-toggle='collapse', data-target='#subgroup2') Open Me 
+            span.fa.fa-chevron-down
+            .collapse#subgroup2
+              p This is a bit more info
+          li.b-b(data-toggle='collapse', data-target='#subgroup3') More info 
+            span.fa.fa-chevron-down
+            .collapse#subgroup3
+              p This is a bit more info
+              p This is lots more info!!
+  .container.b-b
+    .row.m-t-lg
       .col-md-8
         include:markdown-it ../markdown/workshops/personal-fitness.md
       .col-md-4
-        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#personal') Find a workshop near you
-        ul.bg-primary.collapse.p-y#personal
-          li What
-          li Things
-          li Things
-          li Things
-          li Things
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#personal') Find a workshop near you 
+          span.fa.fa-chevron-down
+        ul.bg-primary.collapse.p-y.no-bull#personal
+          li.b-b(data-toggle='collapse', data-target='#asubgroup') What 
+            span.fa.fa-chevron-down
+            .collapse#asubgroup
+              p This is a bit more info
+          li.b-b(data-toggle='collapse', data-target='#asubgroup2') Open Me 
+            span.fa.fa-chevron-down
+            .collapse#asubgroup2
+              p This is a bit more info
+          li.b-b(data-toggle='collapse', data-target='#asubgroup3') More info 
+            span.fa.fa-chevron-down
+            .collapse#asubgroup3
+              p This is a bit more info
+              p This is lots more info!!
   hr.m-b-lg.m-t-lg
   include ./block/form
