@@ -1,11 +1,31 @@
 extends ./layout/layout.jade
 
 block content
+  .bg-grey.m-b-lg
+    +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
+    .clearfix
   .container
     .row.m-t-lg
-      //- +title( 'Digital Ocean', 'Benefits and Drawbacks' )
-      //- .col-md-8.col-md-push-2
-      .col-lg-8
-        include:markdown-it ../markdown/workshops.md
+      .col-md-8
+        include:markdown-it ../markdown/workshops/group-fitness.md
+      .col-md-4
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#group') Find a workshop near you
+        ul.bg-primary.collapse.p-y#group
+          li What
+          li Things
+          li Things
+          li Things
+          li Things
+      hr
+      .col-md-8
+        include:markdown-it ../markdown/workshops/personal-fitness.md
+      .col-md-4
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#personal') Find a workshop near you
+        ul.bg-primary.collapse.p-y#personal
+          li What
+          li Things
+          li Things
+          li Things
+          li Things
   hr.m-b-lg.m-t-lg
   include ./block/form
