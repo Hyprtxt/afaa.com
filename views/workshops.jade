@@ -3,8 +3,9 @@ extends ./layout/layout.jade
 block content
   .container
     .row.m-t-lg
-      +title( 'Digital Ocean', 'Benefits and Drawbacks' )
-      .col-md-8.col-md-push-2
-        include:markdown-it ../markdown/digitalocean.md
+      //- +title( 'Digital Ocean', 'Benefits and Drawbacks' )
+      //- .col-md-8.col-md-push-2
+      .col-lg-8
+        include:markdown-it ../markdown/workshops.md
   hr.m-b-lg.m-t-lg
   include ./block/form
