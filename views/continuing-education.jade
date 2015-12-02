@@ -17,13 +17,13 @@ mixin course( product )
     .clearfix
 
 mixin section( section, products )
-  .col-md-12.m-b-lg
+  .col-md-12.m-b-lg.b-b
     h3.m-b.text-center.text-bold.text-uppercase=section
-    .b-b
     each product in products
       if product.types != undefined
         if product.types[0] === section
           +course( product )
+    .clearfix
 
 block content
   .container
