@@ -1,5 +1,30 @@
 extends ./layout/layout.jade
 
+mixin course( product )
+  .course.p-y
+    .col-md-3.col-lg-2.p-a-0.hidden-sm-down
+      img( src=assets+product.images[0] )
+    .col-md-6.col-lg-7.content
+      a(href='/products/'+product.filename)
+        h5.pull-left=product.title
+      .clearfix
+      each description in product.description
+        p.text-small=description
+    .col-md-3.col-lg-3
+      .m-b-lg.hidden-sm-down
+      .m-b.hidden-md-up
+      a(href='/products/'+product.filename).pull-right.btn.btn-primary.btn-block Enroll Now
+    .clearfix
+
+mixin section( section, products )
+  .col-md-12.m-b-lg
+    h3.m-b.text-center.text-bold.text-uppercase=section
+    .b-b
+    each product in products
+      if product.types != undefined
+        if product.types[0] === section
+          +course( product )
+
 block content
   .container
     .row
@@ -7,27 +32,18 @@ block content
       .col-md-12.m-b-lg
         ul.nav.nav-tabs
           li.nav-item
-            a.nav-link.active Certification
+            a.nav-link.active These
           li.nav-item
-            a.nav-link Recertification
+            a.nav-link Are
           li.nav-item
-            a.nav-link Specializations
+            a.nav-link Tabs
           li.nav-item
-            a.nav-link Sports Performance
+            a.nav-link For
           li.nav-item
-            a.nav-link Continuing Education
-      .col-md-12.m-b-lg
-        h3.m-b.text-center.text-bold.text-uppercase Personal Training Certification
-        .b-b
-          include ./block/course
-          include ./block/course
-      .col-md-12.m-b-lg
-        h3.m-b.text-center.text-bold.text-uppercase Recertification
-        .b-b
-          include ./block/course
-          include ./block/course
-      .col-md-12.m-b-lg
-        h3.m-b.text-center.text-bold.text-uppercase Specializations
-        .b-b
-          include ./block/course
-          include ./block/course
+            a.nav-link Filtering
+
+      //- pre!=JSON.stringify( product, null, 2 )
+
+      +section( 'Specializations', products )
+
+      +section( 'CEU Corner', products )

@@ -1,5 +1,7 @@
 ## GROUP FITNESS TRAINER
 
+    <!-- <img src=''> -->
+
 8 CEUs
 
 **NEW** Group Fitness Trainer **PRACTICAL WORKSHOP**

@@ -73,11 +73,15 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'static/**/*.*', ['reload']
   gulp.watch 'src/sass/**/*.sass', ['sass']
   gulp.watch 'src/coffee/**/*.coffee', ['coffee']
-  gulp.watch 'views/*.jade', ['jadeSingle']
+  gulp.watch [
+    'views/*.jade'
+    'views/template/continuing-education.jade'
+    ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
   gulp.watch 'views/layout/**/*.jade', ['jade']
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
+  gulp.watch 'views/template/continuing-education.jade', ['education']
   gulp.watch 'view-data/products/*.coffee', ['products']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
@@ -108,6 +112,7 @@ _jadeSrc = [
   '!./views/layout/**'
   '!./views/block/**'
   '!./views/template/**'
+  '!./views/continuing-education.jade'
 ]
 
 doJade = ( stream ) ->
@@ -131,7 +136,7 @@ gulp.task 'jadeSingle', [ 'setupJadeData' ], ( next ) ->
 modelsToJade = ( model ) ->
   models = glob.sync './view-data/' + model + '/**.coffee'
   jadeData = _jadeData
-  jadeData.javascripts.push '/js/imageSwapper.js'
+  jadeData.javascripts.push '/js/imageSwapper.js' # Cant do this cause sitefinity...
   tasks = models.map ( path, idx ) ->
     filename = path.replace( './view-data/', '' ).replace( '.coffee', '.html' )
     # console.log name
@@ -152,11 +157,40 @@ modelsToJade = ( model ) ->
 gulp.task 'products', [ 'setupJadeData' ], ->
   return modelsToJade 'products'
 
+gulp.task 'education', [ 'setupJadeData' ], ->
+  models = glob.sync './view-data/products/**.coffee'
+  productData = models.map ( path, idx ) ->
+    product = require path
+    product.filename = path
+      .replace './view-data/products/', ''
+      .replace '.coffee', '.html'
+    return product
+  # console.log data
+  eduData = _jadeData
+  eduData.products = productData
+  gulp.src './views/continuing-education.jade'
+    .pipe jade
+      locals: eduData
+      pretty: true
+    .pipe gulp.dest dest
+    .pipe wait 1000
+    .pipe livereload()
+
 gulp.task 'copystatic', ->
   gulp.src [ './static/**', dest + '/**' ]
     .pipe gulp.dest dest
 
-gulp.task 'render', [ 'products', 'jade', 'copystatic', 'copyfont', 'copycss', 'sass', 'copyjs', 'coffee' ]
+gulp.task 'render', [
+  'education'
+  'products'
+  'jade'
+  'copystatic'
+  'copyfont'
+  'copycss'
+  'sass'
+  'copyjs'
+  'coffee'
+]
 # , ( cb ) ->
   # rimraf dest + '/map', cb
 
