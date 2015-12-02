@@ -1,0 +1,15 @@
+extends ./layout/layout.jade
+
+block content
+  .container
+    .row.m-t-lg
+      //- +title( 'Digital Ocean', 'Benefits and Drawbacks' )
+      //- .col-md-8.col-md-push-2
+      .col-md-6
+        include:markdown-it ../markdown/workshops/group-fitness.md
+        .btn.btn-lg.btn-primary Find a workshop near you
+      .col-md-6
+        include:markdown-it ../markdown/workshops/personal-fitness.md
+        .btn.btn-lg.btn-primary Call to Action!
+  hr.m-b-lg.m-t-lg
+  include ./block/form
