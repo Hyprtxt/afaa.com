@@ -19,7 +19,7 @@ module.exports =
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   images: [
     '/images/pdp1.jpg'
-    '/images/related2.jpg'
-    '/images/related4.jpg'
+    '/images/product2.jpg'
+    '/images/product4.jpg'
   ]
   relatedProducts: true
