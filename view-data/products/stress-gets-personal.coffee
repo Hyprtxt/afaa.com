@@ -4,7 +4,7 @@ module.exports =
     'This program focuses on the sources and symptoms of stress and techniques that can be used to help manage stress. Techniques include stress-less thinking, relaxation, and imagination-meditation-affirmation, proper nutrition, exercise, and biofeedback.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '6'

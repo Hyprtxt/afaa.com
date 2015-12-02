@@ -4,7 +4,7 @@ module.exports =
     'This program is the starting point for aspiring yoga teachers.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '3'

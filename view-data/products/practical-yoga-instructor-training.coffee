@@ -4,7 +4,7 @@ module.exports =
     'Learn how to confidently lead a safe and challenging multi-level yoga class in a variety of settings. The course curriculum combines AFAA’s traditional methods of teaching group exercise with our unique “Sunrise Yoga Format™” approach to yoga.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '7'

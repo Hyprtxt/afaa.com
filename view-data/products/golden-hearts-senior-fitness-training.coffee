@@ -4,7 +4,7 @@ module.exports =
     'Golden Hearts focuses on designing and teaching fitness programs for seniors. You will learn the physiological changes that occur with aging, the role exercise plays in chronic disease management and safe and effective exercise program design for the healthy active to sedentary senior.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '7'

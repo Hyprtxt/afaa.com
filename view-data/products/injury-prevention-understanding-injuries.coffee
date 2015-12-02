@@ -4,7 +4,7 @@ module.exports =
     'Understanding Injuries defines categories of injuries, stages of inflammation and repair, and basic injury terminology. You’ll learn about commonly tight muscles, and high-risk exercises. Intrinsic and extrinsic risk factors for injury are covered, as well as the AFAA 5 Questions and the Exercise Continuum.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '4'

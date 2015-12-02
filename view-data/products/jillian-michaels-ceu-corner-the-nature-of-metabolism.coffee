@@ -4,7 +4,7 @@ module.exports =
     'In The Nature of Metabolism, you’ll explore the amazing process of metabolism, including the key hormones involved in weight loss regulation. Jillian details the effects of these hormones and offers tips to help manage their levels for optimal weight loss.'
   ]
   types: [
-    'CEUs'
+  
     'CEU Corner'
   ]
   ceus: '3'

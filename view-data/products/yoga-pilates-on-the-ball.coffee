@@ -4,7 +4,7 @@ module.exports =
     'Expand your knowledge and explore new exercises by adding a large stability ball and a small Pilates ball to your Yoga and Pilates fusion workouts. Learn techniques to increase strength, flexibility and muscle tone with a focus on improving posture, proprioception and functional strength.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '7'

@@ -4,7 +4,7 @@ module.exports =
     'Boot camp workouts are a great way to give that extra push, intensify workouts and break free from boring regimens. In Need Motivation, Jillian introduces a boot camp style workout routine designed to motivate your clients and help build their self-esteem.'
   ]
   types: [
-    'CEUs'
+  
     'CEU Corner'
   ]
   ceus: '3'

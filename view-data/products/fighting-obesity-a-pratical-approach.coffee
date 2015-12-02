@@ -4,7 +4,7 @@ module.exports =
     'This program includes theoretical review and practical applications suitable for the large-sized, overweight, and obese exerciser. Five Complete 10™ Workouts and a downloadable 52-page outline are included.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '7'

@@ -4,7 +4,7 @@ module.exports =
     'This program is ideal for personal fitness trainers wanting to expand their services to include partners, small groups, seasons, and sports specific formats.'
   ]
   types: [
-    'CEUs'
+  
     'Specializations'
   ]
   ceus: '5'
