@@ -4,10 +4,9 @@ module.exports =
     'This program is the starting point for aspiring yoga teachers.'
   ]
   types: [
-  
-    'Specializations'
+    'Continuing Education'
   ]
-  ceus: '3'
+  ceus: '4'
   price: '49'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   images: [

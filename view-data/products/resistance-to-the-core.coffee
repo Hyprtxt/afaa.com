@@ -4,10 +4,9 @@ module.exports =
     'If designed and used correctly, weighted vests provide a cost effective way to enhance workouts. This program will help you to understand the benefits of weighted vests, how to optimize their use, and which resistance training exercises are most appropriate.'
   ]
   types: [
-  
-    'CEU Corner'
+    'Continuing Education'
   ]
-  ceus: '3'
+  ceus: '4'
   price: '49'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   images: [

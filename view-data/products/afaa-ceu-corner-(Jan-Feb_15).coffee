@@ -4,7 +4,6 @@ module.exports =
     'content'
   ]
   types: [
-  
     'CEU Corner'
   ]
   ceus: '3'

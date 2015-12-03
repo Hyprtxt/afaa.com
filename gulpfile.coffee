@@ -181,15 +181,15 @@ gulp.task 'copystatic', ->
     .pipe gulp.dest dest
 
 gulp.task 'render', [
-  'education'
-  'products'
-  'jade'
   'copystatic'
   'copyfont'
   'copycss'
   'sass'
   'copyjs'
   'coffee'
+  'education'
+  'products'
+  'jade'
 ]
 # , ( cb ) ->
   # rimraf dest + '/map', cb

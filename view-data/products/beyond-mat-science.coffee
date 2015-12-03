@@ -4,7 +4,6 @@ module.exports =
     'This course is focused on a scope of practice appropriate for fitness professionals.'
   ]
   types: [
-  
     'Specializations'
   ]
   ceus: '7'

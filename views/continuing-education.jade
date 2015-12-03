@@ -33,8 +33,10 @@ block content
     .row
       .m-b-lg
       .col-md-12.m-b-lg
-        - var educationSections = [ 'Specializations', 'CEU Corner' ];
+        - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
         ul.nav.nav-tabs.m-b-lg
+          li.nav-item
+            a.nav-link.active(href='#all') Everything
           each section in educationSections
             li.nav-item
               a.nav-link=section

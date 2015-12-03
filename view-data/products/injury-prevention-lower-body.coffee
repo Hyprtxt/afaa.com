@@ -4,8 +4,7 @@ module.exports =
     'This program explores injury prevention for the lower body and reviews anatomy and structure, muscle movements of the hip, knee, lower leg, ankle and foot, common injuries and misalignments, major mechanisms of injuries, prevention strategies, and basic rehabilitation/post-physical therapy exercises. Diagrams and examples of exercise progression ideas for the major muscles of the hips, knees and lower leg are included.'
   ]
   types: [
-  
-    'Specializations'
+    'Continuing Education'
   ]
   ceus: '4'
   price: '59'

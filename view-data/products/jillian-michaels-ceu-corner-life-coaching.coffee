@@ -4,10 +4,9 @@ module.exports =
     'In Jillian’s Life Coaching course, Jillian shares with you her knowledge and experience for successful lifestyle changes. You’ll not only learn the importance of a healthful diet and regular exercise, but she’ll also share her proven techniques for coaching clients through rough spots with visualization and positive affirmations.'
   ]
   types: [
-  
-    'CEU Corner'
+    'Continuing Education'
   ]
-  ceus: '3'
+  ceus: '4'
   price: '35'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   images: [

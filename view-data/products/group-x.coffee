@@ -16,7 +16,11 @@ module.exports =
     'AFAA Certified Personal Trainer certification and I.D. card (upon passing the written examination and providing proof of current hands-on CPR/AED certification).'
   ]
   price: '699'
+  ceus: 'TBD'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  types: [
+    'Group X'
+  ]
   images: [
     '/images/product2.jpg'
     '/images/product3.jpg'
