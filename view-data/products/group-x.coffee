@@ -23,7 +23,5 @@ module.exports =
   ]
   images: [
     '/images/product2.jpg'
-    '/images/product3.jpg'
-    '/images/product4.jpg'
   ]
   relatedProducts: false
