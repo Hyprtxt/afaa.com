@@ -16,6 +16,8 @@ $assets: '/Sitefinity/WebsiteTemplates/AFAA/App_Themes/AFAA_Theme/assets'
 //
 // Grayscale and brand colors for use across Bootstrap.
 
+$border-gray:  #ddd
+
 $gray-darkest:              #121214
 $gray-dark:                 #373a3c
 $gray:                      #55595c
@@ -333,21 +335,21 @@ $input-color-placeholder:        #999
   float: right
 
 .b-a
-  border: 1px solid $gray-lighter
+  border: 1px solid $border-gray
 .b-t
-  border-top: 1px solid $gray-lighter
+  border-top: 1px solid $border-gray
 .b-r
-  border-right: 1px solid $gray-lighter
+  border-right: 1px solid $border-gray
 .b-b
-  border-bottom: 1px solid $gray-lighter
+  border-bottom: 1px solid $border-gray
 .b-l
-  border-left: 1px solid $gray-lighter
+  border-left: 1px solid $border-gray
 .b-y
-  border-right: 1px solid $gray-lighter
-  border-left: 1px solid $gray-lighter
+  border-right: 1px solid $border-gray
+  border-left: 1px solid $border-gray
 .b-x
-  border-top: 1px solid $gray-lighter
-  border-bottom: 1px solid $gray-lighter
+  border-top: 1px solid $border-gray
+  border-bottom: 1px solid $border-gray
 
 .flex
   display: flex
@@ -414,21 +416,24 @@ nav.navbar-message
 
 .navbar-main
   .navbar-nav
-    border-bottom: 1px solid $gray-lighter
+    border-bottom: 1px solid $border-gray
     width: 100%
     .nav-item
       margin: 0
       width: 20%
       text-align: center
-      padding-top: 0.4rem
-      padding-bottom: 0.4rem
+      border-bottom: 0.3rem solid white
       a
         color: $gray-darkest
+        padding: 0.8rem 0 0.5rem 0
         // color: black
+      &:hover
+        border-bottom: 0.3rem solid rgba( $brand-primary, 0.5 )
     .nav-item.active
-      background: $brand-primary
-      a
-        color: white
+      border-bottom: 0.3rem solid $brand-primary
+      // // background:
+      // a
+      //   color: white
 
 
 .logo
@@ -449,7 +454,7 @@ nav.navbar-message
   padding: 0
   font-size: 0.75rem
   .container
-    border-bottom: 1px solid $gray-lighter
+    border-bottom: 1px solid $border-gray
   .phone
     clear: right
     font-size: 1.2rem
@@ -468,7 +473,11 @@ nav.navbar-message
 
 @include media-breakpoint-down(md)
   .navbar-main
-    font-size: 0.85rem;
+    font-size: 0.85rem
+
+@include media-breakpoint-up(xl)
+  .navbar-main
+    font-size: 1.2rem
 
 // Footer
 
@@ -490,7 +499,7 @@ nav.navbar-message
   width: 100%
 
 .fixed-scroll
-  border-top: 1px solid $gray-lighter
+  border-top: 1px solid $border-gray
   margin-top: 38.9rem
   padding-top: 4rem
   background-color: white
@@ -546,9 +555,9 @@ nav.navbar-message
 // Disorganized Stuff
 
 .course
-  border-top: 1px solid $gray-lighter
+  border-top: 1px solid $border-gray
   .content
-    padding: 1rem 1rem 0 1rem
+    padding: 0 1rem
     h5
       font-family: $font-family-base
       color: $brand-primary
@@ -588,18 +597,18 @@ nav.navbar-message
   padding: 0
   li
     padding: 1rem 2rem
-    border-bottom: 1px solid $gray-lighter
+    border-bottom: 1px solid $border-gray
 
 .edge-block
   padding: 0 2rem 0 1rem
   .border
     padding: 1rem 0 0 0
-    border-bottom: 1px solid $gray-lighter
+    border-bottom: 1px solid $border-gray
     h5
       margin-top: 0.3rem
       margin-bottom: 0.8rem
   .border.top
-    border-top: 1px solid $gray-lighter
+    border-top: 1px solid $border-gray
 
 .quote
   footer::before

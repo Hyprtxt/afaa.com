@@ -3,7 +3,8 @@ extends ./layout/layout.jade
 mixin course( product )
   .course.p-y
     .col-md-3.col-lg-2.p-a-0.hidden-sm-down
-      img( src=assets+product.images[0] )
+      a(href='/products/'+product.filename)
+        img(src=assets+product.images[0])
     .col-md-6.col-lg-7.content
       a(href='/products/'+product.filename)
         h5.pull-left=product.title
@@ -11,8 +12,10 @@ mixin course( product )
       each description in product.description
         p.text-small=description
     .col-md-3.col-lg-3
-      .m-b-lg.hidden-sm-down
+      //- .m-b-lg.hidden-sm-down
       .m-b.hidden-md-up
+      a(href='/products/'+product.filename).m-b.pull-right.btn.btn-sm.btn-secondary CEUs: 
+        strong #{product.ceus}
       a(href='/products/'+product.filename).pull-right.btn.btn-primary.btn-block Enroll Now
     .clearfix
 
@@ -30,20 +33,10 @@ block content
     .row
       .m-b-lg
       .col-md-12.m-b-lg
-        ul.nav.nav-tabs
-          li.nav-item
-            a.nav-link.active These
-          li.nav-item
-            a.nav-link Are
-          li.nav-item
-            a.nav-link Tabs
-          li.nav-item
-            a.nav-link For
-          li.nav-item
-            a.nav-link Filtering
-
-      //- pre!=JSON.stringify( product, null, 2 )
-
-      +section( 'Specializations', products )
-
-      +section( 'CEU Corner', products )
+        - var educationSections = [ 'Specializations', 'CEU Corner' ];
+        ul.nav.nav-tabs.m-b-lg
+          each section in educationSections
+            li.nav-item
+              a.nav-link=section
+        each section in educationSections
+          +section( section, products )

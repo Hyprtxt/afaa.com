@@ -1,50 +1,41 @@
-extends ./layout/layout.jade
+extends ./layout/layout
 
 block content
+
   .bg-grey.m-b-lg
     +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
     .clearfix
+
+  pre=JSON.stringify( workshops, null, 2 )
   .container.b-b
     .row.m-t-lg
-      .col-md-8
+      .col-lg-7.col-xl-8
         include:markdown-it ../markdown/workshops/group-fitness.md
-      .col-md-4
+      .col-lg-5.col-xl-4
         .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#group') Find a workshop near you 
           span.fa.fa-chevron-down
-        ul.bg-primary.collapse.p-y.no-bull#group
-          li.b-b(data-toggle='collapse', data-target='#subgroup') What 
-            span.fa.fa-chevron-down
-            .collapse#subgroup
-              p This is a bit more info
-          li.b-b(data-toggle='collapse', data-target='#subgroup2') Open Me 
-            span.fa.fa-chevron-down
-            .collapse#subgroup2
-              p This is a bit more info
-          li.b-b(data-toggle='collapse', data-target='#subgroup3') More info 
-            span.fa.fa-chevron-down
-            .collapse#subgroup3
-              p This is a bit more info
-              p This is lots more info!!
+        ul.bg-primary.collapse.p-a.no-bull#group
+          - var workshops = [ 'Jan 9 - Jacksonville Beach, FL', 'Jan 10 - Greenwood, IN', 'Jan 17 - Sacramento, CA', 'Feb 6 - Avondale, AZ', 'Feb 7 - Phoenix, AZ', 'Feb 20 - Richmond, VA', 'Feb 21 - Hayward, CA' ]
+          each shop, idx in workshops
+            li.b-b.p-a(data-toggle='collapse', data-target='#subgroup'+idx)=shop
+              span.fa.fa-chevron-down
+              .collapse(id='subgroup'+idx)
+                p This is a bit more info
+
   .container.b-b
     .row.m-t-lg
-      .col-md-8
+      .col-lg-7.col-xl-8
         include:markdown-it ../markdown/workshops/personal-fitness.md
-      .col-md-4
+      .col-lg-5.col-xl-4
         .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#personal') Find a workshop near you 
           span.fa.fa-chevron-down
-        ul.bg-primary.collapse.p-y.no-bull#personal
-          li.b-b(data-toggle='collapse', data-target='#asubgroup') What 
-            span.fa.fa-chevron-down
-            .collapse#asubgroup
-              p This is a bit more info
-          li.b-b(data-toggle='collapse', data-target='#asubgroup2') Open Me 
-            span.fa.fa-chevron-down
-            .collapse#asubgroup2
-              p This is a bit more info
-          li.b-b(data-toggle='collapse', data-target='#asubgroup3') More info 
-            span.fa.fa-chevron-down
-            .collapse#asubgroup3
-              p This is a bit more info
-              p This is lots more info!!
+        ul.bg-primary.collapse.p-a.no-bull#personal
+          - var workshops = [ 'Jan 9 - Jacksonville Beach, FL', 'Jan 10 - Greenwood, IN', 'Jan 17 - Sacramento, CA', 'Feb 6 - Avondale, AZ', 'Feb 7 - Phoenix, AZ', 'Feb 20 - Richmond, VA', 'Feb 21 - Hayward, CA' ]
+          each shop, idx in workshops
+            li.b-b.p-a(data-toggle='collapse', data-target='#changesubgroup'+idx)=shop
+              span.fa.fa-chevron-down
+              .collapse(id='changesubgroup'+idx)
+                p This is a bit more info
+
   hr.m-b-lg.m-t-lg
   include ./block/form

@@ -75,13 +75,13 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'src/coffee/**/*.coffee', ['coffee']
   gulp.watch [
     'views/*.jade'
-    'views/template/continuing-education.jade'
+    '!views/continuing-education.jade'
     ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
   gulp.watch 'views/layout/**/*.jade', ['jade']
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
-  gulp.watch 'views/template/continuing-education.jade', ['education']
+  gulp.watch 'views/continuing-education.jade', ['education']
   gulp.watch 'view-data/products/*.coffee', ['products']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
