@@ -7,6 +7,7 @@ module.exports =
     '/js/bootstrap/util.js'
     '/js/bootstrap/collapse.js'
     '/js/bootstrap/dropdown.js'
+    # '/js/bootstrap/tab.js'
     '/js/script.js'
   ]
   stylesheets: [

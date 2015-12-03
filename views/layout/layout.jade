@@ -1,5 +1,7 @@
 include ./mixins
+
 block vars
+
 doctype html
 html
   block head
@@ -25,3 +27,5 @@ html
     block scripts
       each script in javascripts
         script(src=script)
+
+    block pageJS
