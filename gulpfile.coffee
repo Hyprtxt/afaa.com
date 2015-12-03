@@ -45,6 +45,8 @@ gulp.task 'sass', ->
 gulp.task 'copyjs', ->
   gulp.src './bower_components/bootstrap/js/dist/*'
     .pipe gulp.dest dest + '/js/bootstrap'
+  gulp.src './bower_components/jquery-cycle2/build/**'
+    .pipe gulp.dest dest + '/js/jquery-cycle2'
   return gulp.src './bower_components/jquery/dist/*'
     .pipe gulp.dest dest + '/js/jquery'
 

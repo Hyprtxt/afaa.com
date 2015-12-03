@@ -17,6 +17,10 @@ block content
   include ./block/magazine
   include ./block/form
 
+block scripts
+  each script in javascripts
+    script(src=script)
+  script(src='/js/jquery-cycle2/jquery.cycle2.js')
 
 //- Fancy Scroll
 
