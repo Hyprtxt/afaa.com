@@ -75,13 +75,13 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'src/coffee/**/*.coffee', ['coffee']
   gulp.watch [
     'views/*.jade'
-    '!views/continuing-education.jade'
+    '!views/courses.jade'
     ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
   gulp.watch 'views/layout/**/*.jade', ['jade']
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
-  gulp.watch 'views/continuing-education.jade', ['education']
+  gulp.watch 'views/courses.jade', ['education']
   gulp.watch 'view-data/products/*.coffee', ['products']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
@@ -112,7 +112,7 @@ _jadeSrc = [
   '!./views/layout/**'
   '!./views/block/**'
   '!./views/template/**'
-  '!./views/continuing-education.jade'
+  '!./views/courses.jade'
 ]
 
 doJade = ( stream ) ->
@@ -168,7 +168,7 @@ gulp.task 'education', [ 'setupJadeData' ], ->
   # console.log data
   eduData = _jadeData
   eduData.products = productData
-  gulp.src './views/continuing-education.jade'
+  gulp.src './views/courses.jade'
     .pipe jade
       locals: eduData
       pretty: true
