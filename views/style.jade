@@ -10,7 +10,9 @@ block content
       .col-md-12
         h3 Typography &amp; Headings
       .col-lg-4.m-b
-        p This is the standard paragrah style. This is also the primary font-size used for most text elements across the site. This text supports  
+        p This is the standard paragrah style. This is the 
+          strong Open Sans 
+          |  Typeface This is also the primary font-size used for most text elements across the site. This text supports  
           em emphasis or italic
           |  and  
           strong strong or bold
@@ -23,16 +25,17 @@ block content
             |  and 
             em italics 
             |  should be used instead.
+        p There is another feature of body copy hidden right here in plain sight! Highlight this text to check it out... I'll wait. Pretty cool eh? That's a custom highlight color using the primary brand color with a slight opacity.
       .col-lg-4.m-b
-        h1 H1 Heading Title
-        h2 H2 Heading Title
-        h3 H3 Heading Title
+        h1 H1 Preferred Heading
+        h2 H2 Authorative
+        h3 H3 Font is Roboto Condensed
         h4 H4 Heading Title
         h5 H5 Heading Title
         h6 H6 Heading Title
       .col-lg-4.m-b
-        h1.text-bold.text-uppercase H1 Heading Title
-        h2.text-bold.text-uppercase H2 Heading Title
+        h1.text-bold.text-uppercase H1 Bold Uppcase
+        h2.text-bold.text-uppercase H2 This title yells!
         h3.text-bold.text-uppercase H3 Heading Title
         h4.text-bold.text-uppercase H4 Heading Title
         h5.text-bold.text-uppercase H5 Heading Title
@@ -119,15 +122,28 @@ block content
               .btn.btn-primary Submit
       .col-md-6
         h3 Colors
-        .bg-primary.p-a.m-b
-          p.m-b-0 Brand Primary
-        .bg-success.p-a.m-b
-          p.m-b-0 Brand Success
-        .bg-info.p-a.m-b
-          p.m-b-0 Brand Info
-        .bg-warning.p-a.m-b
-          p.m-b-0 Brand Warning
-        .bg-danger.p-a.m-b
-          p.m-b-0 Brand Danger
+        p The brand primary color is the only one in use on the site right now. It has been used with varying levels of opactiy (transparency) to create different shades.
+        .row
+          .col-md-6
+            .bg-primary.p-a.m-b
+              p.m-b-0 Brand Primary
+            .bg-primary.p-a.m-b(style='opacity: 0.9')
+              p.m-b-0 Brand Primary 90%
+            .bg-primary.p-a.m-b(style='opacity: 0.75')
+              p.m-b-0 Brand Primary 75%
+            .bg-primary.p-a.m-b(style='opacity: 0.6')
+              p.m-b-0 Brand Primary 60%
+            .bg-primary.p-a.m-b(style='opacity: 0.5')
+              p.m-b-0 Brand Primary 50%
+          .col-md-6
+            p These colors are available, but so far, unused.
+            .bg-success.p-a.m-b
+              p.m-b-0 Brand Success
+            .bg-info.p-a.m-b
+              p.m-b-0 Brand Info
+            .bg-warning.p-a.m-b
+              p.m-b-0 Brand Warning
+            .bg-danger.p-a.m-b
+              p.m-b-0 Brand Danger
   hr.m-b-lg.m-t-lg
   include ./block/form

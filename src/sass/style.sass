@@ -24,11 +24,11 @@ $gray:                      #55595c
 $gray-light:                #818a91
 $gray-lighter:              #f3f3f3
 $gray-lightest:             #f7f7f9
-$brand-primary:                #2c4ba3
-// $brand-success:             #5cb85c
-// $brand-info:                #5bc0de
-// $brand-warning:             #f0ad4e
-// $brand-danger:              #d9534f
+$brand-primary:             #2c4ba3
+$brand-success:             rgb( 100, 255, 94 )
+$brand-info:                rgb( 94, 156, 255 )
+$brand-warning:             rgb( 255, 241, 52 )
+$brand-danger:              rgb( 255, 34, 5 )
 
 // Links
 //
@@ -295,8 +295,8 @@ $input-color-placeholder:        #999
 // @import "font-awesome/scss/fixed-width"
 // @import "font-awesome/scss/list"
 @import "font-awesome/scss/bordered-pulled"
-// @import "font-awesome/scss/animated"
-// @import "font-awesome/scss/rotated-flipped"
+@import "font-awesome/scss/animated"
+@import "font-awesome/scss/rotated-flipped"
 // @import "font-awesome/scss/stacked"
 @import "font-awesome/scss/icons"
 
@@ -553,6 +553,8 @@ nav.navbar-message
   filter: grayscale( 80% )
 .product-thumb.active:hover
   filter: none
+.technicalRequirements .closer .fa
+  transition: 0.5s
 
 // Disorganized Stuff
 

@@ -138,7 +138,7 @@ gulp.task 'jadeSingle', [ 'setupJadeData' ], ( next ) ->
 modelsToJade = ( model ) ->
   models = glob.sync './view-data/' + model + '/**.coffee'
   jadeData = _jadeData
-  jadeData.javascripts.push '/js/imageSwapper.js' # Cant do this cause sitefinity...
+  # jadeData.javascripts.push '/js/imageSwapper.js' # Don't need it yet...
   tasks = models.map ( path, idx ) ->
     filename = path.replace( './view-data/', '' ).replace( '.coffee', '.html' )
     # console.log name
@@ -193,8 +193,6 @@ gulp.task 'render', [
   'products'
   'jade'
 ]
-# , ( cb ) ->
-  # rimraf dest + '/map', cb
 
 gulp.task 'build', [ 'clean' ], ->
   gulp.start 'render'
