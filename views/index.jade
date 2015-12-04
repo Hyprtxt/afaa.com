@@ -16,12 +16,19 @@ block content
   include ./block/list
   include ./block/magazine
   include ./block/form
+  #thanks.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4.modal-title Thank You!
+        .modal-body
+          p Thanks for signing up to learn more about AFAA.
 
-block scripts
-  each script in javascripts
-    script(src=script)
+block pageJS
   script(src='/js/jquery-cycle2/jquery.cycle2.js')
   script(src='/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js')
+  script(src='/js/bootstrap/modal.js')
+  script(src='/js/thanksModal.js')
   
 
 //- Fancy Scroll
