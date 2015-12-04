@@ -4,10 +4,12 @@ module.exports =
   description: 'AFAA Static'
   javascripts: [
     '/js/jquery/jquery.min.js'
+    '/js/tether/tether.min.js'
     '/js/bootstrap/util.js'
     '/js/bootstrap/collapse.js'
     '/js/bootstrap/dropdown.js'
-    # '/js/bootstrap/tab.js'
+    '/js/bootstrap/tooltip.js'
+    '/js/bootstrap/popover.js'
     '/js/script.js'
   ]
   stylesheets: [
@@ -19,14 +21,14 @@ module.exports =
   navbarBrand:
     title: 'AFAA'
     link: '/'
-  topNavigation: [
-    title: 'Cart'
-    link: 'https://shop.nasm.org/ShoppingCart.aspx'
-    class: [ 'p-r' ]
-  ,
-    title: 'My Account'
-    link: 'https://shop.nasm.org/account.aspx'
-  ]
+  # topNavigation: [
+  #   title: 'Cart'
+  #   link: 'https://shop.nasm.org/ShoppingCart.aspx'
+  #   class: [ 'p-r' ]
+  # ,
+  #   title: 'My Account'
+  #   link: 'https://shop.nasm.org/account.aspx'
+  # ]
   navigation: [
     title: 'Group X Instructor'
     link: '/products/group-x'

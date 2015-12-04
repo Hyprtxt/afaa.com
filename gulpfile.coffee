@@ -43,19 +43,21 @@ gulp.task 'sass', ->
     .pipe livereload()
 
 gulp.task 'copyjs', ->
-  gulp.src './bower_components/bootstrap/js/dist/*'
+  gulp.src './bower_components/tether/dist/js/**'
+    .pipe gulp.dest dest + '/js/tether'
+  gulp.src './bower_components/bootstrap/js/dist/**'
     .pipe gulp.dest dest + '/js/bootstrap'
   gulp.src './bower_components/jquery-cycle2/build/**'
     .pipe gulp.dest dest + '/js/jquery-cycle2'
-  return gulp.src './bower_components/jquery/dist/*'
+  return gulp.src './bower_components/jquery/dist/**'
     .pipe gulp.dest dest + '/js/jquery'
 
 gulp.task 'copycss', ->
-  return gulp.src './bower_components/font-awesome/css/*'
+  return gulp.src './bower_components/font-awesome/css/**'
     .pipe gulp.dest dest + '/css/font-awesome'
 
 gulp.task 'copyfont', ->
-  return gulp.src './bower_components/font-awesome/fonts/*'
+  return gulp.src './bower_components/font-awesome/fonts/**'
     .pipe gulp.dest dest + '/fonts'
 
 gulp.task 'coffee', ->

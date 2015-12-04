@@ -10,3 +10,19 @@ $activeNavLinks.parent().addClass 'active'
 # This fixes a Sitefinity issue where empty divs get a free non-breaking space.
 $('div').each ->
   $(this).html( $(this).html().replace(/&nbsp;/gi,'') )
+
+# popover activation
+$('.account-popover').popover
+  html: true
+  content: ->
+    $popover = $ '#popover'
+    $content = $popover.clone()
+    $content.attr 'hidden', false
+    return $content
+  placement: 'left'
+  constraints: [
+    to: 'window'
+    pin: true
+  ]
+
+# $('.account-popover').on 'click', ( e ) ->

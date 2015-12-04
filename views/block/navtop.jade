@@ -3,10 +3,14 @@ nav.navbar.navbar-top.hidden-sm-down
     a.pull-left.navbar-brand.text-bold(href=navbarBrand.link) 
       img.logo(src=assets+'/images/afaa.png', alt='Aerobics and Fitness Association of America')
     ul.nav.navbar-nav.hidden-sm-down.pull-right.m-t
-      each nav in topNavigation
-        li.nav-item(class=nav.liclass)
-          a.nav-link(href=nav.link, class=nav.class, id=nav.id) 
-            if nav.icon
-              i.fa(class=nav.icon)
-            |  #{nav.title}
+      li.nav-item
+        a.nav-link.p-r(href='https://shop.nasm.org/ShoppingCart.aspx') Cart
+      li.nav-item
+        span.nav-link.account-popover My Account
+    #popover(hidden)
+      p this is where we have you make a choice!
+      p.m-b-0
+        a(href='https://shop.nasm.org/account.aspx') NASM
+      p.m-b-0
+        a(href='#') AFAA
     a(href='tel:' + phone).phone.pull-right=phone
