@@ -4,6 +4,7 @@ block vars
   - function toSlug( text ) {
   -   return text.toLowerCase().replace( ' ' , '-' )
   - }
+  - var everything = 'All Products';
 
 mixin course( product )
   .course.p-y
@@ -25,7 +26,7 @@ mixin course( product )
     .clearfix
 
 mixin section( section, products )
-  if section !== 'Everything'
+  if section !== everything
     .col-md-12.m-b-lg.b-b.tab-pane.active( id=toSlug( section ) )
       h3.m-b.text-center.text-bold.text-uppercase=section
       each product in products
@@ -42,12 +43,12 @@ block content
         - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
         ul.nav.nav-tabs.m-b-lg
           li.nav-item
-            a.nav-link.active#everything( href='#everything', data-toggle='tab' ) Everything
+            a.nav-link.active#everything( href='#everything', data-toggle='tab' )=everything
           each section in educationSections
             li.nav-item
               a( href='#' + toSlug( section ), data-toggle='tab' ).nav-link=section
         .tab-content
-          +section( 'Everything', products )
+          +section( everything, products )
           each section in educationSections
             +section( section, products )
 
