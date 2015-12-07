@@ -1,12 +1,12 @@
 extends ./layout/layout.jade
 
 block content
-  .bg-grey.m-b-lg
+  .bg-grey.m-b
     +title( 'AFAA', 'Recertification', 'm-b-md p-t-lg' )
     .clearfix
   .container
     .row
-      .col-md-12.m-t-lg
+      .col-md-12.col-lg-10.col-lg-push-1.col-xl-8.col-xl-push-2
         include:markdown-it ../markdown/recertification.md
   hr.m-b-lg.m-t-lg
   include ./block/form

@@ -15,10 +15,9 @@ $('div').each ->
 $('.account-popover').popover
   html: true
   content: ->
-    $popover = $ '#popover'
-    $content = $popover.clone()
-    $content.attr 'hidden', false
-    return $content
+    return $ '#popover'
+      .clone()
+      .attr 'hidden', false
   placement: 'left'
   constraints: [
     to: 'window'

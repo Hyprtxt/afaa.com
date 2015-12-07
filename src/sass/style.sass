@@ -271,9 +271,9 @@ $input-color-placeholder:        #999
 // @import "bootstrap/scss/close"
 
 // Components w/ JavaScript
-@import "bootstrap/scss/modal"
+// @import "bootstrap/scss/modal"
 // @import "bootstrap/scss/tooltip"
-@import "bootstrap/scss/popover"
+// @import "bootstrap/scss/popover"
 // @import "bootstrap/scss/carousel"
 
 // Utility classes
@@ -398,6 +398,24 @@ h1, h2, h3, h4, h5, h6
  *  AFAA Styles
  * * * * * * * * * * * * * */
 
+.popover
+  padding: 0.5rem
+  min-width: 24rem
+  background: white
+  box-shadow: 0 0 3px $gray-dark
+
+.popover-title
+  display: none
+
+.account-popover
+  cursor: pointer
+
+.account-popover.bs-tether-enabled
+  z-index: 2000
+  position: relative
+  background: white
+  box-shadow: 1px 0 1px $gray-dark
+
 // Navigation Styles
 
 nav.navbar-message
@@ -440,7 +458,7 @@ nav.navbar-message
 
 .logo
   width: 7.5rem
-  padding: 0.5rem
+  padding: 0.5rem 0
 
 .mobile-logo
   width: 4.1rem
