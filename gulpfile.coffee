@@ -86,7 +86,7 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'views/layout/**/*.jade', ['jade']
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
-  gulp.watch 'views/courses.jade', ['education']
+  gulp.watch 'views/courses.jade', ['courses']
   gulp.watch 'view-data/products/*.coffee', ['products']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
@@ -162,7 +162,7 @@ modelsToJade = ( model ) ->
 gulp.task 'products', [ 'setupJadeData' ], ->
   return modelsToJade 'products'
 
-gulp.task 'education', [ 'setupJadeData' ], ->
+gulp.task 'courses', [ 'setupJadeData' ], ->
   models = glob.sync './view-data/products/**.coffee'
   productData = models.map ( path, idx ) ->
     product = require path
@@ -192,7 +192,7 @@ gulp.task 'render', [
   'sass'
   'copyjs'
   'coffee'
-  'education'
+  'courses'
   'products'
   'jade'
 ]
