@@ -4,7 +4,6 @@ block vars
   - function toSlug( text ) {
   -   return text.toLowerCase().replace( ' ' , '-' )
   - }
-  - var everything = 'All Products';
 
 block content
   .container
@@ -14,6 +13,7 @@ block content
         h1 Header
         p content
       .col-md-12.m-b-lg
+        - var everything = 'All Products';
         - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
         ul.nav.nav-tabs.m-b-lg
           li.nav-item

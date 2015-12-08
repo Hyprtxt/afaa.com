@@ -1,18 +1,20 @@
 .container
   .row
     +title( 'You Belong at AFAA', 'Discover how you can become part of the AFAA family.', 'm-b-md' )
-  .col-lg-8.m-b-lg.col-lg-push-2
-    form(action='http://certify.nasm.org/acton/eform/14843/0039/d-ext-0001', method='POST')
-      input(type='hidden', name='Topic', value='AFAA')
-      .form-group.row
-        .col-sm-6.m-b
-          input.form-control(placeholder='First Name', name='First Name')
-        .col-sm-6.m-b
-          input.form-control(placeholder='Last Name', name='Last Name')
-        .col-sm-6.m-b
-          input.form-control(placeholder='Email Address', name='Email Address')
-        .col-sm-6.m-b
-          input.form-control(placeholder='Phone Number', name='Phone')
-      .row.m-t
-        .col-sm-10.col-sm-push-1.col-md-4.col-md-push-4.m-t
-          button.btn.btn-primary.btn-block.text-uppercase Subscribe
+  .row
+    .col-lg-8.m-b-lg.col-lg-push-2
+      form#acton1(action='http://certify.nasm.org/acton/eform/14843/0039/d-ext-0001', method='POST')
+        input(type='hidden', name='Topic', value='AFAA')
+        fieldset.form-group
+          .col-sm-6.m-b
+            input.form-control(placeholder='First Name', name='First Name', required)
+          .col-sm-6.m-b
+            input.form-control(placeholder='Last Name', name='Last Name', required)
+        fieldset.form-group
+          .col-sm-6.m-b
+            input.form-control(placeholder='Email Address', name='Email Address', required)
+          .col-sm-6.m-b
+            input.form-control(placeholder='Phone Number', name='Phone', required)
+        .row.m-t
+          .col-sm-10.col-sm-push-1.col-md-4.col-md-push-4.m-t
+            button.btn.btn-primary.btn-block.text-uppercase Subscribe
