@@ -15,3 +15,32 @@ mixin quote( quote, attribution )
     i.fa.fa-quote-left.fa-2x.fa-pull-left.text-gray-lighter
     p.m-l-lg.text-italic=quote
     footer.m-l-lg=attribution
+
+mixin course( product )
+  .course.p-y
+    .col-md-3.col-lg-2.p-a-0.hidden-sm-down
+      a(href='/products/'+product.filename)
+        img(src=assets+product.images[0])
+    .col-md-6.col-lg-7.content
+      a(href='/products/'+product.filename)
+        h3.m-b-0=product.title
+      span.m-b-lg CEUs: #{product.ceus}
+      .clearfix
+      each description in product.description
+        p.text-small=description
+    .col-md-3.col-lg-3
+      //- .m-b-lg.hidden-sm-down
+      .m-b.hidden-md-up
+      a(href=product.link).pull-right.btn.btn-primary.btn-block Enroll Now
+      //- a.text-center links!
+    .clearfix
+
+mixin section( section, products )
+  if section !== everything
+    .col-md-12.m-b-lg.b-b.tab-pane.active( id=toSlug( section ) )
+      h3.m-b.text-center.text-bold.text-uppercase=section
+      each product in products
+        if product.types != undefined
+          if product.types[0] === section
+            +course( product )
+      .clearfix
