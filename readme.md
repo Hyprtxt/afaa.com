@@ -11,17 +11,17 @@ A very dynamic program that dynamically creates a static website, ready for Site
 
 One completed page in SiteFinity
 
-- [ ] URL Structure `/courses/group-x`
+- [x] URL Structure `/courses/group-x`
 
 - [ ] Interactivity Completion
     - [ ] Done with JavaScript
     - [x] Image Swapper
     - [?] Technical Requirements
-    - [?] Cycle Slideshow (controls & content)
     - [?] Course Tabs (add deeplinks?)
-    - [?] Thanks Modal
     - [x] Active Navigation States
     - [?] Sitefinity Hacks (nbsp Removal + stg links?)
+    - [ ] Cycle Slideshow (controls & content)
+    - [x] Thanks Modal
  - [ ] Header and Footer Completion
      - [ ] Phone #s
      - [ ] Account Menu Link & UX Approval

@@ -1,12 +1,14 @@
 extends ./layout/layout
 
-block content  
-  .container
-    .row.m-x-md
-      .col-md-12
-        h2 Workshops
+block content
+
+  .bg-grey.m-b-lg
+    +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
+    .clearfix
+
+  pre=JSON.stringify( workshops, null, 2 )
   .container.b-b
-    .row.m-t-md
+    .row.m-t-lg
       .col-lg-7.col-xl-8
         include:markdown-it ../markdown/workshops/group-fitness.md
       .col-lg-5.col-xl-4

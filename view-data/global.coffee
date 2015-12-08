@@ -17,7 +17,7 @@ module.exports =
     'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
     '/css/style.css'
   ]
-  phone: '800-555-5555'
+  phone: '800 446-2322'
   navbarBrand:
     title: 'AFAA'
     link: '/'

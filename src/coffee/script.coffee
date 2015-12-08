@@ -18,7 +18,7 @@ $('.account-popover').popover
     return $ '#popover'
       .clone()
       .attr 'hidden', false
-  placement: 'left'
+  placement: 'bottom'
   constraints: [
     to: 'window'
     pin: true

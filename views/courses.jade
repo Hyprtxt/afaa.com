@@ -13,9 +13,8 @@ mixin course( product )
         img(src=assets+product.images[0])
     .col-md-6.col-lg-7.content
       a(href='/products/'+product.filename)
-        h3=product.title
-          a(href='/products/'+product.filename).m-b.pull-right.btn.btn-sm.btn-secondary CEUs: 
-            strong #{product.ceus}
+        h3.m-b-0=product.title
+      span.m-b-lg CEUs: #{product.ceus}
       .clearfix
       each description in product.description
         p.text-small=description
@@ -23,6 +22,7 @@ mixin course( product )
       //- .m-b-lg.hidden-sm-down
       .m-b.hidden-md-up
       a(href=product.link).pull-right.btn.btn-primary.btn-block Enroll Now
+      //- a.text-center links!
     .clearfix
 
 mixin section( section, products )
@@ -36,12 +36,14 @@ mixin section( section, products )
       .clearfix
 
 block content
-  .bg-grey.m-b-lg
-    +title( 'Courses', '', 'm-b-md p-t-lg' )
-    .clearfix
+  //- .bg-grey.m-b-lg
+  //-   +title( 'Courses', '', 'm-b-md p-t-lg' )
+  //-   .clearfix
   .container
     .row
-      .m-b-lg
+      .col-md-12.m-b-lg
+        h1 Header
+        p content
       .col-md-12.m-b-lg
         - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
         ul.nav.nav-tabs.m-b-lg

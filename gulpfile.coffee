@@ -1,5 +1,7 @@
 #!/usr/bin/env coffee
 
+# It crashes when you eff up the jade templates. Helpful but barfy.
+
 gulp = require 'gulp'
 changed = require 'gulp-changed'
 wait = require 'gulp-wait'
@@ -21,6 +23,20 @@ merge = require 'merge-stream'
 data = require 'gulp-data'
 
 dest = './static_generated'
+
+_jadeData = {}
+gulp.task 'setupJadeData', ( next ) ->
+  requireCoffee './view-data/global.coffee', ( obj ) ->
+    _jadeData = obj
+    return next()
+
+_jadeSrc = [
+  './views/**/*.jade'
+  '!./views/layout/**'
+  '!./views/block/**'
+  '!./views/template/**'
+  '!./views/courses.jade'
+]
 
 gulp.task 'default', [ 'clean' ], ->
   gulp.start 'watch'
@@ -84,6 +100,7 @@ gulp.task 'watch', [ 'render' ], ->
     ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
   gulp.watch 'views/layout/**/*.jade', ['jade']
+  # Products A.K.A Courses Does not live reload.
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
   gulp.watch 'views/courses.jade', ['courses']
@@ -105,20 +122,6 @@ requireCoffee = ( path, next ) ->
         header: false
       next( eval coffeeScript.compile _data, coffeeopts )
     # return next()
-
-_jadeData = {}
-gulp.task 'setupJadeData', ( next ) ->
-  requireCoffee './view-data/global.coffee', ( obj ) ->
-    _jadeData = obj
-    return next()
-
-_jadeSrc = [
-  './views/**/*.jade'
-  '!./views/layout/**'
-  '!./views/block/**'
-  '!./views/template/**'
-  '!./views/courses.jade'
-]
 
 doJade = ( stream ) ->
   return stream.pipe jade

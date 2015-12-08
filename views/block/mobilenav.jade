@@ -10,9 +10,9 @@ nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
       //-   i.fa.fa-shopping-cart
       //- a(href='', title='Your Account').m-l-md
       //-   i.fa.fa-user
-      a(href='tel:214 799-3897').m-l-md.mobile-phone
+      a(href='tel:'+phone).m-l-md.mobile-phone
         i.fa.fa-phone
-        |  214-799-3897
+        |  #{phone}
       // Mobile Dropdown
       .clearfix
       ul#mobileNav.nav.nav-pills.nav-stacked.collapse.p-t
@@ -31,6 +31,6 @@ nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up
             i.fa.fa-user
             |  Your Account (2016 or later Signup)
         li.nav-item
-          a.nav-link(href='tel:214 799-3897')
+          a.nav-link(href='tel:'+phone)
             i.fa.fa-phone
-            |  1 (800) 555-5555
+            | #{phone}

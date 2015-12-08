@@ -1,0 +1,29 @@
+extends ./layout/layout
+
+block content
+
+  .bg-grey.m-b-lg
+    +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
+    .clearfix
+
+  //- pre=JSON.stringify( workshops, null, 2 )
+  .container.b-x
+    .row.m-t-lg
+      .col-lg-2
+        img(src=assets+'/images/pdp1.jpg')
+      .col-lg-7
+        include:markdown-it ../markdown/workshops/group-fitness.md
+      .col-lg-3
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#group') Find a workshop near you 
+
+  .container.b-b
+    .row.m-t-lg
+      .col-lg-2
+        img(src=assets+'/images/pdp1.jpg')
+      .col-lg-7
+        include:markdown-it ../markdown/workshops/personal-fitness.md
+      .col-lg-3
+        .btn.btn-lg.btn-block.btn-primary(data-toggle='collapse', data-target='#personal') Find a workshop near you 
+
+  hr.m-b-lg.m-t-lg
+  include ./block/form
