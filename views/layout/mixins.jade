@@ -22,8 +22,8 @@ mixin course( product )
       a(href='/products/'+product.filename)
         img(src=assets+product.images[0])
     .col-md-6.col-lg-7.content
-      a(href='/products/'+product.filename)
-        h3.m-b-0=product.title
+      h3.m-b-0
+        a(href='/products/'+product.filename)=product.title
       span.m-b-lg CEUs: #{product.ceus}
       .clearfix
       each description in product.description
