@@ -10,5 +10,5 @@ module.exports =
   price: '59'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   images: [
-    '/images/product3.jpg'
+    '/products/injury-lower-body.jpg'
   ]

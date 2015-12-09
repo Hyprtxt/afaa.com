@@ -25,6 +25,6 @@ module.exports =
     'Group X'
   ]
   images: [
-    '/images/product2.jpg'
+    '/products/group-x-practical.jpg'
   ]
   relatedProducts: false
