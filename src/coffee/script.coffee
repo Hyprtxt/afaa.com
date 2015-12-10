@@ -5,12 +5,14 @@ jQuery ( $ ) ->
   path = location.pathname.split("/")
   path.shift()
   $activeNavLinks = $ 'a[href="/' + path.join('/') + '"].nav-link'
-  console.log $activeNavLinks
+  # console.log $activeNavLinks
   $activeNavLinks.parent().addClass 'active'
 
   # This fixes a Sitefinity issue where empty divs get a free non-breaking space.
   $('div').each ->
     $(this).html( $(this).html().replace(/&nbsp;/gi,'') )
+  # Free breaks too, remove em!
+  $('br').remove();
 
   # popover activation
   $('.account-popover').popover

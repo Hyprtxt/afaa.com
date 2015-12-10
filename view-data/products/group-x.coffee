@@ -8,7 +8,7 @@ module.exports =
     'Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise certification, you must pass the written examination and show proof of your current hands-on CPR/AED certification.'
     'Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.'
   ]
-  featureDescription: 'The Personal Fitness Trainer program includes:'
+  featureDescription: 'The Group X program includes:'
   features: [
     '14 on-line video lectures'
     'Primary Group Exercise downloadable study guide'
