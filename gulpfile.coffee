@@ -146,7 +146,7 @@ modelsToJade = ( model ) ->
   jadeData = _jadeData
   # jadeData.javascripts.push '/js/imageSwapper.js' # Don't need it yet...
   tasks = models.map ( path, idx ) ->
-    filename = path.replace( './view-data/', '' ).replace( '.coffee', '.html' )
+    filename = path.replace( './view-data/products/', 'courses/' ).replace( '.coffee', '.html' )
     # console.log name
     return gulp.src './views/template/' + model + '.jade'
       .pipe data ( file, next ) ->

@@ -31,10 +31,10 @@ module.exports =
   # ]
   navigation: [
     title: 'Group X Instructor'
-    link: '/products/group-x'
+    link: '/courses/group-x'
   ,
     title: 'Personal Trainer'
-    link: '/products/certified-personal-trainer-certification'
+    link: '/courses/certified-personal-trainer-certification'
   ,
     title: 'Courses'
     link: '/courses'
