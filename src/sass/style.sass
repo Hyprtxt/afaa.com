@@ -538,6 +538,11 @@ nav.navbar-message
 
 // Homepage Hero
 
+.cycle-slideshow
+  min-height: 18rem
+  > div
+    display: none
+
 @include media-breakpoint-up(xl)
   .hero
     background: $gray-lightest
@@ -603,7 +608,7 @@ nav.navbar-message
 
 .triple-card
   position: relative
-  width: 262px
+  max-width: 262px
   margin: 0 auto
   padding-top: 1.5rem
   .text
