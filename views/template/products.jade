@@ -8,7 +8,7 @@ block content
       .clearfix
 
   .container
-    .row.m-y-md
+    .row.m-y-lg
       .col-md-6
         h1.text-sans.hidden-md-up=product.title
         img.pull-right.m-b.product-image(src=assets+product.images[0])
@@ -29,6 +29,8 @@ block content
         .clearfix
         a(href=product.link).btn.btn-primary.btn-lg.m-b-lg 
           span.p-x-md.m-b-0.text-md Enroll Now
+        if product.featureTitle
+          h3=product.featureTitle
         if product.featureDescription
           p=product.featureDescription
           ul.p-l-md
