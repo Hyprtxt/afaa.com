@@ -1,19 +1,23 @@
 .hero.m-b-lg
-  .container.p-a-lg
-    .row
-      .m-t-lg.hidden-sm-down
-      .cycle-slideshow(
-        data-cycle-slides='> div'
-        data-cycle-fx='scrollHorz'
-        data-cycle-swipe='true'
-        data-cycle-swipe-fx='scrollHorz'
-      )
+  .container.p-x-0
+    .cycle-slideshow(
+      data-cycle-slides='> .slide'
+      data-cycle-fx='scrollHorz'
+      data-cycle-swipe='true'
+      data-cycle-swipe-fx='scrollHorz'
+      data-cycle-pause-on-hover='true'
+      data-cycle-speed='1000'
+    )
+      .cycle-pager
+      .slide.slide1
         .col-md-7.col-lg-6.col-xl-5.text-center-xs-down
           h1.text-center.text-uppercase.text-bold Motivate. Inspire. Move
-          a(href='/products/group-x').btn.btn-primary.btn-lg.center-block Become An Instructor
+          a(href='/courses/group-x').btn.btn-primary.btn-lg.center-block Become An Instructor
+      .slide.slide2
+        .col-md-7.col-lg-6.col-xl-5.text-center-xs-down.pull-right
+          h1.text-center.text-uppercase.text-bold Challenge Yourself. Challenge Others
+          a(href='/courses/certified-personal-trainer').btn.btn-primary.btn-lg.center-block Become A Personal Trainer
+      .slide.slide3
         .col-md-7.col-lg-6.col-xl-5.text-center-xs-down
-          h1.text-center.text-uppercase.text-bold Challenge Yourself. Challenge Others.
-          a(href='/products/group-x').btn.btn-primary.btn-lg.center-block Become A Personal Trainer
-        .col-md-7.col-lg-6.col-xl-5.text-center-xs-down
-          h1.text-center.text-uppercase.text-bold='Continuing Education – “Great Teachers Never Stop Learning.”'
-          a(href='/products/group-x').btn.btn-primary.btn-lg.center-block Continue Your Education
+          h1.text-center.text-uppercase.text-bold='Great Teachers Never Stop Learning'
+          a(href='/courses').btn.btn-primary.btn-lg.center-block Continue Your Education

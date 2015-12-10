@@ -1,7 +1,25 @@
 extends ./layout/layout.jade
 
 block content
-  .bg-grey.m-b-lg
-    +title( 'Contact Us', 'For a better life', 'm-b-md p-t-lg' )
-    .clearfix
-  include ./block/form
+  .container
+    .row
+      //- .col-md-10.col-md-push-1.m-y-lg
+      .col-sm-12.m-y-md
+        h1 Contact AFAA
+      .col-md-4
+        h4 Sales and Enrollment
+        p
+          a(href='#') 
+            span.fa.fa-phone 
+            |  800-446-2322
+      .col-md-4
+        h4 Member Services
+        p
+          a(href='#') 
+            span.fa.fa-phone 
+            |  800-446-2322 option #2
+      .col-md-4
+        h4 Mailing Address
+        pre AFAA Arizona Office 
+          | 1750 E. Northrop Blvd., Suite 200
+          | Chandler, AZ 85286-1744 

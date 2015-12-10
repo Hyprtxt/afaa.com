@@ -25,10 +25,10 @@ One completed page in SiteFinity
  - [ ] Header and Footer Completion
      - [ ] Phone #s
      - [ ] Account Menu Link & UX Approval
-     - [ ] Terms & Conditions
-     - [ ] Privacy Policy
+     - [x] Terms & Conditions
+     - [x] Privacy Policy
  - [ ] Page Completion
-     - [?] Completed Content Page
+     - [x] Completed Content Page
      - [ ] Title Copy
 
 Complete HP in Sitefinity
@@ -39,7 +39,12 @@ Complete HP in Sitefinity
     - [ ] Slide Content, multiple backgrounds?
     - [ ] Message for Promo Section on the homepage
 
-
+* Contact Form Page Content/Form
+* Workshops Section (Design & Content)
+* Final Courses Content
+  * Personal Trainer Related Products
+  * Group X is using PT content
+* Lost slider effects (slider background expands out of containter.)
 
 ## Sitefinity Notes
 

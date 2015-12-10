@@ -26,8 +26,12 @@ mixin course( product )
         a(href='/courses/'+product.filename)=product.title
       span.m-b-lg CEUs: #{product.ceus}
       .clearfix
-      each description in product.description
-        p.text-small=description
+      each description, index in product.description
+        if index === ( product.description.length - 1 )
+          p.text-small=description + ' '
+            a(href='/courses/'+product.filename) Learn more...
+        else
+          p.text-small=description
     .col-md-3.col-lg-3
       //- .m-b-lg.hidden-sm-down
       .m-b.hidden-md-up

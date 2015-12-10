@@ -320,6 +320,8 @@ $input-color-placeholder:        #999
   font-weight: bold
 .text-italic
   font-style: italic
+.text-sans
+  font-family: $font-family-sans-serif
 .text-condensed
   font-family: $font-family-condensed
 .text-gray-lighter
@@ -539,26 +541,55 @@ nav.navbar-message
 // Homepage Hero
 
 .cycle-slideshow
-  min-height: 18rem
-  > div
-    display: none
+  min-height: 434px
+  position: relative
+.cycle-pager
+  color: white
+  font-size: 5rem
+  line-height: 1rem
+  bottom: 15px
+  left: 7px
+  position: absolute
+  z-index: 1000
+  span
+    cursor: pointer
+    transition: 1s
+  .cycle-pager-active
+    color: $brand-primary
+    text-shadow: 0 1px 2px $gray-dark
 
-@include media-breakpoint-up(xl)
-  .hero
-    background: $gray-lightest
-    .container
-      background: url(#{$assets}/images/hero.jpg)
-      min-height: 434px
-
-@include media-breakpoint-down(lg)
-  .hero
-    background-color: $gray-lightest
-    background: url(#{$assets}/images/hero.jpg) center center no-repeat
+.hero
+  .slide
+    width: 100%
     min-height: 434px
+    position: relative
+    background-position: left center
+    > div
+      margin-top: 5rem
+  .slide1
+    background: url(#{$assets}/images/slide1.jpg)
+  .slide2
+    background: url(#{$assets}/images/slide2.jpg)
+    background-position: right center
+  .slide3
+    background: url(#{$assets}/images/slide3.jpg)
+
+// @include media-breakpoint-up(xl)
+//   .hero
+//     background: $gray-lightest
+//     .container
+//       background: url(#{$assets}/images/hero.jpg)
+
+//
+// @include media-breakpoint-down(lg)
+//   .hero
+//     background-color: $gray-lightest
+//     background: url(#{$assets}/images/hero.jpg) center center no-repeat
+//     min-height: 434px
 
 @include media-breakpoint-down(md)
-  .hero
-    background-position: left center
+  // .hero
+  //
 
 // PDP Styles
 

@@ -17,7 +17,7 @@ module.exports =
     'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
     '/css/style.css'
   ]
-  phone: '800 446-2322'
+  phone: '800-446-2322'
   navbarBrand:
     title: 'AFAA'
     link: '/'
@@ -34,7 +34,7 @@ module.exports =
     link: '/courses/group-x'
   ,
     title: 'Personal Trainer'
-    link: '/courses/certified-personal-trainer-certification'
+    link: '/courses/certified-personal-trainer'
   ,
     title: 'Courses'
     link: '/courses'

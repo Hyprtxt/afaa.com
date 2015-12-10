@@ -8,9 +8,9 @@ block content
       .clearfix
 
   .container
-    .row.m-t-lg
-      .col-md-6.m-b-lg
-        h1.hidden-md-up=product.title
+    .row.m-y-md
+      .col-md-6
+        h1.text-sans.hidden-md-up=product.title
         img.pull-right.m-b.product-image(src=assets+product.images[0])
         .clearfix
         if product.images.length > 1
@@ -21,10 +21,10 @@ block content
               img.pull-right.m-l.product-thumb.desaturate(src=assets+image)
         .clearfix
       .col-md-6
-        h1.hidden-sm-down=product.title
+        h1.text-sans.hidden-sm-down=product.title
         each description in product.description
           p=description
-        p.h3.m-b-md.pull-left $#{product.price}
+        p.h3.text-sans.m-b-md.pull-left $#{product.price}
         p.m-l.pull-left #{product.ceus} CEU's
         .clearfix
         a(href=product.link).btn.btn-primary.btn-lg.m-b-lg 
