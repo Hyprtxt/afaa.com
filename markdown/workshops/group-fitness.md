@@ -1,10 +1,8 @@
-## GROUP FITNESS TRAINER
+## Group X Instructor Workshop
 
 8 CEUs
 
-**NEW** Group Fitness Trainer **PRACTICAL WORKSHOP**
-
-This supplemental in-person workshop focuses on the practical application of group fitness leadership techniques. A complement to the Group Fitness Certification Program, this one-day event will help you practice your skills and develop confidence for leading freestyle or pre-designed classes.
+This supplemental in-person workshop focuses on the practical application of group fitness leadership techniques. A complement to the [Group X Instructor Certification](/courses/group-x), this one-day event will help you practice your skills and develop confidence for leading freestyle or pre-designed classes.
 
 Topics Include:
 

@@ -34,7 +34,7 @@ module.exports =
     link: '/courses/group-x'
   ,
     title: 'Personal Trainer'
-    link: '/courses/certified-personal-trainer'
+    link: '/courses/personal-fitness-trainer'
   ,
     title: 'Courses'
     link: '/courses'

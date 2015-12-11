@@ -1,28 +1,30 @@
 extends ./layout/layout
 
 block content
-
-  .bg-grey.m-b-lg
-    +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
-    .clearfix
-
-  //- pre=JSON.stringify( workshops, null, 2 )
-  .container.b-b
-    .row.m-t-lg
-      .col-lg-3.col-xl-2
-        img(src=assets+'/images/pdp1.jpg')
-      .col-lg-5.col-xl-7
-        include:markdown-it ../markdown/workshops/group-fitness.md
-      .col-lg-4.col-xl-3
-        a(href='/wdp').btn.btn-lg.btn-block.btn-primary Find a workshop near you 
+  .container
+    .row
+      .col-sm-12.m-t-lg
+        h1 Workshops
+        p.lead These workshops provide pratical hands on training.
 
   .container.b-b
-    .row.m-t-lg
+    .row.m-y-lg
       .col-lg-3.col-xl-2
-        img(src=assets+'/images/pdp1.jpg')
+        img(src=assets+'/products/group-x-practical.jpg')
       .col-lg-5.col-xl-7
-        include:markdown-it ../markdown/workshops/personal-fitness.md
+        h2 Group X Instructor Workshop
+        p CEUs 8
+        p This supplemental in-person workshop focuses on the practical application of group fitness leadership techniques. A complement to the [Group X Instructor Certification](/courses/group-x), this one-day event will help you practice your skills and develop confidence for leading freestyle or pre-designed classes.
       .col-lg-4.col-xl-3
-        a(href='/wdp').btn.btn-lg.btn-block.btn-primary Find a workshop near you 
+        a(href='/wdp').btn.btn-lg.btn-block.btn-primary Learn More
 
-  include ./block/form
+  .container.b-b
+    .row.m-y-lg
+      .col-lg-3.col-xl-2
+        img(src=assets+'/products/personal-fitness-trainer.jpg')
+      .col-lg-5.col-xl-7
+        h2 Personal Fitness Trainer Workshop
+        p CEUs 8
+        p This supplemental in-person workshop focuses on the practical application of fitness assessments and weight room coaching skills. A complement to the Personal Fitness Training Certification Program, this workshop will help you refine your knowledge and practice your skills in a one-day event that balances informative presentations with hands-on training.
+      .col-lg-4.col-xl-3
+        a(href='/wdp').btn.btn-lg.btn-block.btn-primary Learn More

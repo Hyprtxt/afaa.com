@@ -1,12 +1,11 @@
 module.exports =
   heading: 'Be the difference'
-  subheading: 'Become the trainer that makes them love working out.'
-
+  subheading: 'Become the instructor that makes them love working out.'
   title: 'Group X Instructor'
   description: [
     'Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.'
     'Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise certification, you must pass the written examination and show proof of your current hands-on CPR/AED certification.'
-    'Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.'
+    # 'Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.'
   ]
   featureDescription: 'The Group X program includes:'
   features: [
@@ -19,7 +18,7 @@ module.exports =
     'AFAA Certified Personal Trainer certification and I.D. card (upon passing the written examination and providing proof of current hands-on CPR/AED certification).'
   ]
   price: '699'
-  ceus: 'TBD'
+  ceus: '15'
   link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
   types: [
     'Group X'
@@ -27,4 +26,4 @@ module.exports =
   images: [
     '/products/group-x-practical.jpg'
   ]
-  relatedProducts: false
+  relatedProducts: true
