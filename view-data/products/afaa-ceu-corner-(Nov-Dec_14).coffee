@@ -1,7 +1,7 @@
 module.exports =
-  title: 'AFAA CEU Corner (Nov/Dec 14)'
+  title: 'AFAA CEU Corner (Nov/Dec 14) - The Sports Surfaces Debate'
   description: [
-    'content'
+    'I let my feet spend as little time on the ground as possible. From the air, fast down, and from the ground, fast up.'
   ]
   types: [
 

@@ -1,7 +1,7 @@
 module.exports =
-  title: 'AFAA CEU Corner (Mar/Apr 15)'
+  title: 'AFAA CEU Corner (Mar/Apr 15) - Rhabdomyolysis'
   description: [
-    'content'
+    'Are trend HIT programs to blame?'
   ]
   types: [
 

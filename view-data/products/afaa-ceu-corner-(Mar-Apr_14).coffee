@@ -1,7 +1,7 @@
 module.exports =
-  title: 'AFAA CEU Corner (Mar/Apr 14)'
+  title: 'AFAA CEU Corner (Mar/Apr 14) - Patellofemoral Pain Syndrome'
   description: [
-    'content'
+    'The knee is the largest joint in the body'
   ]
   types: [
 

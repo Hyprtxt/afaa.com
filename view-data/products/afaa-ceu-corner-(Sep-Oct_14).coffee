@@ -1,7 +1,7 @@
 module.exports =
-  title: 'AFAA CEU Corner (Sep/Oct 14)'
+  title: 'AFAA CEU Corner (Sep/Oct 14) - Pilates-Based Postural Assessment'
   description: [
-    'content'
+    'Improve spinal mobility and strength through proper posture'
   ]
   types: [
 

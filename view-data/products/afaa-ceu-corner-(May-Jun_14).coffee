@@ -1,10 +1,9 @@
 module.exports =
-  title: 'AFAA CEU Corner (May/Jun 14)'
+  title: 'AFAA CEU Corner (May/Jun 14) - Chronic Inflammation Compromises Health and Well-Being'
   description: [
-    'content'
+    'Physicians use biomarkers to reduce risk of end-organ damage and degenerative disease.'
   ]
   types: [
-
     'CEU Corner'
   ]
   ceus: '2'
