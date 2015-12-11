@@ -1,0 +1,55 @@
+extends ../layout/layout
+
+block content
+
+  //- .bg-grey.m-b-lg
+    +title( 'Onsite Workshops', '', 'm-b-md p-t-lg' )
+    .clearfix
+  .container.m-b-lg
+    .row.m-t-lg
+      .col-lg-6
+        img(src=assets+'/products/group-x-practical.jpg')
+      .col-lg-6
+        include:markdown-it ../../markdown/workshops/group-fitness.md
+      .col-lg-12
+        h2.m-b Upcoming Workshops
+        p.lead Call to reserve your spot today! 
+          a.m-b(href='tel:'+phone)=phone
+        table.table.table-striped
+          thead
+          tbody
+            tr
+              td Jacksonville Beach, FL
+              td Jan 9
+              td Time
+              td Address
+            tr
+              td Greenwood, IN
+              td Jan 10
+              td Time
+              td Address
+            tr
+              td Sacramento, CA
+              td Jan 17
+              td Time
+              td Address
+            tr
+              td Avondale, AZ
+              td Feb 6
+              td Time
+              td Address
+            tr
+              td Phoenix, AZ
+              td Feb 7
+              td Time
+              td Address
+            tr
+              td Richmond, VA
+              td Feb 20
+              td Time
+              td Address
+            tr
+              td Hayward, CA
+              td Feb 21
+              td Time
+              td Address

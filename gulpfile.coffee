@@ -97,6 +97,7 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch [
     'views/*.jade'
     'views/courses/*.jade'
+    'views/workshops/*.jade'
     '!views/courses.jade'
     ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
