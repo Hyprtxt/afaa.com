@@ -1,0 +1,68 @@
+extends ../layout/layout.jade
+
+block content
+
+  .bg-grey.m-b-lg
+    +title( 'Be The Differece', 'Become the instructor that makes them love working out.', 'm-b-md p-t-lg' )
+    .clearfix
+
+  .container
+    .row.m-y-lg
+      .col-md-6
+        h1.text-sans.hidden-md-up PFT Custom Template @TODOOOO
+        img.pull-right.m-b.product-image(src=assets+'/products/group-x-practical.jpg')
+        .clearfix
+      .col-md-6
+        h1.text-sans.hidden-sm-down Group X Instructor
+        p Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.
+        p Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise certification, you must pass the written examination and show proof of your current hands-on CPR/AED certification.
+        p.h3.text-sans.m-b-md.pull-left $699
+        p.m-l.pull-left 15 CEU's
+        .clearfix
+        a(href='https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1').btn.btn-primary.btn-lg.m-b-lg 
+          span.p-x-md.m-b-0.text-md Enroll Now
+        h3 The Group X program includes:
+        ul.p-l-md
+          li 14 on-line video lectures
+          li Primary Group Exercise downloadable study guide
+          li Sample multiple-choice questions
+          li Video lecture review clips
+          li An independently monitored and authenticated written exam
+          li One-year AFAA membership and a digital subscription to American Fitness® magazine
+          li AFAA Certified Personal Trainer certification and I.D. card (upon passing the written examination and providing proof of current hands-on CPR/AED certification).
+        hr
+        .technicalRequirements
+          h3 Technical Requirements
+          p.content The program includes video lectures. In order to play them, you will need Adobe Flash installed on your computer. 
+            a(href='#get-flash') Download the free program.
+      .clearfix
+
+  .container.m-b-lg
+    .row
+      hr.m-b-lg.m-t-lgrs
+      .col-md-12
+        h3.text-bold.text-condensed.text-uppercase.text-center.m-b-md You may also like...
+      .col-md-3
+        a(href='/workshops/group-x')
+          img.m-b(src=assets+'/products/group-x.jpg')
+        p.text-center.m-b-0
+          strong
+            a(href='/workshops/group-x') Group X Instructor Workshop
+      .col-md-3
+        a(href='/courses/group-excercise-the-practical-way')
+          img.m-b(src=assets+'/images/pdp1.jpg')
+        p.text-center.m-b-0
+          strong
+            a(href='/courses/group-excercise-the-practical-way') Group Exercise
+      .col-md-3
+        a(href='#')
+          img.m-b(src=assets+'/images/related3.jpg')
+        p.text-center.m-b-0
+          strong
+            a(href='#') CPT 4 eTeach 9 Weeks
+      .col-md-3
+        a(href='#')
+          img.m-b(src=assets+'/images/related4.jpg')
+        p.text-center.m-b-0
+          strong
+            a(href='#') CPT 4 eTeach 9 Weeks
