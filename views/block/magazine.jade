@@ -1,10 +1,16 @@
 .container
   +title( 'Stay inspired, informed and in touch.', ' Keep up to date with the latest in fitness and the fitness community.', 'm-b-0' )
   .col-md-7
-    .m-r
-      img.m-b(src='http://placehold.it/600x300', alt='American Fitness Magazine')
-      p This months issues features Maria Kang the "No-Excuses" mom of three who started a fitness revolution and a social media frenzy by keeping in shape despite her hectic schedule. 
-        a(href='#') Read more...
+    //- .m-r
+    .magazine-spot.m-b
+      .text
+        h2.h1.text-uppercase Maria Kang: 
+        h2 Making No Excuses
+        a().btn.btn-primary.btn-block Read Now
+      img.p-t(src=assets + '/images/american-fitness-cover.png', alt='American Fitness Magazine')
+      .clearfix
+    p This months issues features Maria Kang the "No-Excuses" mom of three who started a fitness revolution and a social media frenzy by keeping in shape despite her hectic schedule. 
+      a(href='#') Read more...
   .col-md-5
     a(href='http://www.nasm.org/the-training-edge-magazine/issues/american-fitness-magazine-nov-dec-2015/outrageous-starts-and-finishes').text-primary
       strong Outrageous Starts and Finishes

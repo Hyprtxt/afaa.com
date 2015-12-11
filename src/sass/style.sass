@@ -356,7 +356,7 @@ $input-color-placeholder:        #999
   border-bottom: 1px solid $border-gray
 
 input
-  box-shadow: inset 1px 1px 1px $gray-dark
+  box-shadow: inset 1px 1px 2px rgba( $gray-dark, 0.8 )
 
 p
   a
@@ -432,6 +432,8 @@ nav.navbar-message
   color: white
   border-radius: 0
   font-family: $font-family-condensed
+  a
+    color: white
 
 .navbar-mobile
   background: white
@@ -511,6 +513,30 @@ nav.navbar-message
   .navbar-main
     font-size: 1.2rem
 
+.magazine-spot
+  width: 100%
+  min-height: 14rem
+  background: linear-gradient( 0deg, darken( $gray-lighter, 10 ), $gray-lightest )
+  position: relative
+  padding: 0
+  .text
+    // position: absolute
+    width: 100%
+    max-width: 21rem
+    float: left
+    padding: 1rem
+  img
+    float: right
+
+@include media-breakpoint-down(lg)
+  .magazine-spot
+    .text
+      max-width: 18rem
+
+@include media-breakpoint-up(md)
+  .magazine-spot
+    .text
+      padding: 4rem 0 0 2rem
 // Footer
 
 .foot
@@ -572,8 +598,6 @@ nav.navbar-message
     min-height: 434px
     position: relative
     background-position: left center
-    > div
-      margin-top: 5rem
   .slide1
     background: url(#{$assets}/images/slide1.jpg)
   .slide2
@@ -581,6 +605,14 @@ nav.navbar-message
     background-position: right center
   .slide3
     background: url(#{$assets}/images/slide3.jpg)
+
+@include media-breakpoint-up(md)
+  .hero
+    .slide
+      > div
+        margin-top: 5rem
+      .btn
+        margin: 0 3rem
 
 // @include media-breakpoint-up(xl)
 //   .hero
