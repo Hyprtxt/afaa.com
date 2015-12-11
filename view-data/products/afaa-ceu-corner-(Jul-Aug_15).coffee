@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (Jul/Aug 15) - Train the Brain!'
+  title: 'Train the Brain!'
+  subhead: 'AFAA CEU Corner (Jul/Aug 15)'
   description: [
     'A plethora of body training approaches abounds today'
   ]

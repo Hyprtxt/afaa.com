@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (May/Jun 15) - The Harmful Effects of Excessive Exercise'
+  title: 'The Harmful Effects of Excessive Exercise'
+  subhead: 'AFAA CEU Corner (May/Jun 15)'
   description: [
     'Studies Reveal Links to Heart Damage'
   ]

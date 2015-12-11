@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (Jul/Aug 14) - Parkinson\'s Disease'
+  title: 'Parkinson\'s Disease'
+  subhead: 'AFAA CEU Corner (Jul/Aug 14)'
   description: [
     'It\'s more frequently seen in patients over the age of 60 and is one of the most common neurological disorders of this age group'
   ]

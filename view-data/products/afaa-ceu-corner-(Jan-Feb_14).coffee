@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (Jan/Feb 14) - Finding the Right Angle to Remedy Knee Pain'
+  title: 'Finding the Right Angle to Remedy Knee Pain'
+  subhead: 'AFAA CEU Corner (Jan/Feb 14)'
   description: [
     'Many people who suffer from knee pain are regular exercisers who want to train'
   ]

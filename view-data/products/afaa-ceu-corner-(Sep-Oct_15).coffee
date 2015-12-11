@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (Sep/Oct 15) - Sometimes You Just Have to Unplug'
+  title: 'Sometimes You Just Have to Unplug'
+  subhead: 'AFAA CEU Corner (Sep/Oct 15)'
   description: [
     'In today\'s world, stress is a very real and dangerous situation in the landscape of life.'
   ]

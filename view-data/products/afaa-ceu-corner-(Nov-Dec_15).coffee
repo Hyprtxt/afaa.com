@@ -1,5 +1,6 @@
 module.exports =
-  title: 'AFAA CEU Corner (Nov/Dec 15) - Motivating People for Better Health'
+  title: 'Motivating People for Better Health'
+  subhead: 'AFAA CEU Corner (Nov/Dec 15)'
   description: [
     'These labels on retail packages, a required outcome of the Nutrition Labeling and Education Act of 1990, have to meet strict guidelines and regulations set by the U.S.'
   ]

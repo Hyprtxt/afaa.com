@@ -23,7 +23,10 @@ mixin course( product )
         img(src=assets+product.images[0])
     .col-md-6.col-lg-7.content
       h3.m-b-0
-        a(href='/courses/'+product.filename)=product.title
+        a(href='/courses/'+product.filename)=product.title 
+          if product.subhead
+            span.block
+              small.text-muted=' ' + product.subhead
       span.m-b-lg CEUs: #{product.ceus}
       .clearfix
       each description, index in product.description
