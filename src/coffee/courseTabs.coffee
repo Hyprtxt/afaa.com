@@ -1,21 +1,35 @@
 jQuery ( $ ) ->
   $tabLinks = $ '.nav-tabs li a'
   $tabContent = $ '.tab-content > div'
+  hash = window.location.hash
 
   $tabLinks.on 'click', ( e ) ->
     $this = $ this
     active = $this.attr 'href'
       .replace '#', ''
+      .replace '_hash', ''
+    console.log active
     e.preventDefault()
+    loadTab active, $this
+
+  loadTab = ( active, $element ) ->
+    history.pushState {}, '', '#' + active
     $tabLinks.removeClass 'active'
-    $this.addClass 'active'
-    $tabContent.each ( ) ->
+    $element .addClass 'active'
+    $tabContent.each ->
       $this = $ this
-      if active is 'everything'
-        $this.fadeIn 500
-      else
-        if $this.attr( 'id' ) is active
-          $this.delay 501
-            .fadeIn 500
+      $this.fadeOut 500
+      setTimeout ->
+        if active is 'everything'
+          $this.fadeIn 500
         else
-          $this.fadeOut 500
+          if $this.attr( 'id' ) is active + '_hash'
+            $this.fadeIn 500
+      , 500
+    return
+
+  if hash
+    console.log 'have hash', hash
+    console.log 'a[href="' + hash + '_hash"]'
+    # $( "a[href='" + hash + "_hash']" ).trigger 'click'
+    loadTab hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
