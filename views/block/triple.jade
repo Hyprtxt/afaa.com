@@ -4,28 +4,31 @@
   .row.flex-md-up
     .col-lg-4.b-r
       .triple-card
-        a(href='#')
+        - var linkOne = '/courses/group-x'
+        a(href=linkOne)
           img(src=assets+'/images/triple1.jpg', alt='Group Instructor').m-b
-        a(href='#')
+        a(href=linkOne)
           h4 Become a Group Instructor
         p Easy-to-follow online training lets you begin immediately and learn at your own pace. 
-          a(href='#') Learn more...
+          a(href=linkOne) Learn more...
     .col-lg-4.b-r
       .triple-card
-        a(href='#')
+        - var linkTwo = '/courses/personal-fitness-trainer'
+        a(href=linkTwo)
           img(src=assets+'/images/triple2.jpg', alt='Personal Fitness Trainer').m-b
-        a(href='#')
+        a(href=linkTwo)
           h4 Become a Personal Trainer
         p The industry's first fully online secure, credible and convenient course for personal trainer certification. 
-          a(href='#') Learn more...
+          a(href=linkTwo) Learn more...
     .col-lg-4
       .triple-card
-        a(href='#')
+        - var linkThree = '/courses'
+        a(href=linkThree)
           img(src=assets+'/images/triple3.jpg', alt='Continuing Education').m-b
-        a(href='#')
+        a(href=linkThree)
           h4 Continuing Education
         p Stay up-to-date with the latest fitness research, trends, and techniques with continuing education courses. 
-          a(href='#') Learn more...
+          a(href=linkThree) Learn more...
   .row
     .clearfix
     hr.m-b-lg.m-t-lg

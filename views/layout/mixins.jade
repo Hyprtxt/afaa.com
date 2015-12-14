@@ -44,7 +44,7 @@ mixin course( product )
 
 mixin section( section, products )
   if section !== everything
-    .col-md-12.m-b-lg.tab-pane.active( id=toSlug( section ) )
+    .col-md-12.m-b-lg.tab-pane.active( id=toSlug( section ) + '_hash' )
       h3.m-b.text-center.text-bold.text-uppercase=section
       each product in products
         if product.types != undefined

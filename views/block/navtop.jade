@@ -4,16 +4,16 @@ nav.navbar.navbar-top.hidden-sm-down
       img.logo(src=assets+'/images/afaa.png', alt='Aerobics and Fitness Association of America')
     ul.nav.navbar-nav.hidden-sm-down.pull-right.m-t
       li.nav-item
-        a.nav-link(href='https://shop.nasm.org/ShoppingCart.aspx') Cart
+        a.nav-link.cart-link(href='https://shop.nasm.org/ShoppingCart.aspx') Cart
       li.nav-item
-        span.nav-link.account-popover.p-x My Account
+        span.nav-link.account-popover My Account
     #popover(style='display:none')
       .b-b.p-a
         p.m-b Courses purchased Jan 1, 2016 or later
         div
-          a.btn.btn-sm.btn-primary(href='https://wtg-shop.nasm.org/account.aspx') Log in
+          a.btn.btn-sm.btn-primary(href='https://shop.nasm.org/account.aspx') Log in
       .p-a
         p.m-b Courses purchased in 2015
         div
           a.btn.btn-sm.btn-primary(href='http://legacy.afaa.com') Log in
-    a(href='tel:' + phone).phone.pull-right.p-r=phone
+    a(href='/contact').phone.pull-right.p-r=phone

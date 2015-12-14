@@ -28,3 +28,10 @@ jQuery ( $ ) ->
     ]
 
   # $('.account-popover').on 'click', ( e ) ->
+
+  # URL Hax
+  linx = $ 'a'
+  linx.each ->
+    href = $(this).attr 'href'
+    if href
+      $(this).attr 'href', href.replace( 'shop.nasm.org', 'stg-shop.nasm.org' )

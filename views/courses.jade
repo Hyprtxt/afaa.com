@@ -16,10 +16,10 @@ block content
         - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
         ul.nav.nav-tabs.m-b-lg
           li.nav-item
-            a.nav-link.active#everything( href='#everything', data-toggle='tab' )=everything
+            a.nav-link.active#everything( href='#everything_hash', data-toggle='tab' )=everything
           each section in educationSections
             li.nav-item
-              a( href='#' + toSlug( section ), data-toggle='tab' ).nav-link=section
+              a( href='#' + toSlug( section ) + '_hash', data-toggle='tab' ).nav-link=section
         .tab-content
           +section( everything, products )
           each section in educationSections
