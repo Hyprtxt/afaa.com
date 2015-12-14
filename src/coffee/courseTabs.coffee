@@ -3,6 +3,9 @@ jQuery ( $ ) ->
   $tabContent = $ '.tab-content > div'
   hash = window.location.hash
 
+  $( window ).on 'popstate', ->
+    loadTab hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
+
   $tabLinks.on 'click', ( e ) ->
     $this = $ this
     active = $this.attr 'href'
@@ -29,7 +32,4 @@ jQuery ( $ ) ->
     return
 
   if hash
-    console.log 'have hash', hash
-    console.log 'a[href="' + hash + '_hash"]'
-    # $( "a[href='" + hash + "_hash']" ).trigger 'click'
     loadTab hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
