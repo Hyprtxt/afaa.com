@@ -14,7 +14,7 @@ block content
       .col-md-12.m-b-lg
         - var everything = 'All Products';
         - var educationSections = [ 'Group X', 'Personal Trainer', 'Specializations', 'Continuing Education', 'CEU Corner' ];
-        ul.nav.nav-tabs.m-b-lg
+        ul.nav.nav-tabs.m-b-lg.course-filters
           li.nav-item
             a.nav-link.active#everything_hash( href='#everything_hash', data-toggle='tab' )=everything
           each section in educationSections

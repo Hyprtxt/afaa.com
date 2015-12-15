@@ -37,3 +37,9 @@ jQuery ( $ ) ->
     loadTab hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
   else
     window.location.hash = 'everything'
+
+  rem_width = $( window ).width() / parseFloat( $( "body" ).css( "font-size" ) )
+  if rem_width < 62
+    $ '.course-filters'
+      .removeClass 'nav-tabs'
+      .addClass 'nav-pills nav-stacked'
