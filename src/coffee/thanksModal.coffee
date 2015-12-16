@@ -3,3 +3,5 @@ jQuery ( $ ) ->
     $thanks = $ '#thanks'
     $thanks.modal()
     window.location.hash = ''
+
+  $('.mobile-nav-spacer')[1].remove()
