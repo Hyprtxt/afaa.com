@@ -22,6 +22,7 @@ jQuery ( $ ) ->
         .clone()
         .show()
     placement: 'bottom'
+    trigger: 'focus'
     constraints: [
       to: 'window'
       pin: true
