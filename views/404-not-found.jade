@@ -1,18 +1,30 @@
 extends ./layout/layout.jade
 
 block content
-  .bg-grey.m-b-lg
-    +title( '404', 'Whoops!', 'm-b-md p-t-lg' )
-    .clearfix
   .container
     .row
-      .col-md-12.m-b-lg.text-center
+      .col-md-12.m-t-lg.text-center
         h3
           span.fa.fa-exclamation-triangle.text-danger
           |  We can't seem to find the page you are looking for.  
           span.fa.fa-exclamation-triangle.text-danger
         p Perhaps you'd like to check out American Fitness Magazine?
-        img(src='http://placehold.it/300x200')
-        p You can always excercise the back button?
-        .btn.btn-primary American Fitness Magazine
-        .btn.btn-primary Home Page
+    .row
+      .col-md-8.col-md-push-2
+        - var zineLink = 'http://www.nasm.org/the-training-edge-magazine/issues/american-fitness-magazine-nov-dec-2015/this-no-excuses-mom-has-started-a-fitness-revolution'
+        .magazine-spot.m-b
+          .text
+            h2.h1.text-uppercase Maria Kang: 
+            h2 Making No Excuses
+            a(href=zineLink).btn.btn-primary.btn-block Read Now
+          img(src=assets + '/images/american-fitness-cover.jpg', alt='American Fitness Magazine')
+          .clearfix
+        p This months issues features 
+          a(href=zineLink) Maria Kang the "No-Excuses" mom 
+          |  of three who started a fitness revolution and a social media frenzy by keeping in shape despite her hectic schedule. 
+          a(href=zineLink) Read more...
+    .row
+      .col-md-12.m-b-lg.text-center
+        p You can always exercise the back button?
+        a(href=zineLink).btn.btn-primary.m-r American Fitness Magazine
+        a(href='/').btn.btn-primary Home Page

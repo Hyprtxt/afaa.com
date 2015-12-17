@@ -4,4 +4,6 @@ jQuery ( $ ) ->
     $thanks.modal()
     window.location.hash = ''
 
-  $('.mobile-nav-spacer')[1].remove()
+  # Hack to fix sitefinity spacing on the HP
+  if $('.mobile-nav-spacer')[1]
+    $('.mobile-nav-spacer')[1].remove()
