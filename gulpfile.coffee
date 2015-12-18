@@ -21,6 +21,8 @@ fs = require 'fs'
 coffeeScript = require 'coffee-script'
 merge = require 'merge-stream'
 data = require 'gulp-data'
+concat = require 'gulp-concat'
+uglify = require 'gulp-uglify'
 
 dest = './static_generated'
 
@@ -204,3 +206,40 @@ gulp.task 'render', [
 
 gulp.task 'build', [ 'clean' ], ->
   gulp.start 'render'
+
+
+# concat
+# uglify
+
+gulp.task 'hpjs', ->
+  return gulp.src [
+    dest + '/js/jquery-cycle2/jquery.cycle2.js'
+    dest + '/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js'
+    dest + '/js/bootstrap/modal.js'
+    dest + '/js/formValidation/formValidation.min.js'
+    dest + '/js/formValidation/framework/bootstrap.min.js'
+    dest + '/js/formValidation/mandatoryIcon.min.js'
+    dest + '/js/formValidation.js'
+  ]
+  .pipe concat 'homepage.js'
+  .pipe uglify()
+  .pipe gulp.dest dest + '/ugly'
+
+gulp.task 'globjs', ->
+  return gulp.src [
+    dest + '/js/jquery/jquery.min.js'
+    dest + '/js/tether/tether.min.js'
+    dest + '/js/bootstrap/util.js'
+    dest + '/js/bootstrap/collapse.js'
+    dest + '/js/bootstrap/dropdown.js'
+    dest + '/js/bootstrap/tooltip.js'
+    dest + '/js/bootstrap/popover.js'
+    dest + '/js/script.js'
+  ]
+  .pipe concat 'global.js'
+  .pipe uglify()
+  .pipe gulp.dest dest + '/ugly'
+
+# gulp.task 'copycss', ->
+#   return gulp.src './bower_components/font-awesome/css/**'
+#     .pipe gulp.dest dest + '/css/font-awesome'

@@ -4,7 +4,9 @@ block content
 
   if product.heading
     .bg-grey.m-b-lg
-      +title( product.heading, product.subheading, 'm-b-md p-t-lg' )
+      .col-md-12.m-b-md.p-t-lg
+        h2.text-center.text-bold.text-uppercase=product.heading
+        p.text-center.text-muted.lead=product.subheading
       .clearfix
 
   .container
@@ -33,7 +35,7 @@ block content
         p.h3.text-sans.m-b-md.pull-left $#{product.price}
         p.m-l.pull-left #{product.ceus} CEU's
         .clearfix
-        a(href=product.link).btn.btn-primary.btn-lg.m-b-lg 
+        a(href='https://shop.nasm.org/addtocart.aspx?productid='+product.link).btn.btn-primary.btn-lg.m-b-lg 
           span.p-x-md.m-b-0.text-md Enroll Now
         if product.featureTitle
           h3=product.featureTitle
@@ -46,7 +48,7 @@ block content
           .technicalRequirements
             h3 Technical Requirements
             p.content The program includes video lectures. In order to play them, you will need Adobe Flash installed on your computer. 
-              a(href='#get-flash') Download the free program.
+              a(href='https://get.adobe.com/flashplayer/') Download the free program.
       .clearfix
 
 //- block pageJS
