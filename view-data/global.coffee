@@ -13,8 +13,7 @@ module.exports =
     '/js/script.js'
   ]
   stylesheets: [
-    'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700'
-    'https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700'
+    'https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700|Roboto+Condensed:400,700'
     '/css/style.css'
   ]
   phone: '800-446-2322'
