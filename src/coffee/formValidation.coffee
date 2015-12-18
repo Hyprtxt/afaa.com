@@ -1,5 +1,8 @@
 jQuery ( $ ) ->
-  console.log 'have valid'
+
+  # Hack to fix sitefinity spacing on the HP
+  if $('.mobile-nav-spacer')[1]
+    $('.mobile-nav-spacer')[1].remove()
 
   $form = $ '#acton1'
 
@@ -48,7 +51,21 @@ jQuery ( $ ) ->
             message: 'Your phone number is required'
           phone:
             country: 'US'
-            message: 'That does not look like a valid phone number'
+            message: 'Use this format: 555-555-5555'
           stringLength:
             max: 25
             message: 'Phone # must not be more than 25 characters long'
+
+  validator = $form.data 'formValidation'
+
+  $thanks = $ '#thanks'
+
+  $form.on 'submit', ( e ) ->
+    e.preventDefault()
+    if validator.isValid()
+      $.ajax
+        type: 'POST'
+        url: $form.attr 'action'
+        data: $form.serialize()
+      .always ( ) ->
+        $thanks.modal()
