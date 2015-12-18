@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '2'
   price: '35'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: '9190'
   images: [
     '/products/unplug-sept-oct-2015.jpg'
   ]

@@ -10,7 +10,7 @@ module.exports =
   ]
   ceus: '2'
   price: '35'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: '9187'
   images: [
     '/products/rhabdomyolysis-march-april-2015.jpg'
   ]

@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '4'
   price: '35'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: ''
   images: [
     '/products/jillian-michaels-ceu-corner.jpg'
   ]

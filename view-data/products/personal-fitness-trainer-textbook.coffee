@@ -7,7 +7,7 @@ module.exports =
     'Personal Trainer'
   ]
   price: '79'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: ''
   images: [
     '/products/pft-textbook.gif'
   ]

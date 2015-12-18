@@ -10,7 +10,7 @@ module.exports =
   ]
   ceus: '2'
   price: '35'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: '9181'
   images: [
     '/products/patelloral-mar-april-2014.jpg'
   ]

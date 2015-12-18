@@ -23,7 +23,7 @@ module.exports =
   ]
   ceus: '15'
   price: '699'
-  link: 'https://shop.nasm.org/addtocart.aspx?productid=8413&variantid=2092&quantity=1'
+  link: ''
   images: [
     '/products/personal-fitness-trainer.jpg'
   ]
