@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '7'
   price: '69'
-  link: ''
+  link: '9192'
   images: [
     '/products/multiple-client.jpg'
   ]

@@ -7,7 +7,7 @@ module.exports =
     'Personal Trainer'
   ]
   price: '79'
-  link: ''
+  link: '9233'
   images: [
     '/products/pft-textbook.gif'
   ]

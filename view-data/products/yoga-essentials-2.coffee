@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '4'
   price: '59'
-  link: ''
+  link: '9195'
   images: [
     '/products/yoga-essentials-2.jpg'
   ]

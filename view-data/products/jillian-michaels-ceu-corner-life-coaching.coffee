@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '4'
   price: '35'
-  link: ''
+  link: '9177'
   images: [
     '/products/jillian-michaels-ceu-corner.jpg'
   ]

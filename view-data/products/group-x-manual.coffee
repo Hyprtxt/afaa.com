@@ -4,10 +4,10 @@ module.exports =
     'Exercise Standards & Guidelines Reference Manual is the perfect complement and reference resource for aspiring and current AFAA group exercise instructors.'
   ]
   types: [
-    'Group X'
+    'Group Ex'
   ]
   price: '45'
-  link: ''
+  link: '9234'
   images: [
-    '/products/group-x-manual.gif'
+    '/products/group-ex-manual.gif'
   ]

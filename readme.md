@@ -11,7 +11,7 @@ A very dynamic program that dynamically creates a static website, ready for Site
 
 One completed page in SiteFinity
 
-- [x] URL Structure `/courses/group-x`
+- [x] URL Structure `/courses/group-ex`
 
 - [ ] Interactivity Completion
     - [ ] Done with JavaScript
@@ -43,7 +43,7 @@ Complete HP in Sitefinity
 * Workshops Section (Design & Content)
 * Final Courses Content
   * Personal Trainer Related Products
-  * Group X is using PT content
+  * Group Ex is using PT content
 * Lost slider effects (slider background expands out of containter.)
 
 ## Sitefinity Notes

@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '7'
   price: '59'
-  link: ''
+  link: '9169'
   images: [
     '/products/hi-lo-hip-hop.jpg'
   ]

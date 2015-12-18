@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '7'
   price: '149'
-  link: ''
+  link: '9204'
   images: [
     '/products/gear-cycling.jpg'
   ]

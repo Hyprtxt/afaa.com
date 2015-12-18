@@ -30,8 +30,8 @@ module.exports =
   #   link: 'https://shop.nasm.org/account.aspx'
   # ]
   navigation: [
-    title: 'Group X Instructor'
-    link: '/courses/group-x'
+    title: 'Group Ex Instructor'
+    link: '/courses/group-ex'
   ,
     title: 'Personal Trainer'
     link: '/courses/personal-fitness-trainer'

@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '7'
   price: '149'
-  link: ''
+  link: '9216'
   images: [
     '/products/prenatal-fitness.jpg'
   ]

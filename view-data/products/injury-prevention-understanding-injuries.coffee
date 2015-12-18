@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '4'
   price: '59'
-  link: ''
+  link: '9212'
   images: [
     '/products/understanding-injury.jpg'
   ]

@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '7'
   price: '59'
-  link: ''
+  link: '9193'
   images: [
     '/products/music-essentials.jpg'
   ]

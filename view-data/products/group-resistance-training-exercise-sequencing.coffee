@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '7'
   price: '59'
-  link: ''
+  link: '9171'
   images: [
     '/products/group-resistance-training-exercise-sequence.jpg'
   ]

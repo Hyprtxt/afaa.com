@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '7'
   price: '149'
-  link: ''
+  link: '9223'
   images: [
     '/products/yoga-pilates-ball.jpg'
   ]

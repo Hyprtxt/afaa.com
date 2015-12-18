@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '4'
   price: '49'
-  link: ''
+  link: '9196'
   images: [
     '/products/resistance-core.jpg'
   ]

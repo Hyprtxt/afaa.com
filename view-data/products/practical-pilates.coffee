@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '7'
   price: '149'
-  link: ''
+  link: '9218'
   images: [
     '/products/practical-pilates.jpg'
   ]
