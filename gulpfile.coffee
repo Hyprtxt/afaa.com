@@ -23,6 +23,7 @@ merge = require 'merge-stream'
 data = require 'gulp-data'
 concat = require 'gulp-concat'
 uglify = require 'gulp-uglify'
+minifyCss = require 'gulp-minify-css'
 
 dest = './static_generated'
 
@@ -207,9 +208,7 @@ gulp.task 'render', [
 gulp.task 'build', [ 'clean' ], ->
   gulp.start 'render'
 
-
-# concat
-# uglify
+gulp.task 'ugly', [ 'hpjs', 'globjs', 'globcss' ]
 
 gulp.task 'hpjs', ->
   return gulp.src [
@@ -221,9 +220,9 @@ gulp.task 'hpjs', ->
     dest + '/js/formValidation/mandatoryIcon.min.js'
     dest + '/js/formValidation.js'
   ]
-  .pipe concat 'homepage.js'
-  .pipe uglify()
-  .pipe gulp.dest dest + '/ugly'
+    .pipe concat 'homepage.js'
+    .pipe uglify()
+    .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'globjs', ->
   return gulp.src [
@@ -236,10 +235,11 @@ gulp.task 'globjs', ->
     dest + '/js/bootstrap/popover.js'
     dest + '/js/script.js'
   ]
-  .pipe concat 'global.js'
-  .pipe uglify()
-  .pipe gulp.dest dest + '/ugly'
+    .pipe concat 'global.js'
+    .pipe uglify()
+    .pipe gulp.dest dest + '/ugly'
 
-# gulp.task 'copycss', ->
-#   return gulp.src './bower_components/font-awesome/css/**'
-#     .pipe gulp.dest dest + '/css/font-awesome'
+gulp.task 'globcss', ->
+  return gulp.src dest + '/css/style.css'
+    .pipe minifyCss compatibility: 'ie9'
+    .pipe gulp.dest dest + '/ugly'

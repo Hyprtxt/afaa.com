@@ -8,23 +8,39 @@ block content
           span.fa.fa-exclamation-triangle.text-danger
           |  We can't seem to find the page you are looking for.  
           span.fa.fa-exclamation-triangle.text-danger
-        p Perhaps you'd like to check out American Fitness Magazine?
+        p Perhaps you'd like to check out some of our products?
+    //- include ./block/triple
+    .row.flex-md-up
+      .col-lg-4.b-r
+        .triple-card
+          - var linkOne = '/courses/group-ex'
+          a(href=linkOne)
+            img(src=assets+'/images/triple1.jpg', alt='Group Instructor').m-b
+          a(href=linkOne)
+            h4 Become a Group Instructor
+          p Easy-to-follow online training lets you begin immediately and learn at your own pace. 
+            a(href=linkOne) Learn more...
+      .col-lg-4.b-r
+        .triple-card
+          - var linkTwo = '/courses/personal-fitness-trainer'
+          a(href=linkTwo)
+            img(src=assets+'/images/triple2.jpg', alt='Personal Fitness Trainer').m-b
+          a(href=linkTwo)
+            h4 Become a Personal Trainer
+          p The industry's first fully online secure, credible and convenient course for personal trainer certification. 
+            a(href=linkTwo) Learn more...
+      .col-lg-4
+        .triple-card
+          - var linkThree = '/courses'
+          a(href=linkThree)
+            img(src=assets+'/images/triple3.jpg', alt='Continuing Education').m-b
+          a(href=linkThree)
+            h4 Continuing Education
+          p Stay up-to-date with the latest fitness research, trends, and techniques with continuing education courses. 
+            a(href=linkThree) Learn more...
     .row
-      .col-md-8.col-md-push-2
+      .col-md-12.m-y-lg.text-center
         - var zineLink = 'http://www.nasm.org/the-training-edge-magazine/issues/american-fitness-magazine-nov-dec-2015/this-no-excuses-mom-has-started-a-fitness-revolution'
-        .magazine-spot.m-b
-          .text
-            h2.h1.text-uppercase Maria Kang: 
-            h2 Making No Excuses
-            a(href=zineLink).btn.btn-primary.btn-block Read Now
-          img(src=assets + '/images/american-fitness-cover.jpg', alt='American Fitness Magazine')
-          .clearfix
-        p This months issues features 
-          a(href=zineLink) Maria Kang the "No-Excuses" mom 
-          |  of three who started a fitness revolution and a social media frenzy by keeping in shape despite her hectic schedule. 
-          a(href=zineLink) Read more...
-    .row
-      .col-md-12.m-b-lg.text-center
         p You can always exercise the back button?
         a(href=zineLink).btn.btn-primary.m-r American Fitness Magazine
         a(href='/').btn.btn-primary Home Page
