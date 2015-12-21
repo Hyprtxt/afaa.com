@@ -3,9 +3,8 @@ module.exports =
   subheading: 'Become the instructor that makes them love working out.'
   title: 'Group Ex Instructor'
   description: [
-    'Learn at your own pace with 14 dynamic streaming video lectures, a downloadable study guide, and sample multiple choice questions. Then watch a series of short video lecture review clips to refresh your memory on key points of the video lectures.'
-    'Upon completion of the program, you’ll take an independently monitored two-hour, 100 question multiple choice exam. To receive the Primary Group Exercise certification, you must pass the written examination and show proof of your current hands-on CPR/AED certification.'
-    # 'Currently certified AFAA instructors will earn 5 CEU credits upon the successful completion of this course. You must complete the program within one (1) year of your enrollment date.'
+    'Fitness should be fun, challenging and rewarding. A great group instructor knows the human body, the science of exercise and how to inspire, challenge and motivate change in the lives of the people they lead. AFAA knows how to create great group instructors.'
+    'With your AFAA Primary Group Exercise certification, you’ll get the tools, training and knowledge to help you lead people to healthier, happier lives. We’ll cover these key topics to get you prepared.'
   ]
   featureDescription: 'The Group Ex program includes:'
   features: [
@@ -19,7 +18,7 @@ module.exports =
   ]
   price: '699'
   ceus: '15'
-  link: ''
+  link: '9167'
   types: [
     'Group Ex'
   ]

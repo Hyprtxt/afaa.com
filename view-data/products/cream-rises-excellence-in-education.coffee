@@ -7,7 +7,7 @@ module.exports =
     'Continuing Education'
   ]
   ceus: '4'
-  price: 'TBD'
+  price: '149'
   link: '9214'
   images: [
     '/products/cream-rises.jpg'

@@ -7,7 +7,7 @@ module.exports =
     'Continuing Education'
   ]
   ceus: '4'
-  price: 'TBD'
+  price: '149'
   link: '9198'
   images: [
     '/products/exercise-design-for-seniors.jpg'

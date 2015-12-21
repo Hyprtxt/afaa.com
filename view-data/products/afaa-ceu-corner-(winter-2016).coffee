@@ -9,7 +9,7 @@ module.exports =
   ]
   ceus: '2'
   price: '35'
-  link: ''
+  link: '9236'
   images: [
     '/products/ceu-corner-winter-2016.jpg'
   ]
