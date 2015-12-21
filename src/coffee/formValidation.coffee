@@ -60,7 +60,9 @@ jQuery ( $ ) ->
 
   $thanks = $ '#thanks'
 
-  $form.on 'submit', ( e ) ->
+  $btn = $form.find 'button'
+
+  $btn.on 'click', ( e ) ->
     e.preventDefault()
     if validator.isValid()
       $.ajax

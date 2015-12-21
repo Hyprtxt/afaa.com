@@ -10,5 +10,5 @@ module.exports =
   price: '129'
   link: '9199'
   images: [
-    '/products/diet-free-life.jpg'
+    '/products/arthritis-walk.jpg'
   ]

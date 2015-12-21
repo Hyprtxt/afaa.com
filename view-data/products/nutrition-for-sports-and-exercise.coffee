@@ -8,7 +8,7 @@ module.exports =
   ]
   ceus: '7'
   price: '129'
-  link: '9201'
+  link: '9211'
   images: [
     '/products/diet-free-life.jpg'
   ]
