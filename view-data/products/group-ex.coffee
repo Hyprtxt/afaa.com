@@ -4,12 +4,12 @@ module.exports =
   title: 'Group Ex Instructor'
   description: [
     'Fitness should be fun, challenging and rewarding. A great group instructor knows the human body, the science of exercise and how to inspire, challenge and motivate change in the lives of the people they lead. AFAA knows how to create great group instructors.'
-    'With your AFAA Primary Group Exercise certification, you’ll get the tools, training and knowledge to help you lead people to healthier, happier lives. We’ll cover these key topics to get you prepared.'
+    'With your AFAA Group Ex Instructor certification, you’ll get the tools, training and knowledge to help you lead people to healthier, happier lives. We’ll cover these key topics to get you prepared.'
   ]
   featureDescription: 'The Group Ex program includes:'
   features: [
     '14 on-line video lectures'
-    'Primary Group Exercise downloadable study guide'
+    'Group Ex downloadable study guide'
     'Sample multiple-choice questions'
     'Video lecture review clips'
     'An independently monitored and authenticated written exam'
@@ -18,7 +18,7 @@ module.exports =
   ]
   price: '699'
   ceus: '15'
-  link: '9167'
+  link: '9248'
   types: [
     'Group Ex'
   ]

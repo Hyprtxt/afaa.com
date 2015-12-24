@@ -20,7 +20,7 @@ module.exports =
   ]
   ceus: '15'
   price: '699'
-  link: '9164'
+  link: '9246'
   images: [
     '/products/personal-fitness-trainer.jpg'
   ]
