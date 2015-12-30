@@ -19,7 +19,7 @@ module.exports =
     'Personal Trainer'
   ]
   ceus: '15'
-  price: '699'
+  price: '499'
   link: '9246'
   images: [
     '/products/personal-fitness-trainer.jpg'

@@ -15,6 +15,7 @@ block content
         h2.m-b Upcoming Workshops
         p.lead All workshops are 8am-5pm. Call today to reserve your spot! 
           a.m-b(href='tel:'+phone)=phone
+        //- pre=JSON.stringify( gex, null, 2 )
         table.table.table-striped
           thead
             tr
@@ -22,71 +23,7 @@ block content
               th Date
               th Address
           tbody
-            tr
-              td Arlington, TX
-              td January 30th
-              td University of Texas-Maverick Activities Center, 500 W. Nedderman Dr. Arlington, TX 76019
-            tr
-              td Herndon, VA
-              td January 31st
-              td Sport and Health Worldgate, 13037 Worldgate Dr., Herndon, VA 20170
-            tr
-              td Pasadena, CA
-              td January 31st
-              td Gold's Gym Pasadena, 39 S. Alta Dena Dr., Pasadena, CA 91107
-            tr
-              td Richmond, VA
-              td February 13th
-              td University of Richmond – Weinstein Center, 28 Westhampton Way, Richmond, VA 23173
-            tr
-              td Avondale, AZ
-              td February 21st
-              td EOS Fitness, 3005 N. Dysart Road, Avondale, AZ 85392
-            tr
-              td NY, NY
-              td February 28th
-              td Vanderbilt YMCA, 224 E. 47th Street, NY, NY 10017
-            tr
-              td Tampa, FL
-              td February 28th
-              td Northwest Hillsborough YMCA, 8950 W. Waters Ave., Tampa, FL 33615
-            tr
-              td Long Beach, CA
-              td February 28th
-              td Gold's Gym, 345 Pine Ave., Long Beach, CA 90802
-            tr
-              td Guilderland, NY
-              td March 5th
-              td Vent Fitness, 2080 Western Ave., Guilderland, NY 12084
-            tr
-              td Los Angeles, CA
-              td March 6th
-              td Ketchum Family YMCA, 401 S. Hope Street, Los Angeles, CA 90071
-            tr
-              td Jersey City, NJ
-              td March 12th
-              td Saint Peter’s University, 2641 Kennedy Blvd., Jersey City, NJ 07306
-            tr
-              td Emmitsburg, VA
-              td March 12th
-              td Mt. St. Mary’s University Knott, 16300 Old Emmitsburg Road, Emmitsburg, VA 21727
-            tr
-              td Jacksonville, FL
-              td March 12th
-              td Bailey's Health and Fitness, 1352 Beach Blvd., Jacksonville, FL 32250
-            tr
-              td Wahiawa, HI
-              td March 12th
-              td Wahiawa Annex Fitness Center, 500 Center Street, Building 446, Wahiawa, HI 96786
-            tr
-              td St. Louis, MO
-              td March 12th
-              td C.S. Fitness, 3227 Morganford Road, St. Louis, MO 63116
-            tr
-              td Lowell, MA
-              td March 13th
-              td University of Massachusetts Campus Recreation, 100 Pawtucket St., Lowell, MA 01854
-            tr 
-              td Altamonte, FL
-              td April 30th
-              td Youfit, 140 Cranes Roost Blvd., Altamonte, FL 32701
+            each workshop in gex
+              tr
+                each item in workshop
+                  td=item

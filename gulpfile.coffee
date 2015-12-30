@@ -100,7 +100,7 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch [
     'views/*.jade'
     'views/courses/*.jade'
-    'views/workshops/*.jade'
+    '!views/workshops/*.jade'
     '!views/courses.jade'
     ], ['jadeSingle']
   gulp.watch 'views/block/*.jade', ['jade']
@@ -109,12 +109,53 @@ gulp.task 'watch', [ 'render' ], ->
   gulp.watch 'view-data/*.coffee', ['jade', 'products']
   gulp.watch 'views/template/products.jade', ['products']
   gulp.watch 'views/courses.jade', ['courses']
+  gulp.watch 'views/workshops/*.jade', ['workshops']
   gulp.watch 'view-data/products/*.coffee', ['products']
   gulp.watch 'markdown/**/*.md', ['jade']
   gulp.watch 'readme.md', ['jade']
   return livereload.listen
     basePath: 'static_generated/'
     start: true
+
+Request = require 'request'
+
+gulp.task 'workshops', [ 'setupJadeData' ], ( next ) ->
+  workDest = dest + '/workshops';
+  PFT = 'https://spreadsheets.google.com/feeds/list/1QILIeVrKurWSQFmwGERhsLH9C2AdosbsiRw4NeM76h0/1/public/values?alt=json'
+  GEX = 'https://spreadsheets.google.com/feeds/list/1QILIeVrKurWSQFmwGERhsLH9C2AdosbsiRw4NeM76h0/2/public/values?alt=json'
+  getSheetData PFT, ( data ) ->
+    _jadeData.pft = data
+    gulp.src 'views/workshops/personal-fitness-trainer.jade'
+      .pipe changed workDest,
+        extension: '.html'
+      .pipe jade
+        locals: _jadeData
+        pretty: true
+      .pipe gulp.dest workDest
+      .pipe wait 1000
+      .pipe livereload()
+  getSheetData GEX, ( data ) ->
+    _jadeData.gex = data
+    gulp.src 'views/workshops/group-ex.jade'
+      .pipe changed workDest,
+        extension: '.html'
+      .pipe jade
+        locals: _jadeData
+        pretty: true
+      .pipe gulp.dest workDest
+      .pipe wait 1000
+      .pipe livereload()
+
+  return null
+
+getSheetData = ( URL, next ) ->
+  Request URL, ( err, resp, body ) ->
+    next JSON.parse( body ).feed.entry.map ( v, i ) ->
+      return [
+        v.gsx$location.$t
+        v.gsx$date.$t
+        v.gsx$address.$t
+      ]
 
 # static site stuff
 requireCoffee = ( path, next ) ->

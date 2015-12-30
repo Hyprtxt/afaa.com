@@ -16,7 +16,7 @@ module.exports =
     'One-year AFAA membership and a digital subscription to American Fitness® magazine'
     'AFAA Certified Personal Trainer certification and I.D. card (upon passing the written examination and providing proof of current hands-on CPR/AED certification).'
   ]
-  price: '699'
+  price: '299'
   ceus: '15'
   link: '9248'
   types: [
