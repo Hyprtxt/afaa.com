@@ -67,6 +67,6 @@ jQuery ( $ ) ->
     if validator.isValid()
       $.ajax
         type: 'POST'
-        url: $form.attr('action') + '?' + $form.find('input').serialize()
+        url: $form.attr('action') + '?' + $form.find('input').serialize() + '&new_afaacustomer=Yes'
       .always ( ) ->
         $thanks.modal()
