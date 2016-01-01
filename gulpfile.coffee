@@ -243,6 +243,7 @@ gulp.task 'render', [
   'coffee'
   'courses'
   'products'
+  'workshops'
   'jade'
 ]
 
