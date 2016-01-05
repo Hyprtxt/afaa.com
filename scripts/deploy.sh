@@ -1,7 +1,5 @@
 #!/bin/bash
 
-cd ~/www/afaa.nasm.pw
-
 rsync -r --del ./static_generated nasm:/var/www/afaa.nasm.pw
 
 curl -X POST \
