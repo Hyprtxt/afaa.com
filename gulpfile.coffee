@@ -39,6 +39,7 @@ _jadeSrc = [
   '!./views/block/**'
   '!./views/template/**'
   '!./views/courses.jade'
+  '!./views/workshops/*.jade'
 ]
 
 gulp.task 'default', [ 'clean' ], ->
