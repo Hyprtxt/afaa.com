@@ -37,6 +37,7 @@ jQuery ( $ ) ->
             regexp: /^[a-zA-Z. ]+$/
             message: 'Name can only consist of alphabetical characters and "."'
       'Email Address':
+        row: '.col-sm-6'
         validators:
           notEmpty:
             message: 'Your email address is required'
@@ -45,7 +46,7 @@ jQuery ( $ ) ->
           stringLength:
             max: 80
             message: 'Email must not be more than 80 characters long'
-      'telephone1':
+      telephone1:
         validators:
           notEmpty:
             message: 'Your phone number is required'
