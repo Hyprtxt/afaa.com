@@ -65,6 +65,7 @@ jQuery ( $ ) ->
   $btn.on 'click', ( e ) ->
     e.preventDefault()
     validator.validate()
+    console.log 'validating'
     if validator.isValid()
       console.log $form.attr('action') + '?' + $form.find('input').serialize() + '&new_afaacustomer=Yes'
       $.ajax

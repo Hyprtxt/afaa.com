@@ -16,7 +16,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "v4-dev",
+    "bootstrap": "4.0.0-alpha",
     "jquery-cycle2": "~2.1.6",
     "font-awesome": "~4.5.0",
     "tether": "~1.1.1"
