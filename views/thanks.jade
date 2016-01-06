@@ -1,0 +1,41 @@
+extends ./layout/layout.jade
+
+block content
+  .container
+    .row
+      .col-md-12.m-y-lg.text-center
+        h3
+          span.fa.fa-smile-o.text-success
+          |  Thank You  
+          span.fa.fa-smile-o.text-success
+        p You have successfully signed up!
+        p Thanks for signing up to learn more about AFAA.
+    //- include ./block/triple
+    .row.flex-md-up.m-b-lg
+      .col-lg-4.b-r
+        .triple-card
+          - var linkOne = '/courses/group-ex'
+          a(href=linkOne)
+            img(src=assets+'/images/triple1.jpg', alt='Group Instructor').m-b
+          a(href=linkOne)
+            h4 Become a Group Instructor
+          p Easy-to-follow online training lets you begin immediately and learn at your own pace. 
+            a(href=linkOne) Learn more...
+      .col-lg-4.b-r
+        .triple-card
+          - var linkTwo = '/courses/personal-fitness-trainer'
+          a(href=linkTwo)
+            img(src=assets+'/images/triple2.jpg', alt='Personal Fitness Trainer').m-b
+          a(href=linkTwo)
+            h4 Become a Personal Trainer
+          p The industry's first fully online secure, credible and convenient course for personal trainer certification. 
+            a(href=linkTwo) Learn more...
+      .col-lg-4
+        .triple-card
+          - var linkThree = '/courses'
+          a(href=linkThree)
+            img(src=assets+'/images/triple3.jpg', alt='Continuing Education').m-b
+          a(href=linkThree)
+            h4 Continuing Education
+          p Stay up-to-date with the latest fitness research, trends, and techniques with continuing education courses. 
+            a(href=linkThree) Learn more...
