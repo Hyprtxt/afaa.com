@@ -45,7 +45,7 @@ jQuery ( $ ) ->
           stringLength:
             max: 80
             message: 'Email must not be more than 80 characters long'
-      'Phone':
+      'telephone1':
         validators:
           notEmpty:
             message: 'Your phone number is required'
