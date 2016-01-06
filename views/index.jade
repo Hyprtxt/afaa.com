@@ -12,12 +12,16 @@ block vars
 
 block navigation
   .mobile-nav-spacer.hidden-md-up
-  include ./block/message
+  //- include ./block/message
   include ./block/navtop
   include ./block/nav
   include ./block/mobilenav
 
 block content
+  #help
+    //- span.fa.fa-life-ring.fa-2x
+    p login help?
+    //- span.fa.fa-info-circle.fa-2x
   include ./block/hero
   include ./block/triple
   include ./block/list
