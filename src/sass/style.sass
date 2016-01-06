@@ -784,14 +784,45 @@ nav.navbar-message
   border-radius: 0 5px 5px 0
   box-shadow: 1px 0 3px $gray-light
   border-left: 0
-  position: fixed
+  position: absolute
   z-index: 1200
   text-align: center
   max-width: 3rem
+  transition: 0.5s
+  left: 0
+  top: 10rem
   p
     font-size: 10px
     margin: 0
 
 #help2:hover
+  box-shadow: 1px 1px 5px $gray-light
   p
-    text-transform: underline
+    text-decoration: underline
+
+
+#help3
+  padding: 0.2rem 1rem !important
+  cursor: pointer
+  background: $brand-primary
+  color: white
+  padding: 0.5rem
+  border: 3px solid white
+  border-radius: 0 0 5px 5px
+  border-top: 0
+  box-shadow: 1px 0 3px $gray-light
+  position: fixed
+  z-index: 1200
+  text-align: center
+  transition: 0.5s
+  right: 3rem
+  top: 0
+  p
+    font-size: 10px
+    margin: 0
+
+#help3:hover
+  padding: 0.5rem 1rem !important
+  box-shadow: 1px 1px 5px $gray-light
+  p
+    text-decoration: underline
