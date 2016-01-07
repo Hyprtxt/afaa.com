@@ -11,6 +11,10 @@ block vars
 //-   include ./block/mobilenav
 
 block navigation
+  .container(style='position: relative').hidden-sm-down
+    a(href='/help')#help3
+      p Get Login Help  
+        span.fa.fa-question-circle
   .mobile-nav-spacer.hidden-md-up
   //- include ./block/message
   include ./block/navtop
@@ -18,18 +22,6 @@ block navigation
   include ./block/mobilenav
 
 block content
-  a(href='/thanks')#help1
-    p Get Login Help  
-      span.fa.fa-question-circle
-      //- span.fa.fa-life-ring
-  a(href='/thanks')#help2
-    //- span.fa.fa-life-ring.fa-2x
-    p login help?
-    //- span.fa.fa-info-circle.fa-2x
-  a(href='/thanks')#help3
-    p Get Login Help  
-      span.fa.fa-question-circle
-      //- span.fa.fa-life-ring
   include ./block/hero
   include ./block/triple
   include ./block/list
