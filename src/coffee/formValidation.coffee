@@ -59,8 +59,6 @@ jQuery ( $ ) ->
 
   validator = $form.data 'formValidation'
 
-  $thanks = $ '#thanks'
-
   $btn = $form.find 'button'
 
   $btn.on 'click', ( e ) ->
@@ -73,4 +71,4 @@ jQuery ( $ ) ->
         type: 'POST'
         url: $form.attr('action') + '?' + $form.find('input').serialize() + '&new_afaacustomer=Yes'
       .always ( ) ->
-        $thanks.modal()
+        window.location = '/thanks'
