@@ -1,5 +1,5 @@
 module.exports =
-  title: 'Group Exercise Textbook'
+  title: 'Group Ex Textbook'
   description: [
     'Fitness: Theory & Practice is the official textbook to help prepare you for the AFAA Group Ex Instructor certification exam.'
   ]

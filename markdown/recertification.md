@@ -1,5 +1,12 @@
 # AFAA Recertification
 
+Introducing Certify for Life! Now you no longer need to pay a separate fee every two years to recertify. See the AFAA Renewal Application for more details. *Please Note- You will still be required to purchase and complete your continuing education as well as submit a renewal application.*
+
+Past AFAA certified professionals whose Group Exercise Instructor or Personal Fitness Trainer certifications has lapsed for 180 days or longer will need to repurchase the Personal Fitness Trainer Certification exam or Group Exercise Instructor Certification exam. Please contact an AFAA Education Advisor to discuss your options at 800-446-2322, Option 1.
+
+
+
+
 AFAA certification demonstrates a commitment to excellence. As part of this commitment, AFAA certifications must be renewed every two years.
 
 In order to recertify, you must earn at least 15 continuing education units (CEUs), and at least 2 of these CEUs must be from AFAA developed courses. All other CEUs may be earned through additional AFAA courses and/or AFAA approved provider courses. If you have coursework that is not pre-approved you may fill out a [petition application](#) for CEU review and approval.

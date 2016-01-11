@@ -1,5 +1,5 @@
 module.exports =
-  title: 'Group Exercise Manual'
+  title: 'Group Ex Manual'
   description: [
     'Exercise Standards & Guidelines Reference Manual is the perfect complement and reference resource for aspiring and current AFAA group exercise instructors.'
   ]
