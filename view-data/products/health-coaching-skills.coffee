@@ -7,7 +7,7 @@ module.exports =
     'Specializations'
   ]
   ceus: '7'
-  price: '129'
+  price: '149'
   link: '9208'
   images: [
     '/products/health-coaching.jpg'

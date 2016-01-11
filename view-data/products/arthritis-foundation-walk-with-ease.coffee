@@ -7,7 +7,7 @@ module.exports =
     'Continuing Education'
   ]
   ceus: '4'
-  price: '129'
+  price: '89'
   link: '9199'
   images: [
     '/products/arthritis-walk.jpg'
