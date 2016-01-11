@@ -11,11 +11,13 @@ block vars
 //-   include ./block/mobilenav
 
 block navigation
+  include ./block/warning
   .container(style='position: relative').hidden-sm-down
     p#help3
       a(href='/help') Get login help  
         span.fa.fa-question-circle
   .mobile-nav-spacer.hidden-md-up
+
   //- include ./block/message
   include ./block/navtop
   include ./block/nav
