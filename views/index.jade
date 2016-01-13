@@ -35,11 +35,13 @@ block content
     .modal-dialog
       .modal-content
         .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden=true,) x
+            span.sr-only Close
           h4.modal-title Offer ends January 15th, 2016 at 11:59 pm EST
         .modal-body
           p Third-party courses excluded. See disclaimer for details. Discount applied automatically in the cart.
           p Excludes: Arthritis Foundation Walk With Ease, Jillian Michaels - BODYSHRED, Jillian Michaels CEU Corner, Diet Free Life, Power Music / Group Rx RIP, Nutrition for Sports and Exercise, Yo-Chi, Health Coaching Skills, Exercise Design for Seniors, Cream Rises: Excellence In Education.
-
 
 block pageJS
   script(src='/js/jquery-cycle2/jquery.cycle2.js')
