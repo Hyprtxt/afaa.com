@@ -11,6 +11,8 @@ block vars
 //-   include ./block/mobilenav
 
 block navigation
+  .mobile-nav-spacer.hidden-md-up
+  include ./block/message1
   include ./block/warning
   .container(style='position: relative').hidden-sm-down
     p#help3
@@ -29,13 +31,15 @@ block content
   include ./block/list
   include ./block/magazine
   include ./block/form
-  #thanks.modal.fade
+  #offer.modal.fade
     .modal-dialog
       .modal-content
         .modal-header
-          h4.modal-title Thank You!
+          h4.modal-title Offer ends January 15th, 2016 at 11:59 pm EST
         .modal-body
-          p Thanks for signing up to learn more about AFAA.
+          p Third-party courses excluded. See disclaimer for details. Discount applied automatically in the cart.
+          p Excludes: Arthritis Foundation Walk With Ease, Jillian Michaels - BODYSHRED, Jillian Michaels CEU Corner, Diet Free Life, Power Music / Group Rx RIP, Nutrition for Sports and Exercise, Yo-Chi, Health Coaching Skills, Exercise Design for Seniors, Cream Rises: Excellence In Education.
+
 
 block pageJS
   script(src='/js/jquery-cycle2/jquery.cycle2.js')

@@ -72,3 +72,12 @@ jQuery ( $ ) ->
         url: $form.attr('action') + '?' + $form.find('input').serialize() + '&new_afaacustomer=Yes'
       .always ( ) ->
         window.location = '/thanks'
+        return null
+    return null
+
+  $offer = $ '#offer'
+  $message = $ '.navbar-message'
+  $message.on 'click', ( e ) ->
+    e.preventDefault()
+    $offer.modal()
+    return null
