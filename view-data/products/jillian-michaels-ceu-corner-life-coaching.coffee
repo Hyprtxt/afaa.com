@@ -6,7 +6,7 @@ module.exports =
   types: [
     'Continuing Education'
   ]
-  ceus: '4'
+  ceus: '3'
   price: '35'
   link: '9177'
   images: [
