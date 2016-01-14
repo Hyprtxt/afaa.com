@@ -276,6 +276,7 @@ gulp.task 'globjs', ->
     dest + '/js/bootstrap/dropdown.js'
     dest + '/js/bootstrap/tooltip.js'
     dest + '/js/bootstrap/popover.js'
+    dest + '/js/loader.js'
     dest + '/js/script.js'
   ]
     .pipe concat 'global.js'
