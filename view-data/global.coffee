@@ -10,6 +10,7 @@ module.exports =
     '/js/bootstrap/dropdown.js'
     '/js/bootstrap/tooltip.js'
     '/js/bootstrap/popover.js'
+    '/js/loader.js'
     '/js/script.js'
   ]
   stylesheets: [

@@ -1,5 +1,5 @@
 jQuery ( $ ) ->
-  $spinner = $('<span>').addClass( 'fa fa-cog fa-spin')
+  $spinner = $('<span class="fa fa-cog fa-spin"></span>')
 
   $('.account-popover').on 'shown.bs.popover', ->
     $('.popover a').on 'click', ( e ) ->
