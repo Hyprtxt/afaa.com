@@ -264,7 +264,7 @@ gulp.task 'hpjs', ->
     dest + '/js/formValidation.js'
   ]
     .pipe concat 'homepage.js'
-    .pipe uglify()
+    # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'globjs', ->
