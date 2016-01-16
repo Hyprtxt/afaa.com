@@ -435,13 +435,19 @@ h1, h2, h3, h4, h5, h6
   box-shadow: 0 -1px 1px $gray-dark
 
 // Navigation Styles
-
+nav.navbar-message.activated
+  height: 40px
 nav.navbar-message
   background: $brand-primary
   color: white
   border-radius: 0
   font-family: $font-family-condensed
   cursor: pointer
+  padding: 0
+  height: 0
+  transition: height 0.5s ease
+  p
+    line-height: 40px
   a
     color: white
 

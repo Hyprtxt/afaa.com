@@ -30,3 +30,6 @@ jQuery ( $ ) ->
       to: 'window'
       pin: true
     ]
+  setTimeout ->
+    document.getElementsByClassName('navbar-message')[0].className = 'navbar navbar-message bg-faded activated'
+  , 1000
