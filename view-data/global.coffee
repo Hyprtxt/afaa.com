@@ -3,6 +3,7 @@ module.exports =
   title: 'AFAA'
   description: 'AFAA Static'
   javascripts: [
+    '//nexus.ensighten.com/nasm/afaadev/Bootstrap.js'
     '/js/jquery/jquery.min.js'
     '/js/tether/tether.min.js'
     '/js/bootstrap/util.js'

@@ -30,6 +30,16 @@ jQuery ( $ ) ->
       to: 'window'
       pin: true
     ]
-  setTimeout ->
-    document.getElementsByClassName('navbar-message')[0].className = 'navbar navbar-message bg-faded activated'
-  , 1000
+
+  # promo = $.ajax
+  #   url: '//afaa.nasm.pw/promo.html'
+  #   method: 'GET'
+  #
+  # promo.done ( data ) ->
+  #   $spacer = $ '.mobile-nav-spacer'
+  #   $promoBar = $ data
+  #   $promoBar.insertAfter $spacer
+  #   setTimeout ->
+  #     $promoBar.find('.navbar-message').addClass 'activated'
+  #   , 1000
+  #   return null
