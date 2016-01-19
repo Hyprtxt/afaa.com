@@ -6,7 +6,7 @@ module.exports =
   types: [
     'Specializations'
   ]
-  ceus: '7'
+  ceus: '5'
   price: '69'
   link: '9192'
   images: [
