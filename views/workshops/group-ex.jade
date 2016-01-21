@@ -11,9 +11,12 @@ block content
         img(src=assets+'/products/group-ex-practical.jpg')
       .col-lg-6
         include:markdown-it ../../markdown/workshops/group-fitness.md
+        .clearfix
+        p.h3.text-sans.m-b-md.pull-left $199
+        p.m-l.pull-left 8 CEUs
       .col-lg-12
         h2.m-b Upcoming Workshops
-        p.lead All workshops are 8am-5pm. Call today to reserve your spot! 
+        p.lead All live workshops are 8am-5pm. Call today to reserve your spot! 
           a.m-b(href='tel:'+phone)=phone
         //- pre=JSON.stringify( gex, null, 2 )
         table.table.table-striped
