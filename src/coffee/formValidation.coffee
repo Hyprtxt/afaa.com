@@ -74,10 +74,3 @@ jQuery ( $ ) ->
         window.location = '/thanks'
         return null
     return null
-
-  $offer = $ '#offer'
-  $message = $ '.navbar-message'
-  $message.on 'click', ( e ) ->
-    e.preventDefault()
-    $offer.modal()
-    return null
