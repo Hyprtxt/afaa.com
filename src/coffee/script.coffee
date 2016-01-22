@@ -30,3 +30,19 @@ jQuery ( $ ) ->
       to: 'window'
       pin: true
     ]
+
+  $('.navbar-message').addClass 'activated'
+
+  # promo = $.ajax
+  #   url: '//afaa.nasm.pw/promo.html'
+  #   method: 'GET'
+  #
+  # promo.done ( data ) ->
+  #   $spacer = $ '.mobile-nav-spacer'
+  #   $promoBar = $ data
+  #   $promoBar.insertAfter $spacer
+  #   setTimeout ->
+  #     $('.navbar-message').addClass 'activated'
+  #   , 1000
+  #   return null
+

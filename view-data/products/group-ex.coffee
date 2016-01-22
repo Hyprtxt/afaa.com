@@ -4,7 +4,7 @@ module.exports =
   title: 'Group Ex Instructor'
   description: [
     'Fitness should be fun, challenging and rewarding. A great group instructor knows the human body, the science of exercise and how to inspire, challenge and motivate change in the lives of the people they lead. AFAA knows how to create great group instructors.'
-    'With your AFAA Group Ex Instructor certification, you’ll get the tools, training and knowledge to help you lead people to healthier, happier lives. We’ll cover these key topics to get you prepared.'
+    'With your AFAA Group Ex Instructor certification, you’ll get the tools, training and knowledge to help you lead people to healthier, happier lives. In this online program, we’ll cover these key topics to get you prepared.'
   ]
   featureDescription: 'The Group Ex program includes:'
   features: [
