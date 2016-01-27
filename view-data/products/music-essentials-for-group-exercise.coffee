@@ -5,7 +5,7 @@ module.exports =
     'This program is sponsored by Power Music, a supplier of music for fitness professionals.'
   ]
   types: [
-    'Specializations'
+    'Specialities'
   ]
   ceus: '4'
   price: '59'

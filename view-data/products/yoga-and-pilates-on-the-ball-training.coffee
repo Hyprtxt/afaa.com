@@ -4,7 +4,7 @@ module.exports =
     'Expand your knowledge and explore new exercises by adding a large stability ball and a small Pilates ball to your Yoga and Pilates fusion workouts. In this online course, you will learn techniques to increase strength, flexibility and muscle tone with a focus on improving posture, proprioception and functional strength.'
   ]
   types: [
-    'Specializations'
+    'Specialities'
   ]
   ceus: '7'
   price: '149'

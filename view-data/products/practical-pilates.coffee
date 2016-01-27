@@ -5,7 +5,7 @@ module.exports =
   ]
   types: [
 
-    'Specializations'
+    'Specialities'
   ]
   ceus: '7'
   price: '149'

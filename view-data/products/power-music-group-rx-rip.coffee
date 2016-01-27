@@ -4,7 +4,7 @@ module.exports =
     'In Power Music you’ll explore the traditional and non-traditional exercises used in the Group Rx RIP group fitness class, and the fundamental principles for teaching a safe and effective RIP class. You’ll learn proper techniques to increase strength and muscle tone with an aim to improve posture, proprioception, and functional strength. Includes a downloadable 90-page workshop outline.'
   ]
   types: [
-    'Specializations'
+    'Specialities'
   ]
   ceus: '7'
   price: '149'

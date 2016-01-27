@@ -4,7 +4,7 @@ module.exports =
     'How you teach makes the difference in what you’re teaching. This program showcases the effective teaching and educating techniques used by Lawrence Biscontini, by explaining both the “What” and “How” of his teachings in group related programs.'
   ]
   types: [
-    'Specializations'
+    'Specialities'
   ]
   ceus: '7'
   price: '149'
