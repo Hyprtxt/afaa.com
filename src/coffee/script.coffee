@@ -31,7 +31,7 @@ jQuery ( $ ) ->
       pin: true
     ]
 
-  $('.navbar-message').addClass 'activated'
+  # $('.navbar-message').addClass 'activated'
 
   # promo = $.ajax
   #   url: '//afaa.nasm.pw/promo.html'
@@ -45,4 +45,3 @@ jQuery ( $ ) ->
   #     $('.navbar-message').addClass 'activated'
   #   , 1000
   #   return null
-
