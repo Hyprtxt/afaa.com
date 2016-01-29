@@ -5,7 +5,7 @@ module.exports =
     'This program is focused on a scope of pracitce appropriate for fitness professionals.'
   ]
   types: [
-    'Specialities'
+    'Specialties'
   ]
   ceus: '6'
   price: '89'

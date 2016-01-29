@@ -4,7 +4,7 @@ module.exports =
     'This program provides fitness professionals, club owners, and managers the opportunity to learn more about first aid and emergency response procedures in the health club setting. Note: This program does not replace CPR certification or First Aid and AED training.'
   ]
   types: [
-    'Specialities'
+    'Specialties'
   ]
   ceus: '5'
   price: '69'
