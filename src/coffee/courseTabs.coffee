@@ -3,9 +3,9 @@ jQuery ( $ ) ->
   $tabContent = $ '.tab-content > div'
   hash = window.location.hash
 
-  # $( window ).on 'popstate', ( e ) ->
-  #   console.log e
-  #   loadTab hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
+  $( window ).on 'popstate', ( e ) ->
+    loadTab window.location.hash.replace( '#', '' ), $( "a[href='" + hash + "_hash']" )
+    return
 
   $tabLinks.on 'click', ( e ) ->
     $this = $ this
@@ -15,10 +15,12 @@ jQuery ( $ ) ->
     # console.log active
     e.preventDefault()
     loadTab active, $this
+    return
 
   loadTab = ( active, $element ) ->
     console.log 'loadTab', active, $element
     # history.pushState {}, '', '#' + active
+    window.location.hash = active
     $tabLinks.removeClass 'active'
     $element .addClass 'active'
     $tabContent.each ->
