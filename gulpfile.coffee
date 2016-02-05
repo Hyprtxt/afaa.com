@@ -267,6 +267,17 @@ gulp.task 'hpjs', ->
     # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
+gulp.task 'formjs', ->
+  return gulp.src [
+    dest + '/js/formValidation/formValidation.min.js'
+    dest + '/js/formValidation/framework/bootstrap.min.js'
+    dest + '/js/formValidation/mandatoryIcon.min.js'
+    dest + '/js/formValidation.js'
+  ]
+    .pipe concat 'globalForm.js'
+    # .pipe uglify()
+    .pipe gulp.dest dest + '/ugly'
+
 gulp.task 'globjs', ->
   return gulp.src [
     dest + '/js/jquery/jquery.min.js'
