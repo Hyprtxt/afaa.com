@@ -118,9 +118,12 @@ gulp.task 'watch', [ 'render' ], ->
     basePath: 'static_generated/'
     start: true
 
+gulp.task 'cleanWorkshops', ( cb ) ->
+  return rimraf dest + '/workshops', cb
+
 Request = require 'request'
 
-gulp.task 'workshops', [ 'setupJadeData' ], ( next ) ->
+gulp.task 'workshops', [ 'setupJadeData', 'cleanWorkshops' ], ( next ) ->
   workDest = dest + '/workshops';
   PFT = 'https://spreadsheets.google.com/feeds/list/1QILIeVrKurWSQFmwGERhsLH9C2AdosbsiRw4NeM76h0/1/public/values?alt=json'
   GEX = 'https://spreadsheets.google.com/feeds/list/1QILIeVrKurWSQFmwGERhsLH9C2AdosbsiRw4NeM76h0/2/public/values?alt=json'
