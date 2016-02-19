@@ -1,0 +1,64 @@
+extends ./layout/layout.jade
+
+block content
+  .container.m-y-lg
+    .row
+      .col-md-12
+        h1 The Recert Page
+      .col-md-6
+        ul
+          li.list1 Which Certification are you Renewing?
+            div
+              select#field1
+                option
+                option(value='group-ex') Group Ex Instructor
+                option(value='pft') Personal Fitness Trainer
+                option(value='afaa') AFAA Fitness Practitioner
+                option(value='apt') Advanced Personal Trainer
+                option(value='kick') Kick Boxing Specialist
+                option(value='step') Step Specialist
+                option(value='yoga') Yoga Specialist
+                option(value='military') Military Fitness Specialist
+                option(value='weight') Weight Training Specialist
+                option(value='telefitness') Telefitness Specialist
+                option(value='wave') The Wave Workout Specialist
+          li.list2 Purchase Recert For Life?
+            .radio
+              label
+                input(type='radio', name='forLife', value='true')
+                |  Yes
+              label
+                input(type='radio', name='forLife', value='false')
+                |  No
+          li.list3 Is your Certification Expired?
+            .radio
+              label
+                input(type='radio', name='expired', value='true')
+                |  Yes
+              label
+                input(type='radio', name='expired', value='false')
+                |  No
+          li.list4 Do you need a file a Petition for your CEU Credits?
+            .radio
+              label
+                input(type='radio', name='petition', value='true')
+                |  Yes
+              label
+                input(type='radio', name='petition', value='false')
+                |  No
+      .col-md-6
+        p You need the following products:
+        h1.recert-results
+        ul.recert-items
+          li(data-price='99').recert-once Recertification Fee: $99
+          li(data-price='299').recert-life Recert for Life: $299
+          li(data-price='50').late Late Fee: $50
+          li(data-price='29').petition Petition Fee: $25
+        p Total: $
+          span.total 0
+        p 
+          .btn.btn-primary Add Products to Cart
+
+block pageJS
+  //- script(src='http://backbonejs.org/backbone.js')
+  script(src='/js/recert.js')
