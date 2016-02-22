@@ -1,0 +1,40 @@
+extends ./layout/layout.jade
+
+block content
+  .container.m-y-lg
+    .row
+      .col-md-12
+        h1 Modal Promo Page Proof of Concept
+        p 4 options under this button
+        .btn.btn-primary.offer-button Click here to claim your prize
+  #offer.modal.fade
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden=true,) x
+            span.sr-only Close
+          h2 This is the promo offer, we need 4 options here.
+        .modal-body
+          .row
+            .col-xs-6.p-a
+              h3 One
+              p Pick this one!
+              .btn.btn-primary Select
+            .col-xs-6.p-a
+              h3 Two
+              p Pick this one!
+              .btn.btn-primary Select
+            .col-xs-6.p-a
+              h3 Three
+              p Pick this one!
+              .btn.btn-primary Select
+            .col-xs-6.p-a
+              h3 Four
+              p Pick this one!
+              .btn.btn-primary Select
+
+block pageJS
+  //- script(src='http://backbonejs.org/backbone.js')
+  script(src='/js/bootstrap/modal.js')
+  script(src='/js/modalPromo.js')
