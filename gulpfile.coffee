@@ -81,12 +81,20 @@ gulp.task 'copyfont', ->
   return gulp.src './bower_components/font-awesome/fonts/**'
     .pipe gulp.dest dest + '/fonts'
 
+coffeeLog = ( e ) ->
+  console.log e.location
+  console.log e.name
+  console.log e.message
+  console.log e.stack
+  return
+
 gulp.task 'coffee', ->
   return gulp.src './src/coffee/**/*.coffee'
     .pipe sourcemaps.init()
     .pipe coffee(
         bare: true
-      ).on 'error', gutil.log
+      # ).on 'error', gutil.log
+      ).on 'error', coffeeLog
     .pipe sourcemaps.write '../map' # , sourceRoot: __dirname + './src'
     .pipe gulp.dest dest + '/js'
     .pipe livereload()
@@ -260,7 +268,6 @@ gulp.task 'hpjs', ->
   return gulp.src [
     dest + '/js/jquery-cycle2/jquery.cycle2.js'
     dest + '/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js'
-    dest + '/js/bootstrap/modal.js'
     dest + '/js/formValidation/formValidation.min.js'
     dest + '/js/formValidation/framework/bootstrap.min.js'
     dest + '/js/formValidation/mandatoryIcon.min.js'
@@ -290,6 +297,7 @@ gulp.task 'globjs', ->
     dest + '/js/bootstrap/dropdown.js'
     dest + '/js/bootstrap/tooltip.js'
     dest + '/js/bootstrap/popover.js'
+    dest + '/js/bootstrap/modal.js'
     dest + '/js/loader.js'
     dest + '/js/script.js'
   ]

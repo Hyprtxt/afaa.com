@@ -1,4 +1,33 @@
-console.log 'goooo'
+# console.log 'goooo'
+
+# ?course=&expired=false&petition=false
+
+
+# https://shop.nasm.org/addtocart.aspx?productid=9239
+# https://shop.nasm.org/addtocart.aspx?productid=9241
+# https://shop.nasm.org/addtocart.aspx?productid=9274
+# https://shop.nasm.org/addtocart.aspx?productid=9272
+# https://shop.nasm.org/addtocart.aspx?productid=9273
+
+getQueryString = ->
+  vars = []
+  # Get the start index of the query string
+  qsi = window.location.href.indexOf("?")
+  return vars if qsi is -1
+  # Get the query string
+  qs = window.location.href.slice(qsi + 1)
+  # Check if there is a subsection reference
+  sri = qs.indexOf("#")
+  qs = qs.slice(0, sri) if sri >= 0
+  # Build the associative array
+  hashes = qs.split("&")
+  for hash in hashes
+    sep = hash.indexOf("=")
+    continue if sep <= 0
+    key = decodeURIComponent(hash.slice(0, sep))
+    val = decodeURIComponent(hash.slice(sep + 1))
+    vars[key] = val
+  return vars
 
 jQuery ( $ ) ->
   $window = $ window
@@ -25,6 +54,10 @@ jQuery ( $ ) ->
   $late = $ '.late'
   $petition = $ '.petition'
 
+  qs = getQueryString()
+  # if qs.length
+    # Have query string!!!
+
   # clear fields before re-showing
 
   initialHide = ->
@@ -47,7 +80,9 @@ jQuery ( $ ) ->
     console.log e.target.value, '1'
     if e.target.value is ''
       initialHide()
-    else if e.target.value is 'group-ex' || e.target.value is 'pft'
+    else if e.target.value is 'group-ex'
+      $q2.show()
+    else if e.target.value is 'pft'
       $q2.show()
     else
       $q3.show()
@@ -106,3 +141,12 @@ jQuery ( $ ) ->
     return
 
   return
+
+
+  # $test = $ '#test'
+  # $test.on 'click', ( e ) ->
+  #   e.preventDefault()
+  #   $.ajax( 'https://shop.nasm.org/addtocart.aspx?productid=9239' ).done ( data, textStatus ) ->
+  #     console.log textStatus
+  #     return
+  #   return

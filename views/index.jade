@@ -12,13 +12,12 @@ block vars
 
 block navigation
   .mobile-nav-spacer.hidden-md-up
-  include ./block/message4
   //- include ./block/warning
   .container(style='position: relative').hidden-sm-down
     p#help3
       a(href='/help') Get login help  
         span.fa.fa-question-circle
-  .mobile-nav-spacer.hidden-md-up
+  //- .mobile-nav-spacer.hidden-md-up
   //- include ./block/message
   include ./block/navtop
   include ./block/nav
@@ -45,7 +44,6 @@ block content
 block pageJS
   script(src='/js/jquery-cycle2/jquery.cycle2.js')
   script(src='/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js')
-  script(src='/js/bootstrap/modal.js')
   script(src='/js/formValidation/formValidation.min.js')
   script(src='/js/formValidation/framework/bootstrap.min.js')
   script(src='/js/formValidation/mandatoryIcon.min.js')

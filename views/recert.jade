@@ -6,7 +6,7 @@ block content
       .col-md-12
         h1 The Recert Page
       .col-md-6
-        ul
+        ul.recert-list.recert-questions
           li.list1 Which Certification are you Renewing?
             div
               select#field1
@@ -26,39 +26,50 @@ block content
             .radio
               label
                 input(type='radio', name='forLife', value='true')
-                |  Yes
+                |  Yes 
               label
                 input(type='radio', name='forLife', value='false')
-                |  No
+                |  No 
           li.list3 Is your Certification Expired?
             .radio
               label
                 input(type='radio', name='expired', value='true')
-                |  Yes
+                |  Yes 
               label
                 input(type='radio', name='expired', value='false')
-                |  No
+                |  No 
           li.list4 Do you need a file a Petition for your CEU Credits?
             .radio
               label
                 input(type='radio', name='petition', value='true')
-                |  Yes
+                |  Yes 
               label
                 input(type='radio', name='petition', value='false')
-                |  No
+                |  No 
       .col-md-6
         p You need the following products:
         h1.recert-results
-        ul.recert-items
+        ul.recert-items.recert-list
           li(data-price='99').recert-once Recertification Fee: $99
           li(data-price='299').recert-life Recert for Life: $299
           li(data-price='50').late Late Fee: $50
           li(data-price='29').petition Petition Fee: $25
         p Total: $
           span.total 0
-        p 
-          .btn.btn-primary Add Products to Cart
+        //- p 
+        //-   .btn.btn-primary Add Products to Cart
+        //- p
+        //-   .btn.btn-primary Start Over
+        //- p
+        //-   #test.btn.btn-primary Test Button
+
+//- AFAA - Recert Late Fee 9239
+//- AFAA - Recertification Fee 9241
+//- AFAA – Petition Fee 9274
+//- AFAA - Recert for Life Application Fee (PFT) 9272
+//- AFAA - Recert for Life Application Fee (Group) 9273
 
 block pageJS
   //- script(src='http://backbonejs.org/backbone.js')
+  link(rel='stylesheet', href='/css/recert.css')
   script(src='/js/recert.js')

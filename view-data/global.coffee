@@ -7,6 +7,7 @@ module.exports =
     '/js/jquery/jquery.min.js'
     '/js/tether/tether.min.js'
     '/js/bootstrap/util.js'
+    '/js/bootstrap/modal.js'
     '/js/bootstrap/collapse.js'
     '/js/bootstrap/dropdown.js'
     '/js/bootstrap/tooltip.js'
