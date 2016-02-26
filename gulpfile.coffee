@@ -279,7 +279,6 @@ gulp.task 'hpjs', ->
     dest + '/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js'
   ]
     .pipe concat 'homepage.js'
-    # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'formjs', ->
@@ -290,7 +289,6 @@ gulp.task 'formjs', ->
     dest + '/js/formValidation.js'
   ]
     .pipe concat 'globalForm.js'
-    # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'globjs', ->
@@ -307,7 +305,6 @@ gulp.task 'globjs', ->
     dest + '/js/script.js'
   ]
     .pipe concat 'global.js'
-    # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'globcss', ->
