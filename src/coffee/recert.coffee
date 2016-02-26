@@ -1,4 +1,5 @@
-# console.log 'goooo'
+# Recertification Wizard
+# Templates: recert.jade
 
 # ?course=&expired=false&petition=false
 

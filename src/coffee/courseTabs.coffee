@@ -1,3 +1,6 @@
+# Course Browser tab sorting with History Support
+# Template: courses.jade
+
 jQuery ( $ ) ->
   $tabLinks = $ '.nav-tabs li a'
   $tabContent = $ '.tab-content > div'

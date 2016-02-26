@@ -243,7 +243,7 @@ gulp.task 'courses', [ 'setupJadeData' ], ->
     .pipe livereload()
 
 gulp.task 'copystatic', ->
-  gulp.src [ './static/**', dest + '/**' ]
+  return gulp.src [ './static/**', dest + '/**' ]
     .pipe gulp.dest dest
 
 gulp.task 'render', [
@@ -260,18 +260,23 @@ gulp.task 'render', [
 ]
 
 gulp.task 'build', [ 'clean' ], ->
-  gulp.start 'render'
+  return gulp.start 'render'
 
-gulp.task 'ugly', [ 'hpjs', 'globjs', 'globcss' ]
+gulp.task 'ugly', [ 'catjs' ], ->
+  return gulp.src [
+    dest + '/ugly/*.js'
+  ]
+    .pipe uglify()
+    .pipe rename suffix: '.min'
+    .pipe gulp.dest dest + '/ugly'
+
+gulp.task 'catjs', [ 'coffee' ], ->
+  return gulp.start [ 'hpjs', 'globjs', 'globcss', 'formjs' ]
 
 gulp.task 'hpjs', ->
   return gulp.src [
     dest + '/js/jquery-cycle2/jquery.cycle2.js'
     dest + '/js/jquery-cycle2/plugin/jquery.cycle2.swipe.min.js'
-    dest + '/js/formValidation/formValidation.min.js'
-    dest + '/js/formValidation/framework/bootstrap.min.js'
-    dest + '/js/formValidation/mandatoryIcon.min.js'
-    dest + '/js/formValidation.js'
   ]
     .pipe concat 'homepage.js'
     # .pipe uglify()
@@ -298,11 +303,11 @@ gulp.task 'globjs', ->
     dest + '/js/bootstrap/tooltip.js'
     dest + '/js/bootstrap/popover.js'
     dest + '/js/bootstrap/modal.js'
-    dest + '/js/loader.js'
+    dest + '/js/global/*.js'
     dest + '/js/script.js'
   ]
     .pipe concat 'global.js'
-    .pipe uglify()
+    # .pipe uglify()
     .pipe gulp.dest dest + '/ugly'
 
 gulp.task 'globcss', ->

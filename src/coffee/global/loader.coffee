@@ -1,3 +1,5 @@
+# Adds button animated cog effects to indicate that a page is loading.
+
 jQuery ( $ ) ->
   $spinner = $('<span class="fa fa-cog fa-spin"></span>')
 
