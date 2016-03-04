@@ -50,18 +50,17 @@ block content
         p You need the following products:
         h1.recert-results
         ul.recert-items.recert-list
-          li(data-price='99').recert-once Recertification Fee: $99
-          li(data-price='299').recert-life Recert for Life: $299
-          li(data-price='50').late Late Fee: $50
-          li(data-price='29').petition Petition Fee: $25
+          li(data-price='99', data-sku='9241').recert-once Recertification Fee: $99
+          li(data-price='299', data-sku='9272').recert-life-pft Recert for Life: $299
+          li(data-price='299', data-sku='9273').recert-life-group Recert for Life: $299
+          li(data-price='50', data-sku='9239').late Late Fee: $50
+          li(data-price='25', data-sku='9274').petition Petition Fee: $25
         p Total: $
           span.total 0
-        //- p 
-        //-   .btn.btn-primary Add Products to Cart
+        p 
+          #addToCart.btn.btn-primary Add Products to Cart
         //- p
         //-   .btn.btn-primary Start Over
-        //- p
-        //-   #test.btn.btn-primary Test Button
 
 //- AFAA - Recert Late Fee 9239
 //- AFAA - Recertification Fee 9241
