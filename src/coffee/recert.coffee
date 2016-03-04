@@ -1,27 +1,13 @@
 # Recertification Wizard
 # Templates: recert.jade
 
-# ?course=&expired=false&petition=false
-
-getQueryString = ->
-  vars = []
-  # Get the start index of the query string
-  qsi = window.location.href.indexOf("?")
-  return vars if qsi is -1
-  # Get the query string
-  qs = window.location.href.slice(qsi + 1)
-  # Check if there is a subsection reference
-  sri = qs.indexOf("#")
-  qs = qs.slice(0, sri) if sri >= 0
-  # Build the associative array
-  hashes = qs.split("&")
-  for hash in hashes
-    sep = hash.indexOf("=")
-    continue if sep <= 0
-    key = decodeURIComponent(hash.slice(0, sep))
-    val = decodeURIComponent(hash.slice(sep + 1))
-    vars[key] = val
-  return vars
+miniCart = {
+  "9241": 0
+  "9272": 0
+  "9273": 0
+  "9239": 0
+  "9274": 0
+}
 
 jQuery ( $ ) ->
   $window = $ window
@@ -31,6 +17,7 @@ jQuery ( $ ) ->
   forLife = 'false'
 
   $addButton = $ '#addToCart'
+  $loopButton = $ '#loopButton'
 
   $q1 = $ '.list1'
   $q2 = $ '.list2'
@@ -53,13 +40,8 @@ jQuery ( $ ) ->
   $late = $ '.late'
   $petition = $ '.petition'
 
-  qs = getQueryString()
-  # if qs.length
-    # Have query string!!!
-
-  # clear fields before re-showing
-
   initialHide = ->
+    $total.text '0'
     $q2.hide()
     $q3.hide()
     $q4.hide()
@@ -68,9 +50,20 @@ jQuery ( $ ) ->
     $lifeGroup.hide()
     $late.hide()
     $petition.hide()
+    $addButton.hide()
+    $loopButton.hide()
+    $f1.prop 'selectedIndex', 0
     $f2.attr 'checked', false
     $f3.attr 'checked', false
     $f4.attr 'checked', false
+    return
+
+  saveToMiniCart = ->
+    $visible = $items.find 'li:visible'
+    $visible.each ( idx, element ) ->
+      sku = $( element ).data 'sku'
+      miniCart[sku] = miniCart[sku] + 1
+      return
     return
 
   initialHide()
@@ -128,6 +121,8 @@ jQuery ( $ ) ->
     return
 
   $f4.on 'change', ( e ) ->
+    $addButton.show()
+    $loopButton.show()
     # console.log e.target.value, '4'
     if e.target.value is 'true'
       $petition.show()
@@ -139,15 +134,27 @@ jQuery ( $ ) ->
 
   $addButton.on 'click', ( e ) ->
     url = 'https://shop.nasm.org/addtocart.aspx?'
-    $visible = $items.find 'li:visible'
-    $visible.each ( idx, element ) ->
-      # console.log $( element ).data 'sku'
-      if idx isnt 0
-        url = url + '&'
-      url = url + 'upsellproducts=' + $( element ).data 'sku'
+    saveToMiniCart()
+    console.log miniCart
+    for qty, sku of miniCart
+      console.log qty, sku
+    # miniCart.each ( sku ) ->
+    #   console.log sku
+    #
+    # # $visible = $items.find 'li:visible'
+    # # $visible.each ( idx, element ) ->
+    # #   sku = $( element ).data 'sku'
+    #   if idx isnt 0
+    #     url = url + '&'
+    #   url = url + 'upsellproducts=' + sku
     # console.log url
-    window.location = url;
-    return url
+    # window.location = url;
+    return
+
+  $loopButton.on 'click', ( e ) ->
+    saveToMiniCart()
+    initialHide()
+    return
 
   $window.on 'recalc', ( e ) ->
     price = 0
