@@ -136,22 +136,22 @@ jQuery ( $ ) ->
     url = 'https://shop.nasm.org/addtocart.aspx?'
     saveToMiniCart()
     console.log miniCart
-    for qty, sku of miniCart
+    first = true
+    for sku, qty of miniCart
+      # if qty isnt 0
       console.log qty, sku
-    # miniCart.each ( sku ) ->
-    #   console.log sku
-    #
-    # # $visible = $items.find 'li:visible'
-    # # $visible.each ( idx, element ) ->
-    # #   sku = $( element ).data 'sku'
-    #   if idx isnt 0
-    #     url = url + '&'
-    #   url = url + 'upsellproducts=' + sku
-    # console.log url
-    # window.location = url;
+      if qty isnt 0
+        console.log 'good', qty
+        for n in [1..qty] by 1
+          if !first
+            url = url + '&'
+          first = false
+          url = url + 'upsellproducts=' + sku
+    window.location = url;
     return
 
   $loopButton.on 'click', ( e ) ->
+
     saveToMiniCart()
     initialHide()
     return
