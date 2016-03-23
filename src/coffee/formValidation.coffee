@@ -1,5 +1,43 @@
 jQuery ( $ ) ->
 
+  getQueryString = ->
+    vars = []
+    # Get the start index of the query string
+    qsi = window.location.href.indexOf("?")
+    return vars if qsi is -1
+
+    # Get the query string
+    qs = window.location.href.slice(qsi + 1)
+
+    # Check if there is a subsection reference
+    sri = qs.indexOf("#")
+    qs = qs.slice(0, sri) if sri >= 0
+
+    # Build the associative array
+    hashes = qs.split("&")
+    for hash in hashes
+      sep = hash.indexOf("=")
+      continue if sep <= 0
+      key = decodeURIComponent(hash.slice(0, sep))
+      val = decodeURIComponent(hash.slice(sep + 1))
+      vars[key] = val
+    return vars
+
+  qs = getQueryString()
+
+  console.log qs
+
+  if qs.utm_content
+    $('#utm_content').val qs.utm_content
+  if qs.utm_source
+    $('#utm_source').val qs.utm_source
+  if qs.utm_medium
+    $('#utm_medium').val qs.utm_medium
+  if qs.utm_campaign
+    $('#utm_campaign').val qs.utm_campaign
+  if qs.utm_term
+    $('#utm_term').val qs.utm_term
+
   # Hack to fix sitefinity spacing on the HP
   if $('.mobile-nav-spacer')[1]
     $('.mobile-nav-spacer')[1].remove()

@@ -5,6 +5,11 @@
     .col-lg-8.m-b-lg.col-lg-push-2
       div#acton1(action='http://nasm-dev.actonservice.com/acton/eform/15912/000c/d-ext-0001', method='POST')
         input(type='hidden', name='Topic', value='AFAA')
+        input#utm_content(type='hidden', name='utm_content', value='')
+        input#utm_source(type='hidden', name='utm_source', value='')
+        input#utm_medium(type='hidden', name='utm_medium', value='')
+        input#utm_campaign(type='hidden', name='utm_campaign', value='')
+        input#utm_term(type='hidden', name='utm_term', value='')
         fieldset.form-group
           .col-sm-6.m-b
             input.form-control(placeholder='First Name', name='First Name', required)
