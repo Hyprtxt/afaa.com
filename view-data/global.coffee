@@ -22,7 +22,7 @@ module.exports =
   phone: '800-446-2322'
   navbarBrand:
     title: 'AFAA'
-    link: '/'
+    link: '//afaa.hyprtxt.dev'
   # topNavigation: [
   #   title: 'Cart'
   #   link: 'https://shop.nasm.org/ShoppingCart.aspx'
@@ -39,7 +39,7 @@ module.exports =
     link: '/courses/personal-fitness-trainer'
   ,
     title: 'Courses'
-    link: '/courses'
+    link: '/courses#everything'
   ,
     title: 'Workshops'
     link: '/workshops'
