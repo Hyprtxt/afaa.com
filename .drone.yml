@@ -14,15 +14,16 @@ steps:
   - name: build
     image: dubnium-alpine3.10
     commands:
-      - npm i
-      - npm run build
+      - yarn
+      - yarn run bower
+      - yarn run build
   - name: stage
     image: alpine
     volumes:
       - name: nginx
         path: /drone/src/nginx
     commands:
-      - cp -r out nginx/stage
+      - cp -r static_generated nginx/stage
   - name: deploy
     image: alpine
     volumes:
