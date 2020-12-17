@@ -12,7 +12,7 @@ steps:
       mount:
         - ./node_modules
   - name: build
-    image: node:dubnium-alpine3.10
+    image: tdy721/afaa-builder
     commands:
       - yarn
       - yarn run bower
