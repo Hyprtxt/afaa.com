@@ -12,8 +12,7 @@ steps:
       mount:
         - ./node_modules
   - name: build
-    # image: dubnium-alpine3.10
-    image: catchdigital/node-sass
+    image: dubnium-alpine3.10
     commands:
       - npm i
       - npm run build
